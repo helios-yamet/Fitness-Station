@@ -441,4 +441,24 @@ These technologies helped create, shape and test my code
 * Google fonts - https://fonts.google.com/: Help provide the text style of the site.
 
 -------
+
+## Testing
+
+Summary: *During the development of this project, I had the experience of facing some problems, exhaustively testing the functionality of each part of the platform and managed to solve most of the problems that arose before writing this document.*
+
+*I received help from some family and friends to do the tests on the platform resources and all the problems presented were solved without problems for example my brother found that on his mobile device there was x-scroll on the create sprint page."*
+
+__See testing documentation here: https://github.com/michodgs25/Sprint/blob/master/test.md__
+
+## Version Control
+This sites version control is through github linked to the heroku app, using gitpod IDE, once completed a piece of work, I would type into the terminal:
+
+ #### git add -A
+ - *Adds a change in the working directory to the staging area.*
+  
+#### git commit -m "Update index.html code formatting" 
+ - *Captures the state of a project at that point in time. Ensure message is specific to the changes made to the file(s).*
+ 
+#### git push index.html
+ - *This pushes the file to the github project repository.*
   
