@@ -390,3 +390,23 @@ Summary:
 
 ### Issues and bugs
 *This section looks into what existing issues that are still present in the project& what future iterations could do to resolve these issues:*
+
+### Issues and bugs
+*This section looks into what existing issues that are still present in the project& what future iterations could do to resolve these issues:*
+
+
+-------
+ 
+## Libraries and Frameworks 
+
+- Python 3.7: https://www.python.org/
+
+- Font Awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css
+
+- JQuery library: https://jquery.com/ 
+
+- Google fonts: https://fonts.google.com/
+
+- Django: https://www.djangoproject.com/start/
+
+- Bootstrap: https://getbootstrap.com/
