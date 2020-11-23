@@ -33,9 +33,10 @@
                 Workout Plans
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="Workouts-link">
-                <a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Bed &amp; Bath</a>
-                <a href="{% url 'products' %}?category=kitchen_dining" class="dropdown-item">Kitchen &amp; Dining</a>
-                <a href="{% url 'products' %}?category=bed_bath,kitchen_dining" class="dropdown-item">All Homeware</a>
+                <a href="{% url 'products' %}?category=running" class="dropdown-item">Running</a>
+                <a href="{% url 'products' %}?category=weight_lifting" class="dropdown-item">Weight Lifting</a>
+                <a href="{% url 'products' %}?category=body_weight" class="dropdown-item">Body Weight</a>
+                <a href="{% url 'products' %}?category=running,weight_lifting, body_weight" class="dropdown-item">All Workout plans</a>
             </div>
         </li>
     </ul>
