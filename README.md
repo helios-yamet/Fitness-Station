@@ -208,3 +208,185 @@ These wireframes were designed with Balsamiq Mockups.
   </details> 
 
 ------- 
+
+
+# Features
+
+### Homepage feature
+
+* *The homepage consists of an automatic image carousel, which has the day/week/month/year product offers.*
+
+* *Each images takes the user to the product page.*
+
+<details>
+  <summary>Welcome page: Desktop top: Tablet left: Mobile right</summary>
+  <br>
+<div align="center">
+<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/sprint-welcome-page.jpg" target="_blank" rel=""/>
+  </div>
+  </details>
+  
+  #### Welcome page Summary: 
+   - *This feature was inspired by user stories, to be appealing and landing page designs via Google Images.*
+   
+   ----
+
+### Plans and Merchardise pages
+
+* **
+
+<details>
+  <summary>Homepage, Desktop top: Tablet left: Mobile right</summary>
+<div align="center">
+<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/sprint-homepage.jpg" target="_blank" rel=""/>
+  </div>
+  </details>
+  
+*The button is moved to the center of the card, as it looked better in that position.*
+  
+  #### Home page Summary:
+   - **
+   
+   ----
+
+### 
+
+* **
+
+<details>
+  <summary>The create activity page, Desktop top: Tablet left: Mobile right</summary>
+<div align="center">
+<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/sprint-create.jpg" 
+     target="_blank" rel=""/>
+  </div>
+  </details>
+  
+   #### Summary:
+   - **
+   
+   ----
+   
+   ### feature
+
+* **
+
+<details>
+  <summary>The explore activities page, Desktop top: Tablet left: Mobile right</summary>
+<div align="center">
+<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/sprint-explore.jpg" 
+     target="_blank" rel=""/>
+  </div>
+  </details>
+  
+   #### Summary:
+   - *Explore activities page is very positive feature of this site as this increases user interaction by exploring through their own activity logs.*
+   
+   ----
+   
+   #### feature:
+   
+   **
+   
+   
+   <details>
+  <summary>Accordian</summary>
+<div align="center">
+<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/accordian-feature.jpg" 
+     target="_blank" rel=""/>
+  </div>
+  </details>
+  
+  
+   #### Summary:
+   - **
+   
+   -------
+   
+   ### Navigation bar and sidenav features
+   
+ * **
+ 
+* **
+
+<details>
+  <summary>Navigation(top) and sidenav(bottom):</summary>
+<div align="center">
+<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/nav-sidenav.jpg" 
+     target="_blank" rel=""/>
+  </div>
+  </details>
+  
+  **
+  
+----
+
+
+### Search bar feature
+* **
+
+* **
+
+* **
+
+
+<details>
+  <summary>Search bar</summary>
+<div align="center">
+<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/search.jpg" 
+     target="_blank" rel=""/>
+  </div>
+  </details>
+
+
+-------
+   
+   ### Edit activity feature
+
+* **
+
+<details>
+  <summary>The edit activity, Desktop top: Tablet left: Mobile right</summary>
+<div align="center">
+<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/sprint-edit.jpg" 
+     target="_blank" rel=""/>
+  </div>
+  </details>
+  
+   #### Edit activity Summary:
+   - **
+   
+ -----
+ 
+ ### feature
+ 
+ * **
+ 
+ * **
+ 
+ 
+<details>
+  <summary></summary>
+<div align="center">
+<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/error-feature.jpg" 
+     target="_blank" rel=""/>
+  </div>
+  </details>
+  
+  ####  Summary:
+  
+  * *Using a defensive programmer approach, the addition of the error page guards against any unforseen circumstance of a log still existing on a different tab after being deleted on the explore page.*
+ 
+ ------
+    
+   
+## Features left to be implemented
+
+
+Summary:
+
+
+----------
+
+
+### Issues and bugs
+*This section looks into what existing issues that are still present in the project& what future iterations could do to resolve these issues:*
