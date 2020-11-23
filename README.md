@@ -36,3 +36,13 @@ __Get Fit with Fitness Station__
      * [Remote Deployment](#Remote-Deployment)
 * [Acknowledgements](#Acknowledgements)
      * [External-Media](#External-Media)
+
+     # Project purpose
+
+The purpose of this project is to create a modern, intuitive E-site for my local gym and encourage users to purchase the latest excercise plans and merchandise with one click. 
+Potential users can range from 18 to elderly gym members, so an easy to use platform, that takes into account the full spectrum of technical ability amongst potential users is crucial to the success of the site. 
+
+I decided to create the Fitness Station brand because I wanted to bring my own design and modern coding conventions to a local fitness facility, which is a cornerstone of the community but can greatly benefit from having E-site capabilities, such as being able to purchase their favourite fitness station brand t-shirt, exercise plan or protein; rather than having to physically visit the facility to make a purchase. 
+Fitness station has a thriving exercise community, that I aim to capture, allowing users to share their completed workouts and the branded products they purchased from our site. 
+
+ - Site mobile demo: **
