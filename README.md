@@ -520,3 +520,24 @@ To deploy this app to Heroku you need to follow the steps below:
   </details>
 
 ------
+
+## Acknowledgements
+
+Very Special Thanks to:
+- My mentor with Code Institute **Rohit** and the code institute tech support team, who had all the patience to explain and make me understand certain concepts and peculiarities of the project .
+- Family, friends, who have tested the platform on their real devices, reporting to me about any usability issues and giving improvement tips to improve the usability.
+
+## Slack feedback
+
+Special thanks to the valuable feedback given by slack, I implemented the feedback on navigation font-size and seriously looked into adding a login page. 
+__See feedback below__:
+
+
+#### Read full article here - https://github.com/michodgs25/Sprint/blob/master/static/docs/Sprint_peer%20group%20feedback%20review_09102020.pdf
+
+-----
+  
+ #### All code adapted is for educational purposes only and not for commercial gain.
+
+## External Media 
+All images were take from Google images advanced search with filter - __"free to use or share"__
