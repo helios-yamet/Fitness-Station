@@ -462,3 +462,61 @@ This sites version control is through github linked to the heroku app, using git
 #### git push index.html
  - *This pushes the file to the github project repository.*
   
+## Deployment
+
+
+#### Requirements 
+You will need the following tools installed on your system:
+
+Python 3 - https://www.python.org/downloads/
+An IDE such as Visual Studio, gitpod, Code, or like this project gitpod
+An account at MongoDB Atlas - https:https://github.com/michodgs25/Sprint//www.mongodb.com/
+Git - https://gist.github.com/derhuerst/1b15ff4652a867391f03
+
+
+I personally used github on my local machine to develop the site using Python 3.7.3 and deployed to Heroku via Github.
+
+1. To download or clone the site to your local machine you will need to go to my repo [here.](https://github.com/michodgs25/Sprint) and see deployment steps in https://help.github.com/en/articles/cloning-a-repository
+
+2. Before you download or clone the site you will need to ensure you have Python 3.7 installed.
+
+3. Once you have Python installed, created a virtual environment as appropriate to you chosen IDE and os.
+
+4. Run the requirements.txt file as appropriate to your IDE to install the relevant required packages dependencies for the project into your virtual environment.
+
+5. Run the app.py file as appropriate to your chosen environment and os.
+
+6. You should now be able to view the site on your localhost on port 5000.
+
+
+## Remote Deployment
+
+#### Instructions
+To deploy this app to Heroku you need to follow the steps below:
+
+- Create a **requirements.txt** file so that Heroku can install all the dependencies required to run the app.
+  `pip freeze > requirements.txt`
+
+- Create a **Procfile** with the command:
+  `echo web: python app.py > Procfile`
+
+- In this step, you have to create a free account on the [Heroku website](https://signup.heroku.com/).
+-  Login to the account, click on new and then create a new app. In the following screen, you need to give a name and choose the Europe region.
+-  In the menu access the **Deploy** option, after that click on Connect to Github. Just below provide the information from the app's repository on GitHub and select the option Enable Automatic Deploy.
+- On the Dashboard of the APP, click on Settings and then click on the option **Reveal config Vars**.
+- Now you need to add the following variables to **Reveal config Vars**:
+  - **IP**: `0.0.0.0`
+  - **PORT**: `5000`
+  - **MONGO_URI**: `link to your Mongo DB`
+  - **SECRET_KEY**: `your chosen secret key`
+- You are now ready to access the deployed app on Heroku.
+
+<details>
+  <summary>deploy heroku</summary>
+<div align="center">
+<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/heroku-connect.jpg" 
+     target="_blank" rel=""/>
+  </div>
+  </details>
+
+------
