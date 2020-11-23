@@ -144,4 +144,67 @@ Fitness station has a thriving exercise community, that I aim to capture, allowi
  
  ------
 
+# Design
+
+### There are three key sections that make up the design of the platform:
+
+1.  Homepage, Products, profile page, and Order history
+
+2. Registration& Login pages and verify, confirmation pages
+
+3. Shopping Cart and Checkout pages
+
+
+The website design is inspired by other e-sites such as Amazon and ebay, which introduce the site primarily through imagery, images of the products under special& latest offers headlines; which encourages the user to explore our products further. The reason for displaying offers on the homepage, this is to get the user to look at the products on sale and for them to buy those products, this increases the likelihood of products being sold. Also the home page has a special offer banner near the top, this allows for the gym owner to present special offers tailored for a particular week, month, or a specific season such as Christmas. 
+
+On the homepage the user can explore the site using the search bar on the navigation, shop by category tabs just above the search bar, which takes user to the products and if they clicked the merchandise tab the page will show merchandise product only, same vice versa for workout plans. On the product page there are filters place at the top of the page below the navigation bar; which allows the user to sort through all the products until they find what they like.
+
+See full article on design here __https://github.com/michodgs25/Fitness-Station/issues/1__
+
+### Typography
+
+- The main fonts selected for this project are **Oxygen** and **Arsenal**. I think they are a well designed and easy to read google fonts and also represents the fitness station brand.
+
+*https://fonts.google.com/specimen/Arsenal?sidebar.open=true&selection.family=Arsenal:wght@700|Oxygen:wght@300*
+
+------
+
+### Colours
+
+*https://github.com/michodgs25/Sprint/issues/3#issue-716076941*
+
+------
+
+### Icons
+
+The icons used in this project are provided by [Font Awesome 5.14.0](https://fontawesome.com/).
+
+
+# Wire-Frames
+These wireframes were designed with Balsamiq Mockups. 
+
+<details>
+  <summary>Desktop</summary>
+  <br>
+<div align="center">
+<img src="https://github.com/michodgs25/Fitness-Station/blob/master/fitness_station/static/wire-frames/desktop.png" target="_blank" rel=""/>
+</div>
+  </details>
+
+<details>
+   <summary>Tablet</summary>
+  <br>
+<div align="center">
+<img src="https://github.com/michodgs25/Fitness-Station/blob/master/fitness_station/static/wire-frames/tablet.png" target="_blank" rel=""/>
+</div>
+ </details>
  
+ <details>
+   <summary>Mobile</summary>
+  <br>
+<div align="center">
+<img src="https://github.com/michodgs25/Fitness-Station/blob/master/fitness_station/static/wire-frames/mobile.png" target="_blank" rel=""/>
+</div>
+  </details> 
+
+------- 
