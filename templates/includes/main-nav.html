@@ -17,10 +17,10 @@
                 Workout Plans
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="plan-link">
-                <a href="{% url 'products' %}?category=workout-plans" class="dropdown-item">Running</a>
-                <a href="{% url 'products' %}?category=workout-plans" class="dropdown-item">Get lean</a>
-                <a href="{% url 'products' %}?category=workout-plans" class="dropdown-item">Gain Muscle</a>
-                <a href="{% url 'products' %}?category=workout-plans" class="dropdown-item">All Workout Plans</a>
+                <a href="{% url 'products' %}?category=workout_plans" class="dropdown-item">Running</a>
+                <a href="{% url 'products' %}?category=workout_plans" class="dropdown-item">Get lean</a>
+                <a href="{% url 'products' %}?category=workout_plans" class="dropdown-item">Gain Muscle</a>
+                <a href="{% url 'products' %}?category=workout_plans" class="dropdown-item">All Workout Plans</a>
             </div>
         </li>
 
@@ -29,9 +29,9 @@
                 Merchandise
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Mens Activewear</a>
-                <a href="" class="dropdown-item">Womens Activewear</a>
-                <a href="" class="dropdown-item">Accessories</a>
+                <a href="{% url 'products' %}?category=men's_activewear" class="dropdown-item">Mens Activewear</a>
+                <a href="{% url 'products' %}?category=women's_activewear" class="dropdown-item">Womens Activewear</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item">Accessories</a>
                 <a href="" class="dropdown-item">All Activewear</a>
             </div>
         </li>
