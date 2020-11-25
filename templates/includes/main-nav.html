@@ -4,6 +4,7 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
+            <!--Search product filters-->
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
@@ -11,7 +12,7 @@
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
-
+        <!--Workout plan products-->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="plans-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Workout Plans
@@ -23,10 +24,10 @@
                 <a href="{% url 'products' %}?category=workout_plans" class="dropdown-item">All Workout Plans</a>
             </div>
         </li>
-
+        <!--Activewear& Accessories products-->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="Merchandise-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Merchandise
+                Activewear and Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
                 <a href="{% url 'products' %}?category=men's_activewear" class="dropdown-item">Mens Activewear</a>
