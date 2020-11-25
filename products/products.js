@@ -16,4 +16,7 @@ $('#sort-selector').change(function() {
             
             window.location.replace(currentUrl);
         }
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0)
+		})
     })
