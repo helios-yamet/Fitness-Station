@@ -10,6 +10,7 @@
         {% block extra_meta %}
         {% endblock %}
         {% block corecss %}
+        <!--Css custom and cdn frameworks-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -17,11 +18,12 @@
         {% block extra_css %}
         {% endblock %}
         {% block corejs %}
+        <!--Javascript cdn frameworks-->
         <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <!-- Stripe -->
+        <!-- Stripe cdn -->
         <script src="https://js.stripe.com/v3/"></script>
         {% endblock %}
         {% block extra_js %}
@@ -51,6 +53,7 @@
                         </div>
                     </form>
                 </div>
+                <!--User account dropdown link-->
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
@@ -62,6 +65,7 @@
                                     <p class="my-0">My Account</p>
                                 </div>
                             </a>
+                            <!--Superuser authentication requests-->
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
@@ -75,6 +79,7 @@
                                 {% endif %}
                             </div>
                         </li>
+                        <!--Grand total amount, reminds user of shopping cart total anywhere on site-->
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold
                                       {% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
@@ -93,6 +98,7 @@
                     </ul>
                 </div>
             </div>
+            <!--Import main navigation bar& mobile header-->
             <div class="row bg-white">
                 <nav class="navbar navbar-expand-lg navbar-light w-100">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" 

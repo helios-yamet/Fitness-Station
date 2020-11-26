@@ -8,6 +8,7 @@
 </div>
 {% endblock %}
 {% block content %}
+<!--Display image cards, hold each individual product-->
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
@@ -19,11 +20,13 @@
                 </a>
                 {% else %}
                 <a href="{% url 'product_detail' product.id %}">
+                <!--Display no image png to user, if no product image provided-->
                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 </a>
                 {% endif %}
             </div>
         </div>
+        <!--Product name and details, informs user of each product item-->
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-4 mt-md-4">
                 <p class="mb-0">
@@ -38,6 +41,7 @@
                 <p class="mt-3">{{ product.description }}</p>
                 <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                     {% csrf_token %}
+                    <!--Product size options, allows user to pick the right size for them-->
                     <div class="form-row">
                         {% with product.has_sizes as s %}
                         {% if s %}
@@ -54,6 +58,7 @@
                         {% endif %}
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
+                            <!--Decrement quantity button, allows user to remove product quantities-->
                             <div class="form-group w-50">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -64,6 +69,7 @@
                                         </span>
                                         </button>
                                     </div>
+                                    <!--Increment quantity button, allows user to increase product quantity-->
                                     <input class="form-control qty_input" type="number"
                                         name="quantity" value="1" min="1" max="99"
                                         data-item_id="{{ product.id }}"
@@ -79,6 +85,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!--Keep shopping button, allows user to go back to product page-->
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <a href="{% url 'products' %}" class="btn btn-warning rounded-0 btn-lg text-uppercase mt-5">
                             <span class="icon">
