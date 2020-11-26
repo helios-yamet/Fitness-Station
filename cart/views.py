@@ -20,4 +20,3 @@ def add_to_cart(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
-    
