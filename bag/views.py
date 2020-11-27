@@ -9,7 +9,7 @@ from products.models import Product
 
 def view_bag(request):
     """A view that renders the cart contents page"""
-    return render(request, "cart/cart.html")
+    return render(request, "bag/bag.html")
 
 
 def add_to_bag(request, item_id):
