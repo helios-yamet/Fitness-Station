@@ -15,15 +15,15 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """Add a quantity of the specified product to the cart"""
 
-    quantity = int(request.POST.get('quantity'))
+    quantity = str(request.POST.get('quantity'))
     size = None
     if 'product_size' in request.POST:
         size = request.POST['product_size']
-    cart = request.session.get('cart', {})
-    product = Product.objects.get(id=item_id)
-    redirect_url = request.POST.get('redirect_url')
+        cart = request.session.get('cart', {})
+        product = Product.objects.get(id=item_id)
+        redirect_url = request.POST.get('redirect_url')
 
-    # If item has sizes, organize by item_id and then size
+# If item has sizes, organize by item_id and then size
     if size:
         if item_id in list(cart.keys()):
             print(cart[item_id])['items_by_size']
@@ -36,7 +36,8 @@ def add_to_cart(request, item_id):
         else:
             cart[item_id] = {'items_by_size': {size: quantity}}
             messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
-    # Otherwise organize only by item_id
+
+# Otherwise organize only by item_id
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
@@ -75,6 +76,7 @@ def adjust_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
+
 
 def remove_from_cart(request, item_id):
     """Set the quantity of the give item to 0"""
