@@ -2,16 +2,16 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
 from .forms import OrderForm
-from cart.contexts import cart.contents
+from bag.contexts import bag_contents
 
 
 def checkout(request):
-    cart = request.session.get('cart', {})
-    if not cart:
+    bag = request.session.get('bag', {})
+    if not bag:
         messages.error(request, "There's nothing in your cart at the moment")
         return redirect(reverse('products'))
 
-    current_cart = cart_contents(request)
+    current_bag = bag_contents(request)
     order_form = OrderForm()
     template = 'checkout/checkout.html'
     context = {
