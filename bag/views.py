@@ -48,12 +48,13 @@ def add_to_bag(request, item_id):
 
 def adjust_bag(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
-    quantity = str(request.POST.get('quantity'))
+
+    product = get_object_or_404(Product, pk=item_id)
+    quantity = int(request.POST.get('quantity'))
     size = None
     if 'product_size' in request.POST:
         size = request.POST['product_size']
     bag = request.session.get('bag', {})
-    product = Product.objects.get(id=item_id)
 
     if size:
         if quantity > 0:
@@ -61,10 +62,12 @@ def adjust_bag(request, item_id):
             messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
         else:
             del bag[item_id]['items_by_size'][size]
+            if not bag[item_id]['items_by_size']:
+                bag.pop(item_id)
             messages.success(request, f'Removed size {size.upper()} {product.name} from your bag')
     else:
         if quantity > 0:
-            cart[item_id] = quantity
+            bag[item_id] = quantity
             messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
         else:
             bag.pop(item_id)
@@ -72,6 +75,7 @@ def adjust_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
+
 
 
 def remove_from_bag(request, item_id):
