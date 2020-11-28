@@ -1,9 +1,11 @@
 argh==0.26.2
 asgiref==3.3.1
 bag==3.0.0
+checkout==0.2.0
 dj-database-url==0.5.0
 Django==3.1.3
 django-allauth==0.43.0
+django-countries==6.1.3
 django-crispy-forms==1.10.0
 oauthlib==3.1.0
 Pillow==8.0.1
