@@ -20,33 +20,33 @@ html {
 }
 
 .btn-black {
-    background: black;
-    color: white;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 0.0625em solid rgb(252, 178, 18);
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
-    color: white !important;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .text-black {
-    color: #000 !important;
+    color:rgb(0, 0, 0);
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 0.0625em solid rgb(0, 0, 0);
 }
 
 .bg-black {
-    background: #000 !important;
+    background: rgb(0, 0, 0);
 }
 
 .overlay {
@@ -60,16 +60,16 @@ html {
 }
 
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .btt-button {
-    height: 42px;
-    width: 42px;
+    height: 2.625em;
+    width: 2.625em;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 0.625em;
+    right: 0.625em;
 }
 
 .btt-link,
@@ -79,7 +79,7 @@ a.category-badge > span.badge:hover {
 }
 
 input[name='q']::placeholder {
-    color: #aab7c4;
+    color: rgb(181, 179, 174);
 }
 
 /* ------------------------------- bootstrap toasts */
