@@ -12,6 +12,9 @@ import stripe
 import json
 
 
+stripe.api_key = settings.STRIPE_SECRET
+
+
 @require_POST
 def cache_checkout_data(request):
     try:
