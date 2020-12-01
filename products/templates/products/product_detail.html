@@ -20,8 +20,8 @@
                 </a>
                 {% else %}
                 <a href="{% url 'product_detail' product.id %}">
-                <!--Display no image png to user, if no product image provided-->
-                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    <!--Display no image png to user, if no product image provided-->
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 </a>
                 {% endif %}
             </div>
@@ -30,7 +30,7 @@
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-4 mt-md-4">
                 <p class="mb-0">
-                <strong>{{ product.name }}</strong>
+                    <strong>{{ product.name }}</strong>
                 </p>
                 <p class="lead mb-0 text-left font-weight-italic">${{ product.price }}</p>
                 {% if product.rating %}
@@ -104,7 +104,6 @@
     </div>
 </div>
 {% endblock %}
-
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
