@@ -9,11 +9,6 @@ from .forms import ProductForm
 # Create your views here.
 
 
-def products_home(request):
-    """A homepage view introducing the user to the site"""
-    return render(request, "products/products_home.html")
-
-
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
