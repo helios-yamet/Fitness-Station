@@ -1,10 +1,10 @@
+// This is just a sample script. Paste your real code (javascript or HTML) here.
 /*
     Core logic/payment flow for this comes from here:
     https://stripe.com/docs/payments/accept-a-payment
     CSS from here: 
     https://stripe.com/docs/stripe-js
 */
-
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
@@ -24,11 +24,13 @@ var style = {
         iconColor: '#dc3545'
     }
 };
-var card = elements.create('card', {style: style});
+var card = elements.create('card', {
+    style: style
+});
 card.mount('#card-element');
 
 // Handle realtime validation errors on the card element
-card.addEventListener('change', function (event) {
+card.addEventListener('change', function(event) {
     var errorDiv = document.getElementById('card-errors');
     if (event.error) {
         var html = `
@@ -48,7 +50,9 @@ var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
-    card.update({ 'disabled': true});
+    card.update({
+        'disabled': true
+    });
     $('#submit-button').attr('disabled', true);
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
@@ -63,7 +67,9 @@ form.addEventListener('submit', function(ev) {
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
-            card.update({ 'disabled': false});
+            card.update({
+                'disabled': false
+            });
             $('#submit-button').attr('disabled', false);
         } else {
             if (result.paymentIntent.status === 'succeeded') {
