@@ -10,16 +10,14 @@ from bag.contexts import bag_contents
 
 import stripe
 import json
-
-
-stripe.api_key = settings.STRIPE_SECRET
+import os
 
 
 @require_POST
 def cache_checkout_data(request):
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
-        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.api_key = settings.STRIPE_SECRET
         stripe.PaymentIntent.modify(pid, metadata={
             'bag': json.dumps(request.session.get('bag', {})),
             'save_info': request.POST.get('save_info'),
@@ -33,8 +31,8 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
-    stripe_public_key = settings.STRIPE_PUBLIC_KEY
-    stripe_secret_key = settings.STRIPE_SECRET_KEY
+    stripe_public_key = os.environ.get('STRIPE_PUBLISHABLE')
+    stripe_secret_key = os.environ.get('STRIPE_SECRET')
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
@@ -109,7 +107,6 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': pk_live_51Hs54nJRE250pDbbTtQVDIj4pjggXEsKgrUY1wrpByCkucTM4HDjHOHkLXvFScX7e1v73I2h7n937GWJCSZyxWch00P8GIMFld,
         'client_secret': intent.client_secret,
     }
 
