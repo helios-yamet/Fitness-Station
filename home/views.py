@@ -13,4 +13,6 @@ def index(request):
     sort = None
     direction = None
 
-    return render(request, 'home/index.html')
+    context = {"products": products}
+
+    return render(request, 'home/index.html', context)

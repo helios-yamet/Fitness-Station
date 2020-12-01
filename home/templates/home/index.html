@@ -13,10 +13,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Explore our Special Offers</h2>
+            <h2 class="logo-font text-warning">Explore our Special Offers</h2>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-            <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+            <span class="p-2 mt-2 badge badge-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
             </a>
             {% endfor %}
             <hr class="w-50 mb-1">
@@ -26,7 +26,7 @@
         {% for product in products %}
         <!--Display image cards, hold each individual product image, name, price and rating-->
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="card h-100 border-0">
+            <div class="card-decks h-100 border-0">
                 {% if product.image %}
                 <a href="{% url 'product_detail' product.id %}">
                 <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
