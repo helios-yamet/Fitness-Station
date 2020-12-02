@@ -86,22 +86,22 @@ input[name='q']::placeholder {
 
 .card {
     border-radius: 1em;
-    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    box-shadow: 0 0.375em 0.625em rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
     transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     cursor: pointer;
 }
 
 .card:hover{
     transform: scale(1.02);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    box-shadow: 0 0.625em 1.25em rgba(0,0,0,.12), 0 0.25em 0.5em rgba(0,0,0,.06);
 }
 
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
     position: fixed;
-    top: 72px;
-    right: 15px;
+    top: 4.5em;
+    right: 0.9375em;
     z-index: 99999999999;
 }
 
@@ -110,48 +110,48 @@ input[name='q']::placeholder {
 }
 
 .toast-capper {
-    height: 2px;
+    height: 0.125em;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0; 
     height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
+    border-left: 0.25em solid transparent;
+    border-right: 0.25em solid transparent; 
+    border-bottom:  0.625em solid rgb(0, 0, 0);
     position: absolute;
-    top: -10px;
-    right: 36px;
+    top:  -0.625em;
+    right: 2.25em;
 }
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
-    border-bottom-color: #007bff !important;
+    border-bottom-color: rgb(66, 114, 245);
 }
 
 .arrow-secondary {
-    border-bottom-color: #6c757d !important;
+    border-bottom-color: rgb(166, 166, 166);
 }
 
 .arrow-success {
-    border-bottom-color: #28a745 !important;
+    border-bottom-color: rgb(66, 245, 66);
 }
 
 .arrow-danger {
-    border-bottom-color: #dc3545 !important;
+    border-bottom-color: rgb(252, 3, 3);
 }
 
 .arrow-warning {
-    border-bottom-color: #ffc107 !important;
+    border-bottom-color: rgb(252, 178, 18);
 }
 
 .arrow-info {
-    border-bottom-color: #17a2b8 !important;
+    border-bottom-color: rgb(3, 240, 252);
 }
 
 .arrow-light {
-    border-bottom-color: #f8f9fa !important;
+    border-bottom-color: rgb(255, 255, 255);
 }
 
 .arrow-dark {
@@ -177,11 +177,11 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    color: rgb(166, 166, 166); /* text-secondary */
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: rgb(0, 0, 0);
     border-radius: 0;
 }
 
@@ -190,7 +190,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
+    color: rgb(195, 201, 201);
 }
 
 .allauth-form-inner-content button,
@@ -198,15 +198,15 @@ input[name='q']::placeholder {
 	/* btn */
 	display: inline-block;
     font-weight: 400;
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -218,13 +218,13 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
-    border-color: #222;
+	color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: rgb(3, 240, 252); /* text-info */
 }
 
 /* Product Form */
@@ -246,12 +246,12 @@ input[name='q']::placeholder {
 
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
-    border-color: #dc3545;
+    border-color: rgb(252, 3, 3);
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
+    background-color: rgb(252, 3, 3);
+    border-color: rgb(252, 3, 3);
     border-radius: 0;
 }
 
@@ -303,8 +303,8 @@ input[name='q']::placeholder {
         padding: .375rem .375rem;
     }
 
-    .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-black.rounded-0.btn-lg {
+    .btn.btn-outline-success.rounded-0.btn-lg,
+    .btn.btn-warning.rounded-0.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
     }
