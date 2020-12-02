@@ -2,4 +2,4 @@ import os
 
 os.environ["STRIPE_PUBLISHABLE"] = "pk_live_51Hs54nJRE250pDbbTtQVDIj4pjggXEsKgrUY1wrpByCkucTM4HDjHOHkLXvFScX7e1v73I2h7n937GWJCSZyxWch00P8GIMFld"
 
-os.environ["STRIPE_SECRET_KEY"] = "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"
+os.environ["STRIPE_SECRET"] = "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"
