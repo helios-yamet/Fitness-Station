@@ -8,24 +8,38 @@
 </div>
 {% endblock %}
 {% block content %}
-<!--Call product categories-->
-    <div class="card-deck">
-      <div class="card text-center text-light bg-warning mb-3">
-        <img src="media/homepage_images/workout-plan-category.jpg" class="card-img-top" alt="Workout plans category image">
-        <div class="card-body">
-            <h5 class="card-title">Workout Plans</h5>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<div class="card-deck">
+    <div class="col-sm-6">
+        <div class="card text-center text-light bg-warning mb-3">
+            <img src="media/homepage_images/workout-plan-category.jpg" class="card-img-top" alt="Workout plans category image">
+            <div class="card-body">
+                <h5 class="card-title">Workout Plans</h5>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
         </div>
     </div>
-    <div class="card text-center text-light font-bold bg-warning mb-3">
-        <img src="media/homepage_images/mens-activewear.jpg" class="card-img-top" alt="Activewear category image">
-        <div class="card-body">
-            <h5 class="card-title">Activewear</h5>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div class="col-sm-6">
+        <div class="card text-center text-light bg-warning mb-3">
+            <img src="media/homepage_images/mens-activewear.jpg" class="card-img-top" alt="Activewear category image">
+            <div class="card-body">
+                <h5 class="card-title">Activewear</h5>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
         </div>
     </div>
+    <div class="col-sm-6">
+        <div class="card text-center text-light bg-warning mb-3">
+            <img src="media/homepage_images/accessories-category.jpg" class="card-img-top" alt="Accessories card image">
+            <div class="card-body">
+                <h5 class="card-title">Accessories</h5>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+<div class="col-sm-6">
     <div class="card text-center text-light bg-warning mb-3">
         <img src="media/homepage_images/accessories-category.jpg" class="card-img-top" alt="Accessories card image">
         <div class="card-body">
@@ -34,29 +48,6 @@
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
     </div>
-  </div>
-    {% for product in products %}
-    <!--for loop counter, add site responsiveness, this improves user experience-->
-    {% if forloop.counter|divisibleby:1 %}
-    <div class="col-12 d-sm-none mb-5">
-        <hr>
-    </div>
-    {% endif %}
-    {% if forloop.counter|divisibleby:2 %}
-    <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-        <hr>
-    </div>
-    {% endif %}
-    {% if forloop.counter|divisibleby:3 %}
-    <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-        <hr>
-    </div>
-    {% endif %}
-    {% if forloop.counter|divisibleby:4 %}
-    <div class="col-12 d-none d-xl-block mb-5">
-        <hr>
-    </div>
-    {% endif %}
-    {% endfor %}
+</div>
 </div>
 {% endblock %}
