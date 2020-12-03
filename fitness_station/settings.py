@@ -27,6 +27,7 @@ if os.path.exists("env.py"):
 
 STRIPE_PUBLISHABLE = os.environ.get("STRIPE_PUBLISHABLE")
 STRIPE_SECRET = os.environ.get("STRIPE_SECRET")
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
