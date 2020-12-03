@@ -1,15 +1,6 @@
-from django.conf import settings
 from django.http import HttpResponse
-from django.views.decorators.http import require_POST
-from django.views.decorators.csrf import csrf_exempt
-
-from checkout.webhook_handler import StripeWH_Handler
-
-import stripe
 
 
-@require_POST
-@csrf_exempt
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
@@ -21,23 +12,23 @@ class StripeWH_Handler:
         Handle a generic/unknown/unexpected webhook event
         """
         return HttpResponse(
-            content=f'Unhandled Webhook received: {event["type"]}',
+            content=f'Unhandled webhook received: {event["type"]}',
             status=200)
 
     def handle_payment_intent_succeeded(self, event):
         """
-        Handle the payment_intent.succeeded webhook from stripe
+        Handle the payment_intent.succeeded webhook from Stripe
         """
+        intent = event.data.object
+        print(intent)
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
-            status=200
-        )
+            status=200)
 
     def handle_payment_intent_payment_failed(self, event):
         """
-        Handle the payment_intent.payment_failed webhook from stripe
+        Handle the payment_intent.payment_failed webhook from Stripe
         """
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
-            status=200
-        )
+            status=200)
