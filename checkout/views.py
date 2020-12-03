@@ -29,6 +29,7 @@ def cache_checkout_data(request):
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
+
 def checkout(request):
     stripe_public_key = os.environ.get("STRIPE_PUBLIC_KEY")
     stripe_secret_key = os.environ.get("STRIPE_SECRET_KEY")
