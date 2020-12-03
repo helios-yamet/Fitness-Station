@@ -251,3 +251,7 @@ LOGIN_REDIRECT_URL = '/success' - Url to redirect to, once logged in.
 #### Stripe Testing
 
 *Stripe provide a number of tests that ensure card information cannot be duplicated, outright stolen or if incorrect information is inputted*
+
+* To test Stripe card payments I used the Stripe testing documentation: https://stripe.com/docs/testing
+
+To test whether submitting order works as expected
