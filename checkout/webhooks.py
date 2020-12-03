@@ -1,6 +1,7 @@
 import json
 from django.http import HttpResponse
 
+
 def webhook(request):
     """Listen for webhooks from stripe"""
     # Setup
