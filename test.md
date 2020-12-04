@@ -348,3 +348,8 @@ For orders not found immediately, for each second out of five total seconds, the
 attempt = 1
 while attempt <= 5:
 ```
+
+To test the above functionality, I made test order using a test card number taken from stripe testing documents: https://stripe.com/docs/testing 
+and then check the stripe webhook response: 
+
+* 
