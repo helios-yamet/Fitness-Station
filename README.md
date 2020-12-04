@@ -53,11 +53,26 @@ Fitness station has a thriving exercise community, that I aim to capture, allowi
 
 ## UI 
 
-Using the five planes of UX model created by Jesse Garrett, below describes the project from concept to surface levels:
+Using the five planes of UX model created by Jesse Garrett, below describes the project from concept to surface level:
 
 - 1
+* Why do we create a product? 
+  * To sell our fitness station goods.
+
+* What are our goals? 
+  * Create an intuitive eccommence site for the local gym in the community, providing exercise plans, branded merchardise and accessories.
+
+* Who are our users? Who are we making the product for?
+  * The site is open to all online users, especially members of the gym.
+
+* What tasks will we help users solve?
+  * The site will assist users in purchasing their desired products.
+
+* Why will they use our solution?
+  * Saves users time from having to visit the gym to purchase goods.
 
 - 2
+* 
 
 - 3
 
