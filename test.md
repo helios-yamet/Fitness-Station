@@ -338,3 +338,13 @@ And the second assumming that an order has been placed, responding with a succes
 However if there is no order, attempt create it using the json version in payment intent and if anything does go wrong(user loses wifi connection for example),
 the order will be deleted. 
 This prevents any unauthorised orders and protects the customer.
+
+To prevent potential processes being slower than other thereby causing a potential error, again I applied a delay code mechanism taken from project boutique Ado:
+https://courses.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/90cda137ebaa461894ba8c89cd83291a/?activate_block_id=block-v1%3ACodeInstitute%2BFSF_102%2BQ1_2020%2Btype%40sequential%2Bblock%4090cda137ebaa461894ba8c89cd83291a
+
+For orders not found immediately, for each second out of five total seconds, the webhook handler attempts to find the order five different times.
+
+```
+attempt = 1
+while attempt <= 5:
+```
