@@ -527,6 +527,23 @@ To deploy this app to Heroku you need to follow the steps below:
   </div>
   </details>
 
+## Travis continuous integration 
+
+Continuous Integration is the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. This is where Travis CI comes in.
+
+As a continuous integration platform, Travis CI supports the development process by automatically building and testing code changes, providing immediate feedback on the success of the change. Travis CI can also automate other parts of the development process by managing deployments and notifications.
+
+#### Instructios on how to integrate Travis CI:
+*See https://docs.travis-ci.com/user/tutorial/ for full documentation*
+
+- To start using Travis CI, make sure you have:
+
+* A GitHub or Bitbucket or GitLab.
+
+* Owner permission for a project hosted on the above platforms.
+
+
+
 ------
 
 ## Acknowledgements
