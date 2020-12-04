@@ -89,6 +89,14 @@ Fitness station has a thriving exercise community, that I aim to capture, allowi
 
 - As a user, after I have made a purchase I would like to leave review of the product I have bought, because I want to provide my opinion of a product.
 
+#### Blog 
+
+- As a returning user, I would like to chat about experience of the product, as I'd like to give my feedback on products.
+
+- As a regular Gym member, I want to blog about my daily workouts, as I want to share my experience with others.
+
+- As a social media influencer who visits the gym on week, I want to entertain my followers by blogging about experiences, as this increases my online following.
+
 #### Shopping Cart and Checkout
 
 -  As a user I want a notification when I make a purchase, so I know that the payment has gone through.
