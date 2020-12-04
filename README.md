@@ -14,6 +14,7 @@ __Get Fit with Fitness Station__
 ## Contents
 * [Project purpose](#Project-Purpose)
      * [UX](#UX)
+     * [UI](#UI)
 * [User-Stories](#User-Stories)
      * [Gym-members-and-subscribers](#Gym-members-and-Subscribers)
      * [Gym-owner](#Gym-Owner)
@@ -49,6 +50,20 @@ Fitness station has a thriving exercise community, that I aim to capture, allowi
 
 
 # UX
+
+## UI 
+
+Using the five planes of UX model created by Jesse Garrett, below describes the project from concept to surface levels:
+
+- 1
+
+- 2
+
+- 3
+
+- 4
+
+- 5
 
 
 ## User Stories
