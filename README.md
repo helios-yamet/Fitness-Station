@@ -156,16 +156,16 @@ Fitness station has a thriving exercise community, that I aim to capture, allowi
 
 ### There are three key sections that make up the design of the platform:
 
-1.  Homepage, Products, profile page, and Order history
+1.  Homepage, Products, profile page, Order history and blog page
 
 2. Registration& Login pages and verify, confirmation pages
 
 3. Shopping Cart and Checkout pages
 
 
-The website design is inspired by other e-sites such as Amazon and ebay, which introduce the site primarily through imagery, images of the products under special& latest offers headlines; which encourages the user to explore our products further. The reason for displaying offers on the homepage, this is to get the user to look at the products on sale and for them to buy those products, this increases the likelihood of products being sold. Also the home page has a special offer banner near the top, this allows for the gym owner to present special offers tailored for a particular week, month, or a specific season such as Christmas. 
+The website design is inspired by other e-sites such as Amazon and ebay, which introduce the site primarily through imagery, images of the product categories on the homepage to be exact; which encourages the user to explore our products immediately. The reason for this display on the homepage, is to get immediate user interaction with purchasing those products, which increases the likelihood of products being sold. The goal being to simplify users buying products and keeping that process simple is key.
 
-On the homepage the user can explore the site using the search bar on the navigation, shop by category tabs just above the search bar, which takes user to the products and if they clicked the merchandise tab the page will show merchandise product only, same vice versa for workout plans. On the product page there are filters place at the top of the page below the navigation bar; which allows the user to sort through all the products until they find what they like.
+On the homepage the user can explore the site using the search bar on the navigation, shop by category tabs just below the search bar, which takes user to the products and if they clicked the merchandise tab the page will show merchandise product only, same vice versa for workout plans. On the product page there are filters place at the top of the page below the navigation bar; which allows the user to sort through all the products until they find what they like.
 
 See full article on design here __https://github.com/michodgs25/Fitness-Station/issues/1__
 
