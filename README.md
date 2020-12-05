@@ -124,9 +124,19 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 - 4 __Layout Level__
 
-* 
+  * For each page I asked the below questions:
 
-- 5 __Surface Level
+  * Does the prototype meet the required functionality and information architecture requirements?
+
+  * Are content blocks conveniently located?
+
+  * Is the system convenient for users?
+ 
+  * Do the prototypes meet industry requirements and standards?
+
+  * Is this the best solution, or is it possible to optimize and improve something?
+
+- 5 __Surface Level__
 
 
 ## User Stories
