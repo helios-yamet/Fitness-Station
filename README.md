@@ -99,9 +99,30 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
   * A profile so users can view previous orders; plus create, view, update and delete shipping/billing details form.
   * About gym information, inform potential new members of gym location, facilities and contact details.
 
-- 3 
+- 3 __Structure Level__
+ 
+ * How to help the user solve the problem in the minimum amount of time and the smallest number of steps?
+  
+   * A primary goal of site is to make purchasing our products as simple as possible; a main navigation bar will be implemented across site, this allows users to access every
+    page within seconds. 
+   
+   * Once user has inputted shipping/billing details once, those details are saved to the user profile and the checkout form is auto-filled, for future transactions, ensuring         a smooth checkout experience. 
+   
+   * If user shipping/billing details have changed; the user can update the existing details in their user profile.
+   
+   * If user has forgotten his/her password, they can reset it by entering their email address and a reset email will be sent.
+   
+   * If user is unsure of any past order costs, all orders are logged in the user profile.
+ 
+* Is the architecture of the project understood by users?
+   
+   * The project will apply well renowned fonts& icons and each to be defined by a title introducing the page which informs the user of the type of page.
+  
+* Does the design meet user expectations?
 
-- 4
+   * The design will be aim to meet user expectations by strategically placing fitness station logo and signature colourways which users identify the fitness station brand by.
+
+- 4 
 
 - 5
 
