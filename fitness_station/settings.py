@@ -25,8 +25,8 @@ SECRET_KEY = SECRET_KEY = os.environ.get("SECRET_KEY")
 if os.path.exists("env.py"):
     import env
 
-STRIPE_PUBLISHABLE = os.environ.get("STRIPE_PUBLISHABLE")
-STRIPE_SECRET = os.environ.get("STRIPE_SECRET")
+STRIPE_PUBLISHABLE = os.environ.get("STRIPE_PUBLIC_KEY")
+STRIPE_SECRET = os.environ.get("STRIPE_SECRET_KEY")
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
