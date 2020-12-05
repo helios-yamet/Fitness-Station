@@ -55,7 +55,8 @@ Fitness station has a thriving exercise community, that I aim to capture, allowi
 
 Using the five planes of UX model created by Jesse Garrett, below describes the project from concept to surface level:
 
-- 1
+- 1 __Strategy Level__
+
 * Why do we create a product? 
   * To sell our fitness station goods.
 
@@ -71,10 +72,34 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 * Why will they use our solution?
   * Saves users time from having to visit the gym to purchase goods.
 
-- 2
-* 
+- 2 __Feature Level__
 
-- 3
+* What functions are needed to solve custom tasks?
+
+  * We will need a safe& secure payment system to take payments, to prevent transaction errors. 
+  * Order confirmation in user profile& email sent to address provided, so user knows the order has been processed. 
+  * A login& registration function with secure authentication, ensure users have an account with us. 
+  * A sort products category& products filter, so user can find the product they want.
+  * Shopping bag function, user can view, update and delete all products placed in bag.
+  * A GET& POST function to post blog posts, so user write of their product experience.
+  * Site notifications, when user adds product bag, the site should inform user that the product has been added.
+   
+
+* What functionalities do competitors offer?
+
+   * Product page filter, filters down product by gender, size and category.
+   * A variety of exercise plans, for different user age, gender, abilty and goals.
+   * Ability to share purchased products to social media.
+   * User search bar, user can type key words to find the product they are after.
+
+* What content do users need?
+
+  * Suitable products that enhance the gym going experience.
+  * Users need a description of each product.
+  * A profile so users can view previous orders; plus create, view, update and delete shipping/billing details form.
+  * About gym information, inform potential new members of gym location, facilities and contact details.
+
+- 3 
 
 - 4
 
