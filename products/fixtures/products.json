@@ -1,0 +1,394 @@
+[
+  {
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "men's_activewear",
+      "friendly_name": "Men's Activewear"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "women's_activewear",
+      "friendly_name": "Women's Activewear"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "accessories",
+      "friendly_name": "Accessories"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+      "name": "workout_plans",
+      "friendly_name": "Workout Plans"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "sku": "pp5001340155",
+      "name": "Fitness Station Brand T-shirt",
+      "description": "Fitness Station's very own orange short sleeve T, perfect for every workout or as loungewear.",
+      "has_sizes": true,
+      "price": "40.00",
+      "rating": "5.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/mens-fitness-station-orange-t.jpg",
+      "image": "mens-fitness-station-orange-t.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "sku": "pp5001340156",
+      "name": "Havana Boxing T-shirt",
+      "description": "Havana boxing light pink short-sleeve T-shirt, great for those post workouts",
+      "has_sizes": true,
+      "price": "35.00",
+      "rating": "4.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/mens-havana-t.jpg",
+      "image": "havana-boxing-T.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "sku": "pp5001340157",
+      "name": "Adidas short sleeve T-shirt",
+      "description": "Short sleeve Adidas T-shirt, perfect for your post-workout recovery",
+      "has_sizes": true,
+      "price": "25.00",
+      "rating": "3.80",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/mens-addidas-short-sleeve-t.jpg",
+      "image": "mens-addidas-short-sleeve-t.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "sku": "pp5001340158",
+      "name": "GymShark Long Sleeve T-shirt",
+      "description": "Perfect for your winter workouts.",
+      "has_sizes": true,
+      "price": "45.00",
+      "rating": "4.90",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/mens-gymshark-longsleeve-T.jpg",
+      "image": "mens-gymshark-longsleeve-T.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "category": 1,
+      "sku": "pp5001340159",
+      "name": "Black Gym Shorts",
+      "description": "Great for your next personal best in all fitness aspects.",
+      "has_sizes": true,
+      "price": "25.00",
+      "rating": "4.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/mens-gymshark-shorts.jpg",
+      "image": "black-shorts.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "category": 1,
+      "sku": "pp5001340160",
+      "name": "GymShark Black leg-ins",
+      "description": "Great fitted workout leg-ins, that allow full range of motion for your workouts.",
+      "has_sizes": true,
+      "price": "55.00",
+      "rating": "4.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/mens-gymshark-legins.jpg",
+      "image": "mens-gymshark-legins.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "category": 1,
+      "sku": "pp5001340162",
+      "name": "Nike men's under leg-ins",
+      "description": "Nike red leg-ins, perfect for cold winter workouts, keeping your core temperature level and providing a snug fit.",
+      "has_sizes": true,
+      "price": "60.00",
+      "rating": "4.50",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/men's-red-legins.jpg",
+      "image": "mens-red-legins.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "category": 1,
+      "sku": "pp5001340163",
+      "name": "Nike Thick Socks",
+      "description": "Perfect socks for the winter, providing cushioning and keep your feet protected.",
+      "has_sizes": true,
+      "price": "20.00",
+      "rating": "3.50",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/mens-nike-thick-socks%23.jpg",
+      "image": "mens-nike-thick-socks.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "category": 2,
+      "sku": "pp5001340165",
+      "name": "Nike zip up jumper",
+      "description": "Your perfect winter running jumper, the material is designed to regulate your temperature and, the zip allows the athlete to put on or take off with ease.",
+      "has_sizes": true,
+      "price": "45.99",
+      "rating": "4.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/women's-activewear/womens-nike-zip-jumper.jpg",
+      "image": "womens-nike-zip-jumper.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "category": 2,
+      "sku": "pp5001340167",
+      "name": "Lime green running t-shirt",
+      "description": "Perfect for your summer distance runs; the lightweight fabric helps you keep cool and fit allows you a run without any distractions.",
+      "has_sizes": true,
+      "price": "15.00",
+      "rating": "3.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/women's-activewear/womens-lime-green-t.jpg",
+      "image": "womens-lime-green-t.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "category": 2,
+      "sku": "pp5001340170",
+      "name": "Womens gym shorts",
+      "description": "Perfect for your next trip to the gym, plus at great price.",
+      "has_sizes": true,
+      "price": "9.99",
+      "rating": "3.50",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/women's-activewear/womens'-blue-shorts.jpg",
+      "image": "womens-blue-shorts.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "category": 2,
+      "sku": "pp5001340178",
+      "name": "Women's ZXU Leg-ins",
+      "description": "Grab yourself some brand new ZXU leg-in which shows off your hard work at the gym and provide great stability to those grueling workouts.",
+      "has_sizes": true,
+      "price": "50.00",
+      "rating": "4.50",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/women's-activewear/womens-black-legins.jpg",
+      "image": "womens-black-legins.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+      "category": 2,
+      "sku": "pp5001340179",
+      "name": "Purple gym vest",
+      "description": "Prepare for the summer with this bright purple gym vest, which provides a great fit and wicks away any excess moisture.",
+      "has_sizes": true,
+      "price": "12.00",
+      "rating": "3.50",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/women's-activewear/womens-purple-vest.jpg",
+      "image": "womens-purple-vest.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+      "category": 3,
+      "sku": "pp5001340180",
+      "name": "Yoga ball",
+      "description": "Purchase this yoga ball, to enhance your next gym session.",
+      "has_sizes": false,
+      "price": "25.00",
+      "rating": "3.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/accessories/yoga-inflatable-ball.jpg",
+      "image": "yoga-inflatable-ball.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+      "category": 3,
+      "sku": "pp5001340183",
+      "name": "Gym workout Water Bottle",
+      "description": "Keep yourself well hydrated for your workouts with this state of the art steel bottle.",
+      "has_sizes": false,
+      "price": "22.99",
+      "rating": "4.20",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/accessories/workout-bottle.jpg",
+      "image": "workout-bottle.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+      "category": 3,
+      "sku": "pp500134089",
+      "name": "Jump Rope",
+      "description": "Power your next cardio workout with this jump rope.",
+      "has_sizes": false,
+      "price": "30.00",
+      "rating": "5.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/accessories/skipping-rope.jpg",
+      "image": "skipping-rope.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+      "category": 3,
+      "sku": "pp5001340191",
+      "name": "2kg Plastic Barbells",
+      "description": "Power your next workout with these blue barbells, great for assisting your body weight workouts.",
+      "has_sizes": false,
+      "price": "11.99",
+      "rating": "3.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/accessories/fitness-weights-background-floor-wall-exercise.jpg",
+      "image": "fitness-weights-background-floor-wall-exercise.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+      "category": 3,
+      "sku": "pp5001340196",
+      "name": "5kg(each) kettle bell set",
+      "description": "Boost your next work, with these stainless steel kettlebells.",
+      "has_sizes": false,
+      "price": "34.99",
+      "rating": "4.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/accessories/kettle-bells.jpg",
+      "image": "kettle-bells.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+      "category": 4,
+      "sku": "pp500135009",
+      "name": "Running Workout plan",
+      "description": "Attain your next personal best running time with our running program; that our personal trainers will tailor the program to your specific goals. The program will run for four months; split into four quarters which focus on your running form, pace, endurance, flexibility, and recovery methods.",
+      "has_sizes": false,
+      "price": "400.00",
+      "rating": "4.50",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/workout-plans/running-plan.jpg",
+      "image": "running-plan.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+      "category": 4,
+      "sku": "pp500135995",
+      "name": "Weight Lifting Plan",
+      "description": "Boost your gains with our very own weight lifting program, which is designed specifically for improving your compound lifts such as the deadlift and bench press. The program lasts for a period of three months; focusing on power, endurance, lift-technique, form, and others.",
+      "has_sizes": false,
+      "price": "300.00",
+      "rating": "4.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/workout-plans/weight-lifting-plan.jpg",
+      "image": "weight-lifting-plan.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+      "category": 4,
+      "sku": "pp5001360699",
+      "name": "Yoga plan",
+      "description": "Achieve Zen levels of flexibility with our yoga plan, which in consultation with our yoga instructors is tailored to your individual ability. \r\nThe program duration lasts for a month, members can extend unlimited times if they would like.",
+      "has_sizes": false,
+      "price": "100.00",
+      "rating": "4.60",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/workout-plans/yoga-plan.jpg",
+      "image": "yoga-plan.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+      "category": 4,
+      "sku": "pp500138099",
+      "name": "Body Weight Plan",
+      "description": "Purchase our bodyweight plan and allow us to plan your next three months with workouts that you can do from anywhere with your body and a small space, being the only pieces of equipment you need.\r\nThe plan will focus on all upper, lower body, and core exercises.",
+      "has_sizes": false,
+      "price": "300.00",
+      "rating": "3.80",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/workout-plans/body-weight-plan.jpg",
+      "image": "body-weight-plan.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+      "category": 4,
+      "sku": "pp5001340055",
+      "name": "Hiit plan",
+      "description": "Short on time and need to complete your workouts as soon as possible? Burn fat fast with our HIIT training plan, each workout lasting only thirty minutes and is jam-packed with exercises that gives you a great burn. \r\n\r\nThe program duration lasts 6 months",
+      "has_sizes": false,
+      "price": "600.00",
+      "rating": "5.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/workout-plans/hiit-plan.jpg",
+      "image": "hiit-plan.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+      "category": 1,
+      "sku": "pp50013301787",
+      "name": "Gym Ankle socks",
+      "description": "Smash your next HIIT program with our slim ankle socks with great stability and range of motion.",
+      "has_sizes": true,
+      "price": "15.99",
+      "rating": "4.00",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/mens-gymshark-ankle-socks.jpg",
+      "image": "ankle-socks.jpg"
+    }
+  }
+]
