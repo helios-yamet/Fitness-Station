@@ -122,9 +122,11 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
    * The design will be aim to meet user expectations by strategically placing fitness station logo and signature colourways which users identify the fitness station brand by.
 
-- 4 
+- 4 __Layout Level__
 
-- 5
+* 
+
+- 5 __Surface Level
 
 
 ## User Stories
