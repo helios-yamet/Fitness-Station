@@ -19,11 +19,15 @@
   {% endif %}
   <a class="btn btn-outline-warning rounded-0" href="{% url 'account_login' %}">
 <span class="icon">
-        <i class="fas fa-chevron-left"></i>
+    <i class="fas fa-chevron-left"></i>
 </span>
   Back to Login
   </a>
-  <button type="submit">{% trans "Sign Up" %}</button>
+  <button class="btn btn-outline-success rounded-0" type="submit">{% trans "Sign Up" %}
+  <span class="icon">
+     <i class="fas fa-sign-in-alt"></i>
+</span>
+  </button>
 </form>
 
 {% endblock %}
