@@ -55,7 +55,7 @@ html {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: rgb(255, 255, 255);
 	z-index: -1;
 }
 
@@ -254,6 +254,11 @@ input[name='q']::placeholder {
     background-color: rgb(252, 3, 3);
     border-color: rgb(252, 3, 3);
     border-radius: 0;
+}
+
+/*verify email text padding*/
+.verify-title {
+    padding-top: 5em;
 }
 
 
