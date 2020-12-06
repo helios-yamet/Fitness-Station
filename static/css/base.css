@@ -205,7 +205,7 @@ input[name='q']::placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
+    background-color: rgb(0, 207, 10);
     border: 1px solid #000;
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -256,7 +256,7 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/*verify email text padding*/
+/*verify email text message*/
 .verify-title {
     padding-top: 5em;
 }
