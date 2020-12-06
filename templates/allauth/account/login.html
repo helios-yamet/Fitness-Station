@@ -3,10 +3,8 @@
 {% load account socialaccount %}
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 {% block inner_content %}
-
 <h3 class="logo-font mb-4">{% trans "Sign In" %}</h3>
 <hr>
-
 {% get_providers as socialaccount_providers %}
 {% if socialaccount_providers %}
 <p>{% blocktrans with site.name as site_name %}Please sign in with one
@@ -31,8 +29,16 @@
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
-    <a class="btn btn-outline-warning rounded-0" href="{% url 'home' %}">Home</a>
-    <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+    <a class="btn btn-outline-warning rounded-0" href="{% url 'home' %}">
+    <span class="icon">
+    <i class="fas fa-home"></i>
+    </span>
+    Home</a>
+    <a class="primaryAction btn btn-outline-success rounded-0" type="submit">
+    <span class="icon">
+    <i class="fas fa-sign-in-alt"></i>
+    </span>
+    {% trans "Sign In" %}</a>
     <p class="mt-2">
         <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
     </p>
