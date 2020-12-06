@@ -22,8 +22,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = SECRET_KEY = os.environ.get("SECRET_KEY")
 
-if os.path.exists("env.py"):
-    import env
 
 STRIPE_PUBLISHABLE = os.environ.get("STRIPE_PUBLIC_KEY")
 STRIPE_SECRET = os.environ.get("STRIPE_SECRET_KEY")
