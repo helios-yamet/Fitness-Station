@@ -28,7 +28,7 @@
         <script src="https://js.stripe.com/v3/">
             <script type="text/javascript">
 	    //<![CDATA[
-            Stripe.publishableKey = '{{ publishable }}';
+            settings.STRIPE_PUBLIC_KEY = '{{ STRIPE_PUBLIC_KEY }}';
         //]]>
     </script>
         {% endblock %}
