@@ -190,7 +190,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: rgb(195, 201, 201);
+    color: rgb(0, 0, 0;
 }
 
 .allauth-form-inner-content button,
@@ -224,7 +224,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content a {
-	color: rgb(3, 240, 252); /* text-info */
+	color: rgb(128, 132, 138); /* text-info */
 }
 
 /* Product Form */
