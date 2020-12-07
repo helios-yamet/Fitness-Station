@@ -27,15 +27,13 @@
         <!-- Stripe payment cdn -->
         <script src="https://js.stripe.com/v3/">
             <script type="text/javascript">
-	    //<![CDATA[
+            //<![CDATA[
             settings.STRIPE_PUBLIC_KEY = '{{ STRIPE_PUBLIC_KEY }}';
-        //]]>
-    </script>
+            //]]>
+        </script>
         {% endblock %}
-        
-    {% block extra_js %}
-    {% endblock %}
-    
+        {% block extra_js %}
+        {% endblock %}
         <title>Fitness Station{% block extra_title %}{% endblock %}</title>
     </head>
     <body>
@@ -95,11 +93,11 @@
                                 <div class="text-center">
                                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                     <p class="my-0">
-                                    {% if grand_total %}
+                                        {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
-                                    {% else %}
+                                        {% else %}
                                         $0.00
-                                    {% endif %}
+                                        {% endif %}
                                     </p>
                                 </div>
                             </a>
@@ -119,29 +117,23 @@
                 </nav>
             </div>
         </header>
-            {% if messages %}
+        {% if messages %}
         <div class="message-container">
             {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
+            {% with message.level as level %}
+            {% if level == 40 %}
+            {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+            {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+            {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+            {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+            {% endwith %}
             {% endfor %}
         </div>
-    {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
+        {% endif %}
         {% block page_header %}
         {% endblock %}
         {% block content %}
