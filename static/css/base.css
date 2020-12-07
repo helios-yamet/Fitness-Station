@@ -170,6 +170,15 @@ input[name='q']::placeholder {
     padding-top: 8em;
 }
 
+/*logout image*/
+.hero-image {
+    background-image: url("/media/sign-out/exit-sign.png");
+    height: 31.25em;
+    background-position: center; 
+    background-repeat: no-repeat;
+    padding-top:16em; 
+
+}
 
 /*--------------------------------- Verify email */
 /*verify email text message*/
