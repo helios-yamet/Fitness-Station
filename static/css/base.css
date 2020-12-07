@@ -155,13 +155,26 @@ input[name='q']::placeholder {
 }
 
 .arrow-dark {
-    border-bottom-color: #343a40 !important;
+    border-bottom-color: #343a40;
 }
 
 .bag-notification-wrapper {
-    height: 100px;
+    height: 6.25em;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* -------------------------------- sign out page */
+.logout-text {
+    text-align: center;
+    padding-top: 8em;
+}
+
+
+/*--------------------------------- Verify email */
+/*verify email text message*/
+.verify-title {
+    padding-top: 5em;
 }
 
 /* -------------------------------- Media Queries */
@@ -206,7 +219,7 @@ input[name='q']::placeholder {
     -ms-user-select: none;
     user-select: none;
     background-color: rgb(0, 207, 10);
-    border: 1px solid #000;
+    border: 1px solid rgb(0, 0, 0);
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -256,12 +269,6 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/*verify email text message*/
-.verify-title {
-    padding-top: 5em;
-}
-
-
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -273,7 +280,7 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 10.25em;
     }
 }
 
