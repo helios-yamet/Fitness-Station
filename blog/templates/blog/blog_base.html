@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <title>Fitness Station Blog</title>
         <meta name="google" content="notranslate" />
@@ -8,16 +7,14 @@
         <link rel="stylesheet" href="blog/static/blog/blog.css"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
-
     <body>
-
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}">Fitness Station</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
@@ -36,6 +33,21 @@
         </nav>
         {% block content %}
         <!-- Content Goes here -->
+        {% block sidebar %}
+        <!-- Sidebar Widgets Column -->
+        <div class="sidebar-card">
+            <div class="col-md-4 float-right ">
+                <div class="card my-4">
+                    <h5 class="card-header">About Us</h5>
+                    <div class="card-body">
+                        <p class="card-text"> This awesome blog is made on the top of our Favourite full stack Framework 'Django', follow up the tutorial to learn how we made it..!</p>
+                        <a href="https://djangocentral.com/building-a-blog-application-with-django"
+                            class="btn btn-danger">Know more!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock sidebar %}
         {% endblock content %}
         <!-- Footer -->
         <footer class="py-3 bg-grey">
