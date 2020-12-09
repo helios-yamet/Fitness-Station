@@ -1,6 +1,6 @@
 body {
 	font-size: 18px;
-	background-color: #fdfdfd;
+	background-color: rgb(255, 255, 255);
 }
 
 .head_text {
@@ -8,23 +8,23 @@ body {
 }
 
 .card {
-	box-shadow: 0 16px 48px #E3E7EB;
+	box-shadow: 0 16px 48px rgb(0, 0, 0);
 }
 
 .btn-danger {
-	color: #fff;
-	background-color: #f00000;
-	border-color: #dc281e;
+	color: rgb(255, 255, 255);
+	background-color: rgb(240, 0, 0);
+	border-color: rgb(220, 40, 30);
 }
 
 .masthead {
-	background: #3398E1;
+	background: rgb(51,152,225);
 	height: auto;
 	padding-bottom: 15px;
-	box-shadow: 0 16px 48px #E3E7EB;
+	box-shadow: 0 16px 48px rgb(0, 0, 0);
 	padding-top: 10px;
 }
 
 .sidebar-card {
-	box-shadow: 0 16px 48px #E3E7EB;
+	box-shadow: 0 16px 48px rgb(0, 0, 0);
 }
