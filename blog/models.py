@@ -1,28 +1,13 @@
 from django.db import models
-from django.contrib.auth.models import User
-from django.urls import reverse
+
+# Create your models here.
 
 
-STATUS = (
-    (0, "Draft"),
-    (1, "Publish")
-)
-
-
-class Post(models.Model):
-    title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
-    updated_on = models.DateTimeField(auto_now=True)
-    content = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-
-    class Meta:
-        ordering = ['-created_on']
+class Item(models.Model):
+    title = models.CharField(max_length=50, null=False, blank=False)
+    author = models.TextChoices(null=False, Blank=False)
+    content = models.TextField(max_length=500, null=False, blank=False)
+    status = models.TextChoices(null=False, Blank=False)
 
     def __str__(self):
         return self.title
-
-    def get_absolute_url(self):
-        return reverse('blog')
