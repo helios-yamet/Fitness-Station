@@ -1,4 +1,4 @@
-from django.views import generic
+from django.views import generic, CreateView
 from .models import Post
 
 
@@ -10,3 +10,9 @@ class PostList(generic.ListView):
 class PostDetail(generic.DetailView):
     model = Post
     template_name = 'blog/post_detail.html'
+
+
+class AddPostView(generic.CreateView):
+    model = Post
+    template_name = 'blog/add_post.html'
+    fields = '__all__'
