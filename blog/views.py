@@ -1,4 +1,4 @@
-from django.views import generic, CreateView
+from django.views import generic
 from .models import Post
 
 
