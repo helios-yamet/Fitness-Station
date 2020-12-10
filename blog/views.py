@@ -1,27 +1,46 @@
-from django.views import redirect, reverse
-from .models import Post, render, redirect
-from .forms import PostForm
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Item
+from .forms import ItemForm
 
 
-def PostList(request, ListView):
+def get_blog_item(request, ):
     """ A view that renders the blog posts in list format """
 
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    return render(redirect('blog/blog_index.html'))
+    items = Item.objects.all()
+    context = {
+        'items': items
+    }
+    return render(request, 'blog/blog_index.html', context)
 
 
-def PostDetail(request, DetailView):
-    """ A view that renders individual blog post detail """
+def add_blog_item(request):
+    if request.method == 'POST':
+        form = ItemForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('get_blog_item')
+    form = ItemForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'todo/add_item.html', context)
 
-    model = Post
-    return render(redirect('blog/post_detail.html'))
+
+def edit_item(request, item_id):
+    item = get_object_or_404(Item, id=item_id)
+    if request.method == 'POST':
+        form = ItemForm(request.POST, instance=item)
+        if form.is_valid():
+            form.save()
+            return redirect('get_blog_item')
+    form = ItemForm(instance=item)
+    context = {
+        'form': form
+    }
+    return render(request, 'todo/edit_item.html', context)
 
 
-def AddPostView(request, CreateView):
-    """ A view that render an add new blog post form page"""
-
-    model = Post
-    form_class = PostForm
-    template_name = 'blog/add_post.html'
-
-    return redirect(reverse('blog'))
+def delete_item(request, item_id):
+    item = get_object_or_404(Item, id=item_id)
+    item.delete()
+    return redirect('get_blog_item')
