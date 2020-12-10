@@ -26,10 +26,6 @@
 	box-shadow: 0 16px 48px rgb(0, 0, 0);
 	padding-top: 10px;
 }
-
-.sidebar-card {
-	box-shadow: 0 16px 48px rgb(0, 0, 0);
-}
     </style>
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
@@ -56,21 +52,6 @@
         </nav>
         {% block content %}
         <!-- Content Goes here -->
-        {% block sidebar %}
-        <!-- Sidebar Widgets Column -->
-        <div class="sidebar-card">
-            <div class="col-md-4 float-right ">
-                <div class="card my-4">
-                    <h5 class="card-header">About Us</h5>
-                    <div class="card-body">
-                        <p class="card-text"> This awesome blog is made on the top of our Favourite full stack Framework 'Django', follow up the tutorial to learn how we made it..!</p>
-                        <a href="https://djangocentral.com/building-a-blog-application-with-django"
-                            class="btn btn-danger">Know more!</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endblock sidebar %}
         {% endblock content %}
         <!-- Footer -->
         <footer class="py-3 bg-grey">
