@@ -1,5 +1,6 @@
 from django.views import generic
 from .models import Post
+from .forms import PostForm
 
 
 class PostList(generic.ListView):
@@ -14,5 +15,7 @@ class PostDetail(generic.DetailView):
 
 class AddPostView(generic.CreateView):
     model = Post
+    form_class = PostForm
     template_name = 'blog/add_post.html'
-    fields = ('title', 'author', 'content', 'status')
+    # fields = ('title', 'author', 'content', 'status')
+
