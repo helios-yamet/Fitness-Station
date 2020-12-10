@@ -13,7 +13,7 @@ def get_blog_item(request, ):
     return render(request, 'blog/blog_index.html', context)
 
 
-def add_blog_item(request):
+def add_blog_post(request):
     if request.method == 'POST':
         form = ItemForm(request.POST)
         if form.is_valid():
@@ -23,7 +23,7 @@ def add_blog_item(request):
     context = {
         'form': form
     }
-    return render(request, 'todo/add_item.html', context)
+    return render(request, 'blog/add_post.html', context)
 
 
 def edit_item(request, item_id):
@@ -37,7 +37,7 @@ def edit_item(request, item_id):
     context = {
         'form': form
     }
-    return render(request, 'todo/edit_item.html', context)
+    return render(request, 'blog/edit_post.html', context)
 
 
 def delete_item(request, item_id):
