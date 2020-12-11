@@ -15,10 +15,10 @@
             {% for post in post_list %}
             <div class="card mb-4">
                 <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
-                    <a href="{% url '' %}" class="btn btn-success">Read More &rarr;</a>
+                    <h2 class="card-title">{{ title }}</h2>
+                    <p class="card-text text-muted h6">{{ content }}</p>
+                    <p class="card-text"></p>
+                    <a href="{% url 'edit_blog_item' %}" class="btn btn-success">Update Post&rarr;</a>
                 </div>
             </div>
             {% endfor %}
