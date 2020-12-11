@@ -15,11 +15,10 @@ def blog(request):
 
 def add_blog_post(request):
     if request.method == 'POST':
-        title = request.POST.get('item_title')
-        content = request.POST.get('item_content')
-
-        Item.objects.create(title=title, content=content)
-        return redirect('blog')
+        form = ItemForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('blog')
     form = ItemForm()
     context = {
         'form': form
