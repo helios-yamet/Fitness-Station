@@ -1,6 +1,4 @@
 {% extends "base.html" %}
-
-{% block content %}
 {% block page_header %}s
 <div class="container header-container">
     <div class="row">
@@ -8,21 +6,23 @@
     </div>
 </div>
 {% endblock %}
-<div class="container">
-    <div class="row">
-        <!-- Blog post Column -->
-        <div class="col-md-8 mt-3 left">
-            {% for post in post_list %}
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">{{ title }}</h2>
-                    <p class="card-text text-muted h6">{{ content }}</p>
-                    <p class="card-text"></p>
-                    <a href="{% url 'edit_blog_item' %}" class="btn btn-success">Update Post&rarr;</a>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
+{% block content %}
+<body>
+    <h1 class="container">Your Fitness Station blog</h1>
+    <table>
+        {% for post in posts %}
+        <td>
+            <a href="/edit/{{ item.id }}">
+            <button>Edit</button>
+            </a>
+        </td>
+        <td>
+            <a href="/delete/{{ item.id }}">
+            <button>Delete</button>
+            </a>
+        </td>
+        <a href="/add">Add an Item</a>
+    </table>
+    {% endfor %}
+</body>
 {% endblock %}
