@@ -20,7 +20,11 @@ def add_blog_post(request):
 
         Item.objects.create(title=title, content=content)
         return redirect('get_blog_item')
-    return render(request, 'blog/add_post.html')
+    form = ItemForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'blog/add_post.html', context)
 
 
 def edit_blog_item(request, item_id):
