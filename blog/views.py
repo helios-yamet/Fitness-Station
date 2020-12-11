@@ -26,7 +26,7 @@ def add_blog_post(request):
     return render(request, 'blog/add_post.html', context)
 
 
-def edit_blog_item(request, item_id):
+def edit_blog_post(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     if request.method == 'POST':
         form = ItemForm(request.POST, instance=item)
@@ -40,7 +40,7 @@ def edit_blog_item(request, item_id):
     return render(request, 'blog/edit_post.html', context)
 
 
-def delete_item(request, item_id):
+def delete_post(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     item.delete()
     return redirect('blog')

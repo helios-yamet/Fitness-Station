@@ -9,15 +9,15 @@
 {% block content %}
 <body>
     <h1 class="container">Your Fitness Station blog</h1>
-    <div>
+    <table>
+        <td>
         <a href="{% url 'add_blog_post' %}">
         <button type="button" class="btn btn-success">
         Create a new post
         <i class="fas fa-plus-circle"></i>
         </button>
         </a>
-    </div>
-    <table>
+    </td>
         {% for post in posts %}
         <td>
             <a href="/edit/{{ item.id }}">
