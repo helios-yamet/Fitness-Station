@@ -3,14 +3,14 @@ from .models import Item
 from .forms import ItemForm
 
 
-def get_blog_item(request, ):
+def blog(request):
     """ A view that renders the blog posts in list format """
 
     items = Item.objects.all()
     context = {
         'items': items
     }
-    return render(request, 'blog/blog_index.html', context)
+    return render(request, 'blog/blog.html', context)
 
 
 def add_blog_post(request):
@@ -19,7 +19,7 @@ def add_blog_post(request):
         content = request.POST.get('item_content')
 
         Item.objects.create(title=title, content=content)
-        return redirect('get_blog_item')
+        return redirect('blog')
     form = ItemForm()
     context = {
         'form': form
@@ -33,7 +33,7 @@ def edit_blog_item(request, item_id):
         form = ItemForm(request.POST, instance=item)
         if form.is_valid():
             form.save()
-            return redirect('get_blog_item')
+            return redirect('blog')
     form = ItemForm(instance=item)
     context = {
         'form': form
@@ -44,4 +44,4 @@ def edit_blog_item(request, item_id):
 def delete_item(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     item.delete()
-    return redirect('get_blog_item')
+    return redirect('blog')
