@@ -15,15 +15,12 @@ def get_blog_item(request, ):
 
 def add_blog_post(request):
     if request.method == 'POST':
-        form = ItemForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('get_blog_item')
-    form = ItemForm()
-    context = {
-        'form': form
-    }
-    return render(request, 'blog/add_post.html', context)
+        title = request.POST.get('item_title')
+        content = request.POST.get('item_content')
+
+        Item.objects.create(title=title, content=content)
+        return redirect('get_blog_item')
+    return render(request, 'blog/add_post.html')
 
 
 def edit_blog_item(request, item_id):
