@@ -27,10 +27,10 @@
         <!-- Stripe payment cdn -->
         <script src="https://js.stripe.com/v3/">
             <script type="text/javascript">
-            //<![CDATA[
+            //![CDATA[
             settings.STRIPE_PUBLIC_KEY = '{{ STRIPE_PUBLIC_KEY }}';
-            //]]>
-        </script>
+            //]]
+            </script>
         {% endblock %}
         {% block extra_js %}
         {% endblock %}
@@ -79,7 +79,7 @@
                                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'blog' %}" class="dropdown-item">My Blog</a>
+                                <a href="{% url 'get_blog_item' %}" class="dropdown-item">My Blog</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
