@@ -8,13 +8,13 @@
 {% endblock %}
 {% block content %}
 <div class="form-group">
-    <h1>Add a Blog Post:</h1>
-    <form method="POST" action="{% url 'add_blog_post' %}">
+    <h1>Add a Review:</h1>
+    <form method="POST" action="{% url 'add_review' %}">
         {% csrf_token %}
         {{ form.as_p }}
         <div>
             <p>
-                <button type="submit">Add Item</button>
+                <button type="submit">Add Review</button>
             </p>
         </div>
     </form>
