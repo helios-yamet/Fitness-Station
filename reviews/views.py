@@ -4,7 +4,7 @@ from .forms import ItemForm
 
 
 def reviews(request):
-    """ A view that renders the blog posts in list format """
+    """ A view that renders the review posts in list format """
 
     items = Item.objects.all()
     context = {
