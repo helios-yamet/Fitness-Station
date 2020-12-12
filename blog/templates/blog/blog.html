@@ -27,8 +27,7 @@
             <h5 class="card-title"> {{ item.title }} </h5>
             <p class="card-text"> {{ item.content }} </p>
         </div>
-        <div class="card-footer text-muted">
-            2 days ago
+        <div class="card-footer">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-success">
                     <a href="{% url 'add_blog_post' %}">
@@ -38,10 +37,15 @@
                     </a>
                 </label>
                 <label class="btn btn-warning">
+                    <a href="/edit_blog_post/{{ item.id }}">
                     <input type="radio" name="options" id="option2"> Edit
+                    <i class="fas fa-user-edit"></i>
+                    </a>
                 </label>
                 <label class="btn btn-danger">
+                    <a href="/delete/{{ item.id }}"></a>
                     <input type="radio" name="options" id="option3"> Delete
+                    <i class="fas fa-trash-alt"></i>
                 </label>
             </div>
         </div>
