@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
 <div class="form-group">
     <h1>Edit a Blog Post:</h1>
-    <form method="POST" action="add">
+    <form method="POST" action="{% url 'edit_blog_post' %}">
         {% csrf_token %}
         {{ form.as_p }}
         <div>
