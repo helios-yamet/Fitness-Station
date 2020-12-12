@@ -8,7 +8,7 @@
 {% endblock %}
 {% block content %}
 <body>
-    <h1 class="container">Your Fitness Station blog</h1>
+    <h1 class="container">Fitness Station Product Review</h1>
     {% for item in items %}
     <div>
         <div class="card text-center">
@@ -22,22 +22,10 @@
             <div class="card-footer">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn-success">
-                    <a href="{% url 'add_blog_post' %}">
+                    <a href="{% url 'add_review' %}">
                     <input type="radio" name="options" id="option1">
                     Create
                     <i class="fas fa-plus-circle"></i>
-                    </a>
-                    </label>
-                    <label class="btn btn-warning">
-                    <a href="/edit_blog_post/{{ item.id }}">
-                    <input type="radio" name="options" id="option2"> Edit
-                    <i class="fas fa-user-edit"></i>
-                    </a>
-                    </label>
-                    <label class="btn btn-danger">
-                    <a href="/delete/{{ item.id }}">
-                    <input type="radio" name="options" id="option3"> Delete
-                    <i class="fas fa-trash-alt"></i>
                     </a>
                     </label>
                 </div>
