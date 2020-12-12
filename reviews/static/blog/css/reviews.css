@@ -1,0 +1,72 @@
+p,
+p a {
+	color: #aaa;
+	text-decoration: none;
+}
+
+p a:hover,
+p a:focus {
+	text-decoration: underline;
+}
+
+p+p {
+	color: #bbb;
+	margin-top: 2em;
+}
+
+.detail {
+	position: absolute;
+	text-align: right;
+	right: 5px;
+	bottom: 5px;
+	width: 50%;
+}
+
+a[href*="intent"] {
+	display: inline-block;
+	margin-top: 0.4em;
+}
+
+
+/*----------------------review star rating */
+
+.rating {
+	width: 226px;
+	margin: 0 auto 1em;
+	font-size: 45px;
+	overflow: hidden;
+}
+
+.rating input {
+	float: right;
+	opacity: 0;
+	position: absolute;
+}
+
+.rating a,
+.rating label {
+	float: right;
+	color: rgb(rgb(130, 130, 130);
+	text-decoration: none;
+	-webkit-transition: color .4s;
+	-moz-transition: color .4s;
+	-o-transition: color .4s;
+	transition: color .4s;
+}
+
+.rating label:hover ~ label, 
+.rating input:focus ~ label,
+ .rating label:hover, 
+ .rating a:hover, .rating a:hover ~ a, 
+ .rating a:focus, .rating a:focus ~ a {
+	color: rgb(255, 200, 112);
+	cursor: pointer;
+}
+
+.rating2 {
+	direction: rtl;
+}
+
+.rating2 a {
+	float: none
+}
