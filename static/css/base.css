@@ -96,12 +96,6 @@ input[name='q']::placeholder {
     box-shadow: 0 0.625em 1.25em rgba(0,0,0,.12), 0 0.25em 0.5em rgba(0,0,0,.06);
 }
 
-
-/* ------------------------------- Homepage header image */
-#home-header {
-    background: url(media/homepage_images/jumbo-image.jpg) center center / cover no-repeat ;
-}
-
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
