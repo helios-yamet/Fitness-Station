@@ -7,6 +7,23 @@
 </div>
 {% endblock %}
 {% block content %}
+<div class="jumbotron">
+    <h3 class="display-4">About Fitness Station</h3>
+    <p class="lead">Looking to sign up at a local gym in Minehead? 
+        Get in touch with Fitness Station. Our state-of-the-art gym has the facilities and equipment to cater for people of all abilities. 
+        We strive to offer our customers the best services and equipment when visiting our gym. 
+        For this reason, we not only offer professional personal training, but we also ensure all our gym memberships and fitness services are available at affordable and competitive prices. 
+        Whether you are in training for a half marathon and need to work on your cardiovascular fitness or would like to improve on your muscular strength, we can help you. 
+        As well as Olympic class equipment, we also provide a tanning station, available for both gym members and members of the public.
+    </p>
+    <hr class="my-4">
+    <p>If you would like to book an appointment or take out a gym membership with us, why not get in touch? 
+        We will help you to organise and arrange a gym plan that is tailored to your personal requirements. 
+    </p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+</div>
 <form action="{% url 'add_reviews' %}" method="POST" id="new-review">
     <div class="form-group">
         <label for="exampleFormControlInput1">Email address</label>
