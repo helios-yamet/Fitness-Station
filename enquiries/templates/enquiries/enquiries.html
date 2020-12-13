@@ -7,21 +7,20 @@
 </div>
 {% endblock %}
 {% block content %}
-        <div class="col-12 col-lg-6">
-            <p class="text-muted">Please fill out the form below to submit your enquiry</p>
-            <form action="{% url 'add_reviews' %}" method="POST" id="new-review">
-                {% csrf_token %}
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
-                    {{ order_form.full_name | as_crispy_field }}
-                    {{ order_form.email | as_crispy_field }}
-                </fieldset>
-                    <button id="submit-button" class="btn btn-success rounded-0">
-                    <span class="font-weight-bold">Submit Enquiry</span>
-                    <span class="icon">
-                    <i class="fas fa-lock"></i>
-                    </span>
-                    </button>
-            </form>
-        </div>
+<form action="{% url 'add_reviews' %}" method="POST" id="new-review">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button id="submit" class="btn btn-success rounded-0">
+    <span class="font-weight-bold">Submit Enquiry</span>
+    <span class="icon">
+    <i class="fas fa-lock"></i>
+    </span>
+    </button>
+</form>
 {% endblock %}
