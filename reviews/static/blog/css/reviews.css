@@ -1,5 +1,4 @@
-p,
-p a {
+p, p a {
 	color: #aaa;
 	text-decoration: none;
 }
@@ -46,7 +45,7 @@ a[href*="intent"] {
 .rating a,
 .rating label {
 	float: right;
-	color: rgb(rgb(130, 130, 130);
+	color: rgb(130, 130, 130);
 	text-decoration: none;
 	-webkit-transition: color .4s;
 	-moz-transition: color .4s;
