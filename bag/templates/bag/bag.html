@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
-
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -105,6 +104,7 @@
                             </span>
                             <span class="text-uppercase">Keep Shopping</span>
                             </a>
+                            {% if user.is_authenticated %}
                             <a href="{% url 'checkout' %}" class="btn btn-success rounded-0 btn-lg">
                             <span class="text-uppercase">Secure Checkout</span>
                             <span class="icon">
@@ -114,7 +114,28 @@
                         </td>
                     </tr>
                 </table>
-            </div>
+                {% endif %}
+                <br>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card border-warning">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <p>Register if you don't have an account with us</p>
+                                    <a href="{% url 'account_signup' %}" class="btn btn-info">
+                                    Register
+                                    <i class="fas fa-user-plus"></i>
+                                    </a>
+                                    <p class="my-1">login if you already have an account</p>
+                                    <a href="{% url 'account_login' %}" class="btn btn-success">
+                                    Login
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             <!--If bag has no product, user is offered to go back to products page, increase user time on site-->
             {% else %}
             <p class="lead mb-5">Your bag is empty.</p>
