@@ -26,7 +26,6 @@
         We will help you to organise and arrange a gym plan that is tailored to your personal requirements. 
     </p>
 </div>
-<div class="container-fluid">
 <main>
     <div>
         <div class="container">
@@ -37,6 +36,7 @@
                 </div>
                 <form action="{% url 'enquiries' %}" method="POST" id="formContact"
                     onsubmit="return sendMail(this);">
+                    {% csrf_token %}
                     <input
                         type="text"
                         name="name"
@@ -68,13 +68,14 @@
                     </button>
                 </form>
             </div>
-            <!--Map to scale upon click and reveal adress, pin designed by author-->
+            <!--Map displaying location of the gym-->
             <div class="col-lg-6 contact-map text-wrapper">
                 <div class="reveal-text"></div>
                 <h3 class="color">We are located in Minehead Somerset</h3>
-                <div id="map"></div>
+                <div id="map">
             </div>
         </div>
+    </div>
     </div>
 </main>
 {% endblock %}
