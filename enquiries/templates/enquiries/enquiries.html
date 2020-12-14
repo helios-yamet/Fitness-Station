@@ -68,6 +68,16 @@
                     </button>
                 </form>
             </div>
+            <h1>Contact</h1>
+            <form role="form" action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit"
+                class="btn btn-success">
+                    Submit
+                <i class="fas fa-share-square"></i>
+                </button>
+            </form>
             <!--Map displaying location of the gym-->
             <div class="col-lg-6 contact-map text-wrapper">
                 <div class="reveal-text"></div>
