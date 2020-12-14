@@ -19,8 +19,9 @@
         For this reason, we not only offer professional personal training, but we also ensure all our gym memberships and 
         fitness services are available at affordable and competitive prices.<span id="dots">...</span><span id="more">
         Whether you are in training for a half marathon and need to work on your cardiovascular fitness or would like to improve on your muscular strength, we can help you. 
-        As well as Olympic class equipment, we also provide a tanning station, available for both gym members and members of the public.</span></p>
-        <button onclick="myFunction()" id="myBtn">Read more</button>
+        As well as Olympic class equipment, we also provide a tanning station, available for both gym members and members of the public.</span>
+    </p>
+    <button onclick="myFunction()" id="myBtn">Read more</button>
     <hr class="my-4">
     <p>If you would like to book an appointment or take out a gym membership with us, why not get in touch? 
         We will help you to organise and arrange a gym plan that is tailored to your personal requirements. 
@@ -62,30 +63,35 @@
                         required
                         ></textarea>
                     <button type="submit" id="submit-enquiry"
-                    class="btn btn-success">
+                        class="btn btn-success">
                     Submit
                     <i class="fas fa-share-square"></i>
                     </button>
                 </form>
             </div>
             <h1>Contact</h1>
-            <form role="form" action="" method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit"
-                class="btn btn-success">
-                    Submit
-                <i class="fas fa-share-square"></i>
-                </button>
-            </form>
+            <div class="col-12 col-lg-6">
+                <fieldset class="rounded px-3 mb-5">
+                    <form role="form" action="" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <legend class="fieldset-label small text-black px-2 w-auto"></legend>
+                        <button type="submit"
+                            class="btn btn-success">
+                        Submit
+                        <i class="fas fa-share-square"></i>
+                        </button>
+                    </form>
+                </fieldset>
+            </div>
             <!--Map displaying location of the gym-->
             <div class="col-lg-6 contact-map text-wrapper">
                 <div class="reveal-text"></div>
                 <h3 class="color">We are located in Minehead Somerset</h3>
                 <div id="map">
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </main>
 {% endblock %}
