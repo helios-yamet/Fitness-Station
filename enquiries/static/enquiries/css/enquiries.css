@@ -25,30 +25,6 @@
     border-radius: .25rem;
 }
 
-.form-header {
-  margin: 0em 1em 1em 1em;
-}
-
-form {
-  margin: 0em 1em 1em 1em;
-}
-
-form input {
-  margin: 1em 0;
-}
-
-textarea {
-  margin: 1em 0;
-}
-
-#submit-enquiry {
-  box-shadow: none;
-}
-
-.contact-map {
-  margin-bottom: 1rem;
-}
-
 /*--------------------- enquiries media queries */
 
 /*xxl monitor*/

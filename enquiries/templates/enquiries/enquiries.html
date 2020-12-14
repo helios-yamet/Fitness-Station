@@ -29,30 +29,31 @@
 </div>
 <main>
     <div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="col-lg-6 contact-form text-wrapper">
-                <div class="reveal-text"></div>
                 <div class="form-header">
-            <h1>Contact Us</h1>
-            <div class="col-12 col-lg-6">
-                <fieldset class="rounded px-3 mb-5">
-                    <form role="form" action="{% url 'enquiries' %}" method="post">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <legend class="fieldset-label small text-black px-2 w-auto"></legend>
-                        <button type="submit"
-                            class="btn btn-success">
-                        Submit
-                        <i class="fas fa-share-square"></i>
-                        </button>
-                    </form>
-                </fieldset>
-            </div>
-            <!--Map displaying location of the gym-->
-            <div class="col-lg-6 contact-map text-wrapper">
-                <div class="reveal-text"></div>
-                <h3 class="color">We are located in Minehead Somerset</h3>
-                <div id="map">
+                    <h1>Contact Us</h1>
+                    <div class="col-12 col-lg-6">
+                        <fieldset class="rounded px-3 mb-5">
+                            <form role="form" action="{% url 'enquiries' %}" method="post">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <legend class="fieldset-label small text-black px-2 w-auto"></legend>
+                                <button type="submit"
+                                    class="btn btn-success">
+                                Submit
+                                <i class="fas fa-share-square"></i>
+                                </button>
+                            </form>
+                        </fieldset>
+                    </div>
+                    <!--Map displaying location of the gym-->
+                    <div class="col-lg-6 contact-map text-wrapper">
+                        <div class="reveal-text"></div>
+                        <h3 class="color">We are located in Minehead Somerset</h3>
+                        <div id="map">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
