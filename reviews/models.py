@@ -1,9 +1,4 @@
 from django.db import models
-
-# Create your models here.
-
-
-from django.db import models
 from profiles.models import UserProfile
 from products.models import Product
 
@@ -29,10 +24,5 @@ class Review(models.Model):
     )
     review_content = models.TextField(blank=True, null=True, default="")
 
-
-class Item(models.Model):
-    title = models.CharField(max_length=50, null=False, blank=False)
-    content = models.TextField(max_length=500, null=False, blank=False)
-
     def __str__(self):
-        return self.title
+        return self.reviews
