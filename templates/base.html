@@ -26,11 +26,25 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <!-- Stripe payment cdn -->
         <script src="https://js.stripe.com/v3/"></script>
+        <!--call stripe key from settings-->
             <script type="text/javascript">
             //![CDATA[
             settings.STRIPE_PUBLIC_KEY = '{{ STRIPE_PUBLIC_KEY }}';
             //]]
-            </script>
+        </script>
+        <!--Emailjs cdn-->
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+   (function(){
+       emailjs.init(os.get.environ="['EMAIL_JS_KEY']");
+       emailjs.send("gmail", "rosie", {
+           name: "Aaron",
+           notes: "The project that I want is..."
+            })
+       })();
+       </script>
         {% endblock %}
         {% block extra_js %}
         {% endblock %}
