@@ -1,5 +1,16 @@
 from django.contrib import admin
-from .models import Item
+from .models import Review
 
-# Register your models here.
-admin.site.register(Item)
+
+class ReviewAdmin(admin.ModelAdmin):
+    """
+    Display and modify reviews in admin panel.
+    """
+
+    list_display = (
+        "user_profile",
+        "product",
+    )
+
+
+admin.site.register(Review, ReviewAdmin)
