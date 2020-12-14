@@ -19,11 +19,6 @@ html {
     width: fit-content;
 }
 
-.btn-black {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-}
-
 .btn-outline-black {
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -37,16 +32,8 @@ html {
     color: rgb(255, 255, 255);
 }
 
-.text-black {
-    color:rgb(0, 0, 0);
-}
-
 .border-black {
     border: 0.0625em solid rgb(0, 0, 0);
-}
-
-.bg-black {
-    background: rgb(0, 0, 0);
 }
 
 .overlay {
@@ -86,20 +73,17 @@ input[name='q']::placeholder {
 
 .card {
     border-radius: 1em;
-    box-shadow: 0 0.375em 0.625em rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
     transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     cursor: pointer;
 }
 
 .card:hover{
     transform: scale(1.02);
-    box-shadow: 0 0.625em 1.25em rgba(0,0,0,.12), 0 0.25em 0.5em rgba(0,0,0,.06);
 }
 
 /* ------------------------------- Homepage jumbotron header */
 .jumbotron {
-  background-image: url("media/homepage_images/jumbo-image.jpg") no-repeat no-repeat center;
-  background-size: cover;
+    background-image: linear-gradient(#b9a2a5, #ffc342);
 }
 
 /* ------------------------------- bootstrap toasts */
