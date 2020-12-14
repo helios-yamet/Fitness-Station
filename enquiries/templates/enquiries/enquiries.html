@@ -15,9 +15,9 @@
     <h3 class="display-4">About Fitness Station</h3>
     <p class="lead">Looking to sign up at a local gym in Minehead? 
         Get in touch with Fitness Station. Our state-of-the-art gym has the facilities and equipment to cater for people of all abilities. 
-        We strive to offer our customers the best services and equipment when visiting our gym. 
+        We strive to offer our customers the best services and equipment when visiting our gym.<span id="dots">...</span><span id="more">
         For this reason, we not only offer professional personal training, but we also ensure all our gym memberships and 
-        fitness services are available at affordable and competitive prices.<span id="dots">...</span><span id="more">
+        fitness services are available at affordable and competitive prices.
         Whether you are in training for a half marathon and need to work on your cardiovascular fitness or would like to improve on your muscular strength, we can help you. 
         As well as Olympic class equipment, we also provide a tanning station, available for both gym members and members of the public.</span>
     </p>
@@ -33,46 +33,10 @@
             <div class="col-lg-6 contact-form text-wrapper">
                 <div class="reveal-text"></div>
                 <div class="form-header">
-                    <h5 class="color">Get in touch!</h5>
-                </div>
-                <form action="{% url 'enquiries' %}" method="POST" id="formContact"
-                    onsubmit="return sendMail(this);">
-                    {% csrf_token %}
-                    <input
-                        type="text"
-                        name="name"
-                        class="form-control"
-                        id="fullname"
-                        placeholder="Name"
-                        required
-                        />
-                    <input
-                        type="email"
-                        name="emailaddress"
-                        class="form-control"
-                        id="emailaddress"
-                        placeholder="Email"
-                        required
-                        />
-                    <textarea
-                        rows="5"
-                        name="message"
-                        class="form-control"
-                        id="message"
-                        placeholder="write your message here"
-                        required
-                        ></textarea>
-                    <button type="submit" id="submit-enquiry"
-                        class="btn btn-success">
-                    Submit
-                    <i class="fas fa-share-square"></i>
-                    </button>
-                </form>
-            </div>
-            <h1>Contact</h1>
+            <h1>Contact Us</h1>
             <div class="col-12 col-lg-6">
                 <fieldset class="rounded px-3 mb-5">
-                    <form role="form" action="" method="post">
+                    <form role="form" action="{% url 'enquiries' %}" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <legend class="fieldset-label small text-black px-2 w-auto"></legend>
