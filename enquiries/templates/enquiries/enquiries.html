@@ -16,7 +16,8 @@
         <span id="dots">For this reason, we not only offer professional personal training, but we also ensure all our gym memberships and fitness services are available at affordable and competitive prices. 
         Whether you are in training for a half marathon and need to work on your cardiovascular fitness or would like to improve on your muscular strength, we can help you. 
         As well as Olympic class equipment, we also provide a tanning station, available for both gym members and members of the public.</span><span id="more">
-    </span></p>
+        </span>
+    </p>
     <button onclick="myFunction()" id="myBtn">Read more</button>
     <hr class="my-4">
     <p>If you would like to book an appointment or take out a gym membership with us, why not get in touch? 
@@ -24,41 +25,73 @@
     </p>
 </div>
 <div class="container-fluid">
-<form action="{% url 'enquiries' %}" method="POST" id="new-enquiries">
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+<main>
+    <div>
+        <div class="container">
+            <div class="col-lg-6 contact-form text-wrapper">
+                <div class="reveal-text"></div>
+                <div class="form-header">
+                    <h3 class="color">Wanna know more?</h3>
+                    <h5 class="color">Get in touch!</h5>
+                </div>
+                <form action="{% url 'enquiries' %}" method="POST" id="formContact"
+                    onsubmit="return sendMail(this);">
+                    <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        id="fullname"
+                        placeholder="Name"
+                        required
+                        />
+                    <input
+                        type="email"
+                        name="emailaddress"
+                        class="form-control"
+                        id="emailaddress"
+                        placeholder="Email"
+                        required
+                        />
+                    <textarea
+                        rows="5"
+                        name="projectsummary"
+                        class="form-control"
+                        id="projectsummary"
+                        required
+                        ></textarea>
+                    <button type="submit" class="btn btn-success color">
+                    Submit
+                    <i class="fas fa-share-square"></i>
+                    </button>
+                </form>
+            </div>
+            <!--Map to scale upon click and reveal adress, pin designed by author-->
+            <div class="col-lg-6 contact-map text-wrapper">
+                <div class="reveal-text"></div>
+                <h3 class="color">I'm located in Minehead Somerset</h3>
+                <div id="map"></div>
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="exampleFormControlTextarea1">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-    <button id="submit" class="btn btn-success rounded-0">
-    <span class="font-weight-bold">Submit Enquiry</span>
-    <span class="icon">
-    <i class="fas fa-lock"></i>
-    </span>
-    </button>
-</form>
-</div>
+</main>
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
-  }
-}
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
+    }
 </script>
 {% endblock %}
