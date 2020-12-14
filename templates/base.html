@@ -32,19 +32,6 @@
             settings.STRIPE_PUBLIC_KEY = '{{ STRIPE_PUBLIC_KEY }}';
             //]]
         </script>
-        <!--Emailjs cdn-->
-        <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-   (function(){
-       emailjs.init(os.get.environ="['EMAIL_JS_KEY']");
-       emailjs.send("gmail", "rosie", {
-           name: "Aaron",
-           notes: "The project that I want is..."
-            })
-       })();
-       </script>
         {% endblock %}
         {% block extra_js %}
         {% endblock %}
