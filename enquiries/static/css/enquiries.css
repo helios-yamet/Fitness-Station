@@ -3,3 +3,65 @@
     display: none;
 }
 
+/* map sized responsively*/
+#map {
+  height: 320px;
+  width: 100%;
+  color: rgb(0, 0, 0);
+}
+
+/* --------------------- contact form */
+
+.form-control {
+    display: block;
+    width: 100%;
+    min-height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-header {
+  margin: 0em 1em 1em 1em;
+}
+
+form {
+  margin: 0em 1em 1em 1em;
+}
+
+form input {
+  margin: 1em 0;
+}
+
+textarea {
+  margin: 1em 0;
+}
+
+.btn-check:focus + .btn-outline-primary,
+.btn-outline-primary:focus {
+  box-shadow: none;
+}
+
+.contact-map {
+  margin-bottom: 1rem;
+}
+
+/*--------------------- enquiries media queries */
+
+/*xxl monitor*/
+@media screen and (min-width: 1500px) {
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+}
