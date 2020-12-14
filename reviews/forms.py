@@ -1,7 +1,4 @@
 from django import forms
-from .models import Item
-
-from django import forms
 from .models import Review
 
 
@@ -28,9 +25,3 @@ class ReviewForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields["review_content"].label = False
         self.fields["review_content"].widget.attrs["aria-label"] = "review content"
-
-
-class ItemForm(forms.ModelForm):
-    class Meta:
-        model = Item
-        fields = ['title', 'content']
