@@ -1,9 +1,13 @@
 from django.shortcuts import render
+from collection.forms import ContactForm
+
 
 # Create your views here.
 
 
-def enquiries(request):
-    """ A view that renders the bag contents page """
+def contact(request):
+    form_class = ContactForm
 
-    return render(request, 'enquiries/enquiries.html')
+    return render(request, 'enquiries/enquiries.html', {
+        'form': form_class,
+    })
