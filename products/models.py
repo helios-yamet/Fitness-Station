@@ -1,5 +1,4 @@
 from django.db import models
-from reviews.models import ReviewedItem
 from django.contrib.auth.models import User
 
 
