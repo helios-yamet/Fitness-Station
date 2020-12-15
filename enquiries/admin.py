@@ -9,8 +9,8 @@ class EnquiriesAdmin(admin.ModelAdmin):
 
     list_display = (
         "full_name",
-        "email",
-        "message",
+        "contact_email",
+        "content",
     )
 
 
