@@ -10,7 +10,6 @@ django-crispy-forms==1.10.0
 django-generic-positions==0.2.3
 django-hvad==1.8.0
 django-libs==2.0.3
-django-rated-reviews==0.6.0
 django-review==1.10.0
 django-user-media==1.2.5
 easy-thumbnails==2.7.1
