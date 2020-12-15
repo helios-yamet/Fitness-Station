@@ -14,7 +14,23 @@ class ContactForm(forms.Form):
     )
 
     def __init__(self, *args, **kwargs):
-        super(ContactForm, self).__init__(*args, **kwargs)
-        self.fields['contact_name'].label = "Your name:"
-        self.fields['contact_email'].label = "Your email:"
-        self.fields['content'].label = "What would you like to know?"
+        """
+        Add placeholders and classes, remove auto-generated
+        labels and set autofocus on first field
+        """
+        super().__init__(*args, **kwargs)
+        placeholders = {
+            "full_name": "Full Name",
+            "email": "Email Address",
+            "content": "Content"
+        }
+
+        self.fields["full_name"].widget.attrs["autofocus"] = True
+        for field in self.fields:
+            if self.fields[field].required:
+                placeholder = f"{placeholders[field]} *"
+            else:
+                placeholder = placeholders[field]
+                self.fields[field].widget.attrs["placeholder"] = placeholder
+                self.fields[field].widget.attrs["class"] = "stripe-style-input"
+                self.fields[field].label = False

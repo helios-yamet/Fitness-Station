@@ -38,6 +38,9 @@
                             <form role="form" action="{% url 'enquiries' %}" method="post">
                                 {% csrf_token %}
                                 {{ form.as_p }}
+                                {{ contact_name }}
+                                {{ contact_email }}
+                                {{ form_content|safe|striptags }}
                                 <legend class="fieldset-label small text-black px-2 w-auto"></legend>
                                 <button type="submit"
                                     class="btn btn-success">
@@ -50,7 +53,7 @@
                     <!--Map displaying location of the gym-->
                     <div class="col-lg-6 contact-map text-wrapper">
                         <div class="reveal-text"></div>
-                        <h3 class="color">We are located in Minehead Somerset</h3>
+                        <h3>We are located in Minehead Somerset</h3>
                         <div id="map">
                         </div>
                     </div>
