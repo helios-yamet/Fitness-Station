@@ -1,0 +1,20 @@
+<div class="row mb-3 review-form__wrapper" id="{% if edit %}currentUserReview{% else %}newUserReview{% endif %}">
+    <div class="col-11 offset-1 my-2">
+        {% if edit %}
+        <p>Your review <i class="far fa-edit icon-size pl-2" id="editReview"></i><a data-toggle="modal"
+            data-target="#deleteReviewConfirm" class="ml-4"><i class="far fa-trash-alt icon-size"></i></a></p>
+        {% else %}
+        <p>Create a review <i class="far fa-edit icon-size" id="editThisReview"></i></p>
+        {% endif %}
+    </div>
+    <form action="{% url 'product_reviews' product.id %}" method="POST" {% if new %}class="d-none"
+    {% endif %}>
+    <div class="col-11 mx-auto col-lg-10 offset-lg-1 box-shadow-black">
+        {% csrf_token %}
+        {{ form|crispy }}
+    </div>
+    <div class="col-8 offset-4 col-lg-4 offset-lg-6 text-right {% if edit %}d-none{% endif %}">
+        <button class="btn button-success" id="reviewSubmitButton" type="submit">Post review</button>
+    </div>
+    </form>
+</div>
