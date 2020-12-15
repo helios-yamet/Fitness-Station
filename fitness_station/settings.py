@@ -26,10 +26,14 @@ SECRET_KEY = SECRET_KEY = os.environ.get("SECRET_KEY")
 if os.path.exists("env.py"):
     import env
 
-
+# Stripe keys
 STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
-STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+STRIPE_WH_SECRET = os.getenv("STRIPE_WH_SECRET", '')
+
+# SENDGRID EMAIL
+SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
