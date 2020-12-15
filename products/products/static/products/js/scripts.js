@@ -41,3 +41,33 @@ const clearFilter = () => {
 		$(`#${cat}`).removeClass(filterActive)
 	})
 }
+
+/*Filters by matching id
+ * @param {string} id the id of the elements to be filtered*/
+const filterById = (id) => {
+	categories.forEach((cat) => {
+		if (cat == id) {
+			$(`.js-filter-${cat}`).removeClass("d-none")
+			$(`#${cat}`).addClass(filterActive)
+		} else {
+			$(`.js-filter-${cat}`).addClass("d-none")
+			$(`#${cat}`).removeClass(filterActive)
+		}
+	})
+}
+
+// Adds a click event to all matching buttons
+document.querySelectorAll(".product-filter-button").forEach((element) => {
+	element.addEventListener("click", function (e) {
+		e.preventDefault()
+		_this = $(this)
+		if (this.classList.contains("js-product-filter-button__active")) {
+			clearFilter()
+		} else {
+			productFilterButton.removeClass("js-product-filter-button__active")
+			this.classList.add("js-product-filter-button__active")
+			filterId = getFilterId()
+			filterById(filterId)
+		}
+	})
+})
