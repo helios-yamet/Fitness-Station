@@ -190,12 +190,13 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Enquiries
-EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'testing@example.com'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
-EMAIL_PORT = 1025
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'michodgs@gmail.com'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'michodgs@gmail.com'
+EMAIL_HOST_PASSWORD = '<sendgrid_password>'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
