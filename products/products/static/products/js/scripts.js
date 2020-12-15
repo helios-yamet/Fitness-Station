@@ -71,3 +71,12 @@ document.querySelectorAll(".product-filter-button").forEach((element) => {
 		}
 	})
 })
+
+$(document).ready(function () {
+	$(document).on("click", "#editReview", function () {
+		enableReviewForm()
+	})
+	$(document).on("click", "#cancelEditReview", function () {
+		disableReviewForm()
+	})
+})
