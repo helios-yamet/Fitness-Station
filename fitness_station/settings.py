@@ -10,33 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 from pathlib import Path, os
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import *
-
-
-# NOTE: you will need move this file to the root
-# directory of this project to execute properly.
-
-
-def build_hello_email():
-    ## Send a Single Email to a Single Recipient
-    import os
-    import json
-    from sendgrid import SendGridAPIClient
-    from sendgrid.helpers.mail import Mail, From, To, Subject, PlainTextContent, HtmlContent, SendGridException
-
-    message = Mail(from_email=From('from@example.com.com', 'Example From Name'),
-                to_emails=To('to@example.com', 'Example To Name'),
-                subject=Subject('Sending with SendGrid is Fun'),
-                plain_text_content=PlainTextContent('and easy to do anywhere, even with Python'),
-                html_content=HtmlContent('<strong>and easy to do anywhere, even with Python</strong>'))
-
-    try:
-        print(json.dumps(message.get(), sort_keys=True, indent=4))
-        return message.get()
-
-    except SendGridException as e:
-        print(e.message)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -220,10 +193,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DEFAULT_FROM_EMAIL = 'michodgs@gmail.com'
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'michodgs@gmail.com'
+EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = '<sendgrid_password>'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
