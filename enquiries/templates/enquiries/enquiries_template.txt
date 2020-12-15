@@ -1,8 +1,7 @@
-
 {{ contact_name }}
 
 
 {{ contact_email }}
 
 
-{{ form_content|safe|striptags }}
+{{ form_content }}

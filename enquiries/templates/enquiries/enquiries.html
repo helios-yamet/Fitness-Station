@@ -28,28 +28,25 @@
     </p>
 </div>
 <main>
-    <div>
-        <div class="container-fluid">
-            <div class="col-lg-6 contact-form text-wrapper">
-                <div class="form-header">
+<div class="col-12 col-lg-6">
+            <form role="form" action="{% url 'enquiries' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
                     <h1>Contact Us</h1>
-                    <div class="col-12 col-lg-6">
                         <fieldset class="rounded px-3 mb-5">
-                            <form role="form" action="{% url 'enquiries' %}" method="post">
-                                {% csrf_token %}
-                                {{ form.as_p }}
-                                {{ contact_name }}
-                                {{ contact_email }}
-                                {{ form_content|safe|striptags }}
+                            {{ forms.contact_name }}
+                            {{ forms.contact_email }}
+                            {{ forms.form_content|safe|striptags }}
                                 <legend class="fieldset-label small text-black px-2 w-auto"></legend>
                                 <button type="submit"
                                     class="btn btn-success">
                                 Submit
                                 <i class="fas fa-share-square"></i>
                                 </button>
-                            </form>
                         </fieldset>
+                            </form>
                     </div>
+                </main>
                     <!--Map displaying location of the gym-->
                     <div class="col-lg-6 contact-map text-wrapper">
                         <div class="reveal-text"></div>
@@ -57,11 +54,6 @@
                         <div id="map">
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
