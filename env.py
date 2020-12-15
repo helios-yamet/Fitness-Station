@@ -6,4 +6,4 @@ os.environ["STRIPE_SECRET_KEY"] = "sk_test_51Hs54nJRE250pDbbbvLXD4R6ROx6gQgcIpaX
 
 os.environ["STRIPE_WH_SECRET"] = "whsec_KwfZBWjFeFiShX6seq0MrogTqTzyqguz"
 
-os.environ["SENDGRID_API_KEY"] = "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"
+os.environ["SENDGRID_API_KEY"] = "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"
