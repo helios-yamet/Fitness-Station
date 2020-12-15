@@ -27,3 +27,9 @@ const disableReviewForm = () => {
 		.removeClass("fas fa-times")
 		.addClass("far fa-edit")
 }
+
+/*Gets id to be filtered.
+ @returns {string} id of element*/
+const getFilterId = () => {
+	return _this.attr("id")
+}
