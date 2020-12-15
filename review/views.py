@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Review
 
 
-class ReviewsAdmin(admin.ModelAdmin):
+class ReviewAdmin(admin.ModelAdmin):
     """
     Display and modify reviews in admin panel.
     """
@@ -13,4 +13,4 @@ class ReviewsAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(Review, ReviewsAdmin)
+admin.site.register(Review, ReviewAdmin)
