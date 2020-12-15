@@ -13,13 +13,13 @@ class Review(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name="reviews",
+        related_name="review",
     )
     product = models.ForeignKey(
         Product,
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name="reviews",
+        related_name="review",
     )
     review_content = models.TextField(blank=True, null=True, default="")
