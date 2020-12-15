@@ -16,3 +16,14 @@ const enableReviewForm = () => {
 		.removeClass("far fa-edit")
 		.addClass("fas fa-times")
 }
+
+/*Disables form to add or edit review.*/
+const disableReviewForm = () => {
+	reviewContent.attr("disabled", "true")
+	reviewSubmit.parent().removeClass("d-block")
+	newReviewForm.removeClass("d-block")
+	$("#cancelEditReview")
+		.attr("id", "editReview")
+		.removeClass("fas fa-times")
+		.addClass("far fa-edit")
+}
