@@ -1,25 +1,18 @@
 from django.db import models
-from profiles.models import UserProfile
-from products.models import Product
+from store.models import Product
+from django.utils import timezone
 
 
-class Review(models.Model):
+class Review(models.Model,):
     """
-    A review linked to the user that created it and the product being reviewed.
+    This model will store a review text, reviewer and
+    date of submission to a product.
     """
-
-    user_profile = models.ForeignKey(
-        UserProfile,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="review",
-    )
     product = models.ForeignKey(
-        Product,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="review",
-    )
-    review_content = models.TextField(blank=True, null=True, default="")
+        Product, on_delete=models.SET_NULL, null=True, blank=True)
+    review_text = models.CharField(max_length=800, blank=False, default='')
+    reviewer = models.CharField(max_length=100, blank=False, default='')
+    date = models.DateTimeField(default=timezone.now, blank=True)
+
+    def __str__(self):
+        return self.reviewer
