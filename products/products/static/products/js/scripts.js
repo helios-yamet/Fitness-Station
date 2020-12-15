@@ -33,3 +33,11 @@ const disableReviewForm = () => {
 const getFilterId = () => {
 	return _this.attr("id")
 }
+
+/*Clears filter to display all products.*/
+const clearFilter = () => {
+	categories.forEach((cat) => {
+		$(`.js-filter-${cat}`).removeClass("d-none")
+		$(`#${cat}`).removeClass(filterActive)
+	})
+}
