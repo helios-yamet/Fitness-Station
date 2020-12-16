@@ -87,6 +87,17 @@
                                 {% endif %}
                             </div>
                         </li>
+                        <!--Contact us page, provides user gym contact information-->
+                        <li class="list-inline-item">
+                            <a href="{% url 'enquiries' %}">
+                                <div class="text-center text-warning font-weight-bold">
+                                    <div><i class="fas fa-book-reader"></i></div>
+                                    <p class="my-0">
+                                        Contact Us
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
                         <!--Grand total amount, reminds user of shopping cart total anywhere on site-->
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-warning font-weight-bold
@@ -99,17 +110,6 @@
                                         {% else %}
                                         $0.00
                                         {% endif %}
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <!--Contact us page, provides user gym contact information-->
-                        <li class="list-inline-item">
-                            <a href="{% url 'enquiries' %}">
-                                <div class="text-center">
-                                    <div><i class="fas fa-book-reader"></i></div>
-                                    <p class="my-0">
-                                        Contact Us
                                     </p>
                                 </div>
                             </a>
@@ -155,18 +155,75 @@
             $('.toast').toast('show');
         </script>
         {% endblock %}
-        <div class="container">
-            <hr>
-            <div class="text-center center-block">
-                <p class="txt-railway">- Fitness Station -</p>
-                <br />
-                <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-                <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-                <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
-                <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+        <footer class="bg-secondary">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="heading text-center">
+                    <div class="head1">Just Scratching the Surface</div>
+                    <p class="bdr"></p>
+                </div>
+                <div class="card-body">
+                    <div class="row m-0 pt-5">
+                        <div class="card col-12 col-md-3">
+                            <div class="card-content">
+                                <i class="fas fa-hand-holding-usd fa-3x"></i>
+                                <div class="card-title"> Our Products </div>
+                                <button class="learn-more">
+                                    <a href="url 'products'">
+                                        <p> <small> Explore <label><i class="fas fa-angle-right"></i></label> </small> </p>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-md-3">
+                            <div class="card-content">
+                                <i class="far fa-handshake fa-3x"></i>
+                                <div class="card-title"> ACCEPT ELECTRONIC CHECK </div>
+                                <p><small>Save customers' cards for future phone orders</small></p>
+                                <div class="learn-more">
+                                    <p> <small> LEARN MORE <label><i class="fas fa-angle-right"></i></label> </small> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-md-3">
+                            <div class="card-content">
+                                <i class="fas fa-mobile-alt fa-3x"></i>
+                                <div class="card-title"> STREAMLINE PHONE PAYMENTS </div>
+                                <p><small>Save customers' cards for future phone orders</small></p>
+                                <div class="learn-more">
+                                    <p> <small> LEARN MORE <label><i class="fas fa-angle-right"></i></label> </small> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-md-3">
+                            <div class="card-content">
+                                <i class="fas fa-user-secret fa-3x"></i>
+                                <div class="card-title"> Contact Us</div>
+                                <div class="learn-more">
+                                    <p> <small> LEARN MORE <label><i class="fas fa-angle-right"></i></label> </small> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer row m-0 bg-warning">
+                    <p>
+                        <label> 
+                        <i class="fas fa-phone fa-rotate-90 text-primary"></i> 
+                        </label>01643 705299
+                    </p>
+                    <div>
+                        <p> <small class="follow-text">Follow Us On Social Media</small> 
+                            <label class="footer-right">
+                            <i class="fab fa-instagram"></i> 
+                            <i class="fab fa-facebook-square"></i> 
+                            <i class="fab fa-twitter-square"></i> 
+                            </label> 
+                        </p>
+                    </div>
+                </div>
             </div>
-            <hr>
         </div>
-        <br>
+        </footer>
     </body>
 </html>
