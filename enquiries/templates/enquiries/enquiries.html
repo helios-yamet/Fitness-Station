@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/enquiries.css' %}">
+<link rel="stylesheet" href="{% static 'enquiries/css/enquiries.css' %}">
 {% endblock %}
 {% block page_header %}
 <div class="container header-container">
@@ -77,5 +77,5 @@
 <!--Map API key-->
 <script async defer 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwkm-Zl_LpT63IFWXzmGhS8i6vZFf9dM8&callback=initMap"></script>
-<script src="{% static 'js/enquiries.js' %}"></script>
+<script src="{% static 'enquiries/js/enquiries.js' %}"></script>
 {% endblock %}
