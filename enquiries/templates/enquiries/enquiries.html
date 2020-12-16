@@ -29,46 +29,60 @@
 </div>
 <!-- User inputs name, email, message and send to fitness station team. -->
 <div class="form-group">
-<section class="container-fluid section-container">
-<div class="row">
-<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
-    <h1>Contact Us</h1>
-    <form method="POST" action="{% url 'enquiries' %}">
-        {% csrf_token %}
+    <section class="container-fluid section-container">
         <div class="row">
-            <div class="col-12">
-                <label class="my-2" for="reviewer">Name</label>
+            <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
+                <h1>Contact Us</h1>
+                <form method="POST" action="{% url 'enquiries' %}">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="my-2" for="reviewer">Name</label>
+                        </div>
+                        <div class="col-12">
+                            <input id="reviewer" name="reviewer" type="text" class="w-75" placeholder="Your name" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="my-2" for="reviewer">Your email address</label>
+                        </div>
+                        <div class="col-12">
+                            <input id="review" name="reviewer" type="text" class="w-75" placeholder="email" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="my-2" for="review_text">Your message</label>
+                        </div>
+                        <div class="col-12">
+                            <textarea id="review_text" name="enquiry" type="text" class="w-100" placeholder="Please enter your message here" required></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-sm btn-success" value="Submit enquiry">
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                </form>
+                <hr>
             </div>
-            <div class="col-12">
-                <input id="reviewer" name="reviewer" type="text" class="w-75" placeholder="Your name" required>
-            </div>
-            <div class="col-12">
-                <label class="my-2" for="reviewer">Your email address</label>
-            </div>
-            <div class="col-12">
-                <input id="review" name="reviewer" type="text" class="w-75" placeholder="email" required>
-            </div>
-            <div class="col-12">
-                <label class="my-2" for="review_text">Your message</label>
-            </div>
-            <div class="col-12">
-                <textarea id="review_text" name="enquiry" type="text" class="w-100" placeholder="Please enter your message here" required></textarea>
-            </div>
-            <input type="submit" class="btn btn-sm btn-success" value="Submit enquiry">
-            <input type="hidden" name="redirect_url" value="{{ request.path }}">
         </div>
-    </form>
-    <hr>
+    </section>
 </div>
-<!--Map displaying location of the gym-->
-<div class="col-lg-6 contact-map text-wrapper">
-    <div class="reveal-text"></div>
-    <h3>We are located in Minehead Somerset</h3>
-    <div class="custom-map">
+<!--Contact address and phone number, so new users can contact the gym directly-->
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card bg-warning">
+      <div class="card-body">
+        <h5 class="card-title">Visit us</h5>
+        <p class="card-text">Address: 3 Hawksworth Rd, Minehead TA24 5BZ <i class="fas fa-address-card"></i></p>
+      </div>
     </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card bg-warning">
+      <div class="card-body">
+        <h5 class="card-title">Call us</h5>
+        <p class="card-text">01643 705299 <i class="fas fa-phone"></i></p>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</section>
 </div>
 {% endblock %}
 {% block postloadjs %}
