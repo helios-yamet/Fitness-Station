@@ -1,5 +1,5 @@
 <li class="list-inline-item">
-<!--Search bar dropdown in mobile view-->
+    <!--Search bar dropdown in mobile view-->
     <a class="text-warning nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-search fa-lg"></i></div>
@@ -34,6 +34,7 @@
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
+        <a href="{% url 'home' %}" class="dropdown-item">Home</a>
         <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
         {% endif %}
         <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
