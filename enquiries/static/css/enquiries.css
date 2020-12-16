@@ -4,10 +4,14 @@
 }
 
 /* map sized responsively*/
-#map {
-  height: 20em;
-  width: 100%;
-  color: rgb(0, 0, 0);
+
+.map-custom {
+	height: 30em;
+	width: 100%;
+	border: 0.1em solid rgb(2, 1, 1, 0.904);
+	box-shadow: 1em rgb(252, 178, 18);
+	padding-bottom: 3em;
+	margin-bottom: 3em;
 }
 
 /* --------------------- contact form */
