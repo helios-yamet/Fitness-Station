@@ -1,18 +1,25 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
 {% block content %}
 <section class="container-fluid section-container">
     <div class="row">
         <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
             <!-- Shows image of products reviews are for with name of the product -->
-            <h2> Reviews for </h2>
+            <h2> Reviews for {{ product.name }}</h2>
             <hr>
             <div class="row mt-4">
                 <div class="col-4 col-sm-3 col-xl-2">
                     <img class="w-100" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}"> 
                 </div>
                 <div class="col-6 mt-3">
-                    <h4>{{ product }}</h4>
+                    <h4>{{ product.rating }}</h4>
                 </div>
             </div>
             <hr>
@@ -34,7 +41,7 @@
                         <textarea id="review_text" name="review_text" type="text" class="w-100" placeholder="Please enter your review here" required></textarea>
                     </div>
                 </div>
-                <input type="submit" class="btn-sm btn-success mt-1" value="Submit review">
+                <input type="submit" class="btn-sm btn-success" value="Submit review">
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
             </form>
             <hr>
