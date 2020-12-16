@@ -31,4 +31,4 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
-        return str(self.item) + ": £" + str(self.price)
+        return self.name
