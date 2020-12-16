@@ -49,11 +49,13 @@
                 <input id="review" name="reviewer" type="text" class="w-75" placeholder="email" required>
             </div>
             <div class="col-12">
-                <label class="my-2" for="review_text">Review text</label>
+                <label class="my-2" for="review_text">Your message</label>
             </div>
             <div class="col-12">
-                <textarea id="review_text" name="review_text" type="text" class="w-100" placeholder="Please enter your review here" required></textarea>
+                <textarea id="review_text" name="enquiry" type="text" class="w-100" placeholder="Please enter your message here" required></textarea>
             </div>
+            <input type="submit" class="btn btn-sm btn-success" value="Submit enquiry">
+            <input type="hidden" name="redirect_url" value="{{ request.path }}">
         </div>
     </form>
     <hr>
@@ -72,5 +74,5 @@
 <!--Map API key-->
 <script async defer 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwkm-Zl_LpT63IFWXzmGhS8i6vZFf9dM8&callback=initMap"></script>
-<script src="{% static 'enquiries/js/enquiries.js' %}"></script>
+<script src="{% static 'enquiries/enquiries.js' %}"></script>
 {% endblock %}
