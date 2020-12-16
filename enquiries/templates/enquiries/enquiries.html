@@ -27,26 +27,36 @@
         We will help you to organise and arrange a gym plan that is tailored to your personal requirements. 
     </p>
 </div>
-<main>
-    <div class="col-12 col-lg-6">
-        <h1>Contact Us</h1>
-        <form role="form" action="{% url 'enquiries' %}" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <fieldset class="rounded px-3 mb-5">
-                {{ contact_name }}
-                {{ contact_email }}
+<!-- User inputs name, email, message and send to fitness station team. -->
+<div class="col-12 col-lg-6">
+    <h1>Contact Us</h1>
+    <form method="POST" action="{% url 'enquiries' %}">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-12">
+                <label class="my-2" for="user">{{ contact_name }}</label>
+            </div>
+            <div class="col-12">
+                <input id="user" name="user" type="text" class="w-75" placeholder="Your name" required>
+            </div>
+            <div class="col-12">
+                <label class="my-2" for="user">{{ contact_email }}</label>
+            </div>
+            <div class="col-12">
+                <textarea id="review_text" name="review_text" type="text" class="w-100" 
+                    placeholder="Please enter your message here" required>
                 {{ form_content|safe|striptags }}
-                <legend class="fieldset-label small text-black px-2 w-auto"></legend>
-                <button type="submit"
-                    class="btn btn-success">
-                Submit
-                <i class="fas fa-share-square"></i>
-                </button>
-            </fieldset>
-        </form>
-    </div>
-</main>
+                </textarea>
+            </div>
+            <button>
+            <input type="submit" class="btn-sm btn-success" value="Submit enquiry">
+            <i class="fas fa-share-square"></i>
+            </button>
+            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+        </div>
+    </form>
+    <hr>
+</div>
 <!--Map displaying location of the gym-->
 <div class="col-lg-6 contact-map text-wrapper">
     <div class="reveal-text"></div>
