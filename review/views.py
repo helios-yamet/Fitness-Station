@@ -9,11 +9,11 @@ def view_review(request, product_id):
     """"
     Gets the id of the specific product and searches for all reviews
     connect to it and puts them in review_list which is then returned
-    to the template (reviews.html)
+    to the template (review.html)
     """
     product = get_object_or_404(Product, pk=product_id)
     review_list = Review.objects.all().filter(product=product)
-    template = 'reviews/reviews.html'
+    template = 'review/review.html'
     context = {
         'review_list': review_list,
         'product': product
@@ -40,7 +40,7 @@ def add_review(request, product_id):
             new_review.instance.review_text = request.POST.get('review_text')
             new_review.save()
 
-            template = 'reviews/reviews.html'
+            template = 'review/review.html'
             context = {
                 'review_list': review_list,
                 'product': product
