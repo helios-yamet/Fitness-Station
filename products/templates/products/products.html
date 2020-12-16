@@ -65,16 +65,6 @@
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
                         {% endif %}
-                        <div class="card-body pb-0 bg-warning">
-                            <p class="mb-0">{{ product.name }}</p>
-                            <div class="col-sm-9">
-                                <div class="card-block px-2">
-                                    <a href="{% url 'view_reviews' product.id %}" class="btn btn-primary mb-2">Reviews</a>
-                                    <!-- this button toggles visibility of the description on small viewports, hidden by defaul on such devices -->
-                                    <button class="btn btn-success mb-2 toggle-info-button" onclick="toggleElementView({{product.id}})">Toggle info</button>
-                                </div>
-                            </div>
-                        </div>
                         <!--Card footer, holds product details, which informs user of the product type-->
                         <div class="card-footer bg-warning pt-0 border-0 text-left">
                             <div class="row">
@@ -86,6 +76,16 @@
                                         <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                         </a>
                                     </p>
+                                    <div class="card-body pb-0 bg-warning">
+                                        <p class="mb-0">{{ product.name }}</p>
+                                        <div class="col-sm-9">
+                                            <div class="card-block px-2">
+                                                <a href="{% url 'view_review' product.id %}" class="btn btn-sm btn-success">
+                                                    Reviews
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                     {% endif %}
                                     {% if product.rating %}
                                     <!--Product rating, allows user insight in the product quality-->
