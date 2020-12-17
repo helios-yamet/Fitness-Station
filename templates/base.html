@@ -156,42 +156,52 @@
         </script>
         {% endblock %}
         <footer>
-        <div class="container-fluid">
-            <div class="card">
-                <div class="heading text-center">
-                    <div class="head1">Just Scratching the Surface</div>
-                    <p class="bdr"></p>
-                </div>
-                <div class="card-body">
-                    <div class="row m-0 pt-5">
-                        <div class="card col-12 col-md-3">
-                            <div class="card-content">
-                                <i class="fas fa-hand-holding-usd fa-3x"></i>
-                                <div class="card-title"> Activewear </div>
-                                <div class="learn-more">
-                                <a href="{% url 'products' %}?category=men's_activewear,women's_activewear" 
-                                class="btn btn-success btn-lg">Explore here</a>
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="heading text-center">
+                        <div class="head1">Just Scratching the Surface</div>
+                        <p class="bdr"></p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row m-0 pt-5">
+                            <div class="card col-12 col-md-3">
+                                <div class="card-content">
+                                    <i class="fas fa-tshirt fa-3x"></i>
+                                    <div class="card-title"> Activewear </div>
+                                    <div class="learn-more">
+                                        <a href="{% url 'products' %}?category=men's_activewear,women's_activewear" 
+                                            class="btn btn-success btn-lg">Go here</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card col-12 col-md-3">
-                            <div class="card-content">
-                                <i class="far fa-handshake fa-3x"></i>
-                                <div class="card-title"> Accessories </div>
-                                <div class="learn-more">
-                                <a href="{% url 'products' %}?category=accessories" 
-                                class="btn btn-success btn-lg">Explore here</a>
+                            <div class="card col-12 col-md-3">
+                                <div class="card-content">
+                                    <i class="fas fa-bicycle fa-3x"></i>
+                                    <div class="card-title"> Accessories </div>
+                                    <div class="learn-more">
+                                        <a href="{% url 'products' %}?category=accessories" 
+                                            class="btn btn-success btn-lg">Go here</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card col-12 col-md-3">
-                            <div class="card-content">
-                                <i class="fas fa-user-secret fa-3x"></i>
-                                <div class="card-title"> Contact Us</div>
-                                <div class="learn-more">
-                                <a href="{% url 'enquiries' %}" 
-                                class="btn btn-success btn-lg">Contact Us </a>
+                            <div class="card col-12 col-md-3">
+                                <div class="card-content">
+                                    <i class="fas fa-phone-square fa-3x"></i>
+                                    <div class="card-title"> Contact Us</div>
+                                    <div class="learn-more">
+                                        <a href="{% url 'enquiries' %}" 
+                                            class="btn btn-success btn-lg">Contact Us </a>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="card col-12 col-md-3">
+                                <div class="card-content">
+                                    <i class="fas fa-home fa-3x"></i>
+                                    <div class="card-title"> Home </div>
+                                    <div class="learn-more">
+                                        <a href="{% url 'products' %}"
+                                            class="btn btn-success btn-lg">Go here</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -199,16 +209,17 @@
                 </div>
                 <div class="card-footer row m-0 bg-warning">
                     <p>
+                        <i class="fas fa-phone fa-rotate-90 text-secondary"></i>
                         <label> 
-                        <i class="fas fa-phone fa-rotate-90 text-primary"></i> 
-                        </label>01643 705299
+                        Call Us Today: 01643 705299
+                        </label>
                     </p>
                     <div>
                         <p> <small class="follow-text font-weight-bold">
                             Follow Us On Social Media
                             </small>
                             <label class="footer-right">
-                            <i class="fab fa-instagram"></i> 
+                            <i class="fab fa-instagram"></i>
                             <i class="fab fa-facebook-square"></i> 
                             <i class="fab fa-twitter-square"></i> 
                             </label> 
