@@ -144,6 +144,7 @@
             $('.toast').toast('show');
         </script>
         {% endblock %}
+        <!--Footer section, provides further navigation for user to explore the platform-->
         <footer class="footer">
             <div class="container-fluid">
                 <div class="card">
@@ -175,21 +176,21 @@
                             </div>
                             <div class="card col-12 col-md-3">
                                 <div class="card-content">
-                                    <i class="fas fa-phone-square fa-3x"></i>
-                                    <div class="card-title"> Contact Us</div>
+                                    <i class="fas fa-dumbbell fa-3x"></i>
+                                    <div class="card-title"> Workout Plans </div>
                                     <div class="learn-more">
-                                        <a href="{% url 'enquiries' %}" 
-                                            class="btn btn-success btn-lg">Contact Us </a>
+                                        <a href="{% url 'products' %}?category=workout_plans"
+                                            class="btn btn-success btn-lg">Go here</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card col-12 col-md-3">
+                                <div class="card col-12 col-md-3">
                                 <div class="card-content">
-                                    <i class="fas fa-home fa-3x"></i>
-                                    <div class="card-title"> Home </div>
+                                    <i class="fas fa-phone-square fa-3x"></i>
+                                    <div class="card-title"> Contact Us</div>
                                     <div class="learn-more">
-                                        <a href="{% url 'products' %}"
-                                            class="btn btn-success btn-lg">Go here</a>
+                                        <a href="{% url 'contact' %}" 
+                                            class="btn btn-success btn-lg">Contact Us </a>
                                     </div>
                                 </div>
                             </div>
