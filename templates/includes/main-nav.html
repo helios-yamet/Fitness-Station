@@ -5,11 +5,6 @@
             <a class="logo-font font-weight-bold nav-link text-warning mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
-            <li>
-                <div>
-                    
-                </div>
-            </li>
             <!--Search sorting product filters-->
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
@@ -36,7 +31,7 @@
                 <a href="{% url 'products' %}?category=men's_activewear" class="dropdown-item">Mens Activewear</a>
                 <a href="{% url 'products' %}?category=women's_activewear" class="dropdown-item">Womens Activewear</a>
                 <a href="{% url 'products' %}?category=accessories" class="dropdown-item">Accessories</a>
-                <a href="" class="dropdown-item">All Activewear</a>
+                <a href="{% url 'products' %}?category=men's_activewear,women's_activewear" class="dropdown-item">All Activewear</a>
             </div>
         </li>
     </ul>
