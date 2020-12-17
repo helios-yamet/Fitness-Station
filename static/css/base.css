@@ -177,12 +177,12 @@ input[name='q']::placeholder {
 
 .head1 {
     font-weight: 900;
-    font-size: 30px
+    font-size: 1.875em;
 }
 
 .bdr {
-    border-bottom: 1.5px solid #FFB74D;
-    width: 65px;
+    border-bottom: 1.5px solid rgb(252, 178, 18);
+    width: 6.25em;
     margin-right: auto;
     margin-left: auto
 }
@@ -191,45 +191,33 @@ footer .card-footer {
     justify-content: space-between;
     border: none;
     background: none;
-    border-bottom: 0.5px solid #9E9E9E
+    border-bottom: 0.09375em solid rgb(130, 130, 130);
 }
 
 .footer-right>i {
-    margin-left: 15px
-}
-
-.fa-hand-holding-usd {
-    color: #FFB74D
-}
-
-.fa-handshake {
-    color: #FFB74D
+    margin-left: 1.875em;
 }
 
 footer .card-title {
     margin-bottom: .75rem;
     font-weight: 900;
-    font-size: 15px;
-    margin-top: 1.75rem
+    font-size: 0.9375em;
+    margin-top: 1em;
 }
 
 .learn-more {
-    color: #FFB74D
-}
-
-.fa-angle-right {
-    margin-left: 10px
+    color: rgb(252, 178, 18)
 }
 
 .fa-3x {
-    color: #FFB74D
+    color: rgb(252, 178, 18);
 }
 
 footer .card-content {
-    padding-right: 40px;
-    padding-left: 30px;
-    padding-bottom: 10px;
-    padding-top: 10px
+    padding-right: 2.5em;
+    padding-left: 1.875em;
+    padding-bottom: 0.3125em;
+    padding-top: 0.3125em;
 }
 
 footer .card-content>p {
@@ -238,7 +226,7 @@ footer .card-content>p {
 
 footer .heading {
     position: relative;
-    top: 75px
+    top: 1.875em;
 }
 
 footer .follow-text {
