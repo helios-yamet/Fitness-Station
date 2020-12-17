@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Review
+from django.contrib import messages
 from products.models import Product
 from .forms import ReviewForm
 
@@ -39,6 +40,8 @@ def add_review(request, product_id):
             new_review.instance.reviewer = request.POST.get('reviewer')
             new_review.instance.review_text = request.POST.get('review_text')
             new_review.save()
+            messages.success(request, 'Thankyou for submitting that review!')
+            return redirect('review')
 
             template = 'review/review.html'
             context = {
