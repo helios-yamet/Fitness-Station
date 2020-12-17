@@ -10,7 +10,7 @@ class ContactForm(forms.Form):
                                      required=True)
     content = forms.CharField(
         required=True,
-        widget=forms.Textarea, max_length=500, min_length=5,
+        widget=forms.Textarea, max_length=300, min_length=5,
     )
 
     def __init__(self, *args, **kwargs):
@@ -32,5 +32,4 @@ class ContactForm(forms.Form):
             else:
                 placeholder = placeholders[field]
                 self.fields[field].widget.attrs["placeholder"] = placeholder
-                self.fields[field].widget.attrs["class"] = "stripe-style-input"
                 self.fields[field].label = False

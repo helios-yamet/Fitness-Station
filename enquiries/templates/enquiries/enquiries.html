@@ -29,20 +29,20 @@
     </p>
 </div>
 <!-- User inputs name, email, message and send to fitness station team. -->
-<div class="form-group">
+<div class="row">
     <section class="container-fluid section-container">
         <div class="row">
             <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
-                <h1>Contact Us</h1>
+                <h1 class="">Contact Us</h1>
+                <br>
                 <form method="POST" action="{% url 'enquiries' %}">
                     {% csrf_token %}
                     <!--User inputs first& last name-->
                     <div class="input-group col-12">
-                        <div class="input-group-prepend">
-                            <span for="reviewer" class="input-group-text">First and last name</span>
+                        <div class="input-group-prepend input-group-text">
+                            <span for="reviewer" class="">Full Name</span>
                         </div>
-                        <input type="text" aria-label="First name" class="form-control" placeholder="First Name" required>
-                        <input type="text" aria-label="Last name" class="form-control" placeholder="Last Name" required>
+                        <input type="text" aria-label="First name" class="form-control" placeholder="Full Name" required>
                     </div>
                     <!--User input email, the address the gym will respond to-->
                     <div class="form-group col-12">
@@ -68,6 +68,8 @@
         </div>
     </section>
 </div>
+<br>
+
 <!--Contact address and phone number, so new users can contact the gym directly-->
 <div class="container-fluid">
     <div class="row">

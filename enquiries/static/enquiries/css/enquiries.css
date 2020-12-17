@@ -2,39 +2,3 @@
 #more {
     display: none;
 }
-
-/* map sized responsively*/
-
-.map-custom {
-	height: 30em;
-	width: 100%;
-	border: 0.1em solid rgb(2, 1, 1, 0.904);
-	box-shadow: 1em rgb(252, 178, 18);
-	padding-bottom: 3em;
-	margin-bottom: 3em;
-}
-
-/* --------------------- contact form */
-
-.form-control {
-    display: block;
-    width: 100%;
-    min-height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: rgb(196, 196, 196);
-    border: 0.0625em solid rgb(0, 0, 0);
-    border-radius: .25rem;
-}
-
-/*--------------------- enquiries media queries */
-
-/*xxl monitor*/
-@media screen and (min-width: 1500px) {
-  #map {
-    height: 400px;
-    width: 100%;
-  }
-}
