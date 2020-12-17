@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'enquiries/css/enquiries.css' %}">
+<link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
 {% endblock %}
 {% block page_header %}
 <div class="container header-container">
@@ -63,5 +63,5 @@
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
-<script src="{% static 'enquiries/js/enquiries.js' %}"></script>
+<script src="{% static 'contact/js/contact.js' %}"></script>
 {% endblock %}
