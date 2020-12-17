@@ -175,6 +175,10 @@ input[name='q']::placeholder {
 
 /*--------------------------------- Footer */
 
+footer .container-fluid {
+    padding-top: 60px;
+}
+
 .head1 {
     font-weight: 900;
     font-size: 1.875em;
