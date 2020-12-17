@@ -14,17 +14,17 @@ def enquiries(request):
         form = form_class(data=request.POST)
 
         if form.is_valid():
-            full_name = request.POST.get('contact_name', '')
-            contact_email = request.POST.get('contact_email', '')
-            content = request.POST.get('content', '')
+            full_name = request.POST.get('full_name', '')
+            email_address = request.POST.get('email_address', '')
+            message = request.POST.get('message', '')
 
             # Email the profile with the
             # contact information
             template = get_template('enquiries/enquiries_template.txt')
             context = {
                 'full_name': full_name,
-                'contact_email': contact_email,
-                'content': content,
+                'email_address': email_address,
+                'message': message,
             }
             content = template.render(context)
 
@@ -32,7 +32,7 @@ def enquiries(request):
                 "New contact form submission",
                 content,
                 "Your website" + '',
-                ['youremail@gmail.com'], headers={'Reply-To': contact_email}
+                ['youremail@gmail.com'], headers={'Reply-To': email_address}
             )
             email.send()
             return redirect('enquiries')
