@@ -52,7 +52,7 @@
             <h4 class="mb-4 text-uppercase">Message us</h4>
             <form action="{% url 'contact' %}" method="POST" class="form-group">
                 {% csrf_token %}
-                {{ contact_form|crispy }}
+                {{ contact_form | crispy }}
                 <button id="submit-button" class="btn btn-lg btn-success">
                     <span class="text-uppercase">Send message</span>
                     <span class="icon">
