@@ -28,7 +28,7 @@
                 <div class="col-12 col-md-6 form-bg p-3">
                     <h4 class="mb-4 text-uppercase">Create a Review</h4>
                     {% if user.is_authenticated %}
-                    <form action="{% url 'review_form' product.id %}" method="POST" class="form-group">
+                    <form action="{% url 'view_review' product.id %}" method="POST" class="form-group">
                         {% csrf_token %}
                         {{ review_form|crispy }}
                         <button id="submit-button" class="btn btn-lg btn-success">
