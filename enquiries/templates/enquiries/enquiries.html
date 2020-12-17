@@ -11,6 +11,7 @@
 </div>
 {% endblock %}
 {% block content %}
+<!--About gym desciption, user can learn more about the gym by clicking read more button-->
 <div class="jumbotron">
     <h3 class="display-4">About Fitness Station</h3>
     <p class="lead">Looking to sign up at a local gym in Minehead? 
@@ -35,58 +36,61 @@
                 <h1>Contact Us</h1>
                 <form method="POST" action="{% url 'enquiries' %}">
                     {% csrf_token %}
-                    <div class="row">
-                        <div class="col-12">
-                            <label class="my-2" for="reviewer">Name</label>
+                    <!--User inputs first& last name-->
+                    <div class="input-group col-12">
+                        <div class="input-group-prepend">
+                            <span for="reviewer" class="input-group-text">First and last name</span>
                         </div>
-                        <div class="col-12">
-                            <input id="reviewer" name="reviewer" type="text" class="w-75" placeholder="Your name" required>
-                        </div>
-                        <div class="col-12">
-                            <label class="my-2" for="reviewer">Your email address</label>
-                        </div>
-                        <div class="col-12">
-                            <input id="review" name="reviewer" type="text" class="w-75" placeholder="email" required>
-                        </div>
-                        <div class="col-12">
-                            <label class="my-2" for="review_text">Your message</label>
-                        </div>
-                        <div class="col-12">
-                            <textarea id="review_text" name="enquiry" type="text" class="w-100" placeholder="Please enter your message here" required></textarea>
-                        </div>
-                        <input type="submit" class="btn btn-sm btn-success" value="Submit enquiry">
+                        <input type="text" aria-label="First name" class="form-control" placeholder="First Name" required>
+                        <input type="text" aria-label="Last name" class="form-control" placeholder="Last Name" required>
+                    </div>
+                    <!--User input email, the address the gym will respond to-->
+                    <div class="form-group col-12">
+                        <label class="my-2" for="reviewer"></label>
+                    </div>
+                    <div class="col-12">
+                        <input id="review" name="reviewer" for="reviewer" type="text" class="form-control" placeholder="email" required>
+                    </div>
+                    <!--User creates message and submits it, sending message to the gym-->
+                    <div class="form-group shadow-textarea">
+                        <label for="reviewer"></label>
+                        <textarea class="form-control z-depth-1" id="reviewer" rows="3" 
+                        placeholder="Write something here..."></textarea>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="submit" class="btn btn-lg btn-success btn-block" value="Submit enquiry">
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
-                <hr>
             </div>
+            <hr>
         </div>
     </section>
 </div>
 <!--Contact address and phone number, so new users can contact the gym directly-->
 <div class="container-fluid">
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card bg-warning">
-      <div class="card-body">
-        <h5 class="card-title">Visit us</h5>
-        <p class="card-text">Address: 3 Hawksworth Rd, Minehead TA24 5BZ <i class="fas fa-address-card"></i></p>
-      </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card bg-warning">
+                <div class="card-body">
+                    <h5 class="card-title">Visit us</h5>
+                    <p class="card-text">Address: 3 Hawksworth Rd, Minehead TA24 5BZ <i class="fas fa-address-card"></i></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card bg-warning">
+                <div class="card-body">
+                    <h5 class="card-title">Call us</h5>
+                    <p class="card-text">01643 705299 <i class="fas fa-phone"></i></p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card bg-warning">
-      <div class="card-body">
-        <h5 class="card-title">Call us</h5>
-        <p class="card-text">01643 705299 <i class="fas fa-phone"></i></p>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
-<script class="custom-map"></script>
 <script src="{% static 'enquiries/js/enquiries.js' %}"></script>
 {% endblock %}
