@@ -5,6 +5,27 @@ from products.models import Product
 from .forms import ReviewForm
 
 
+def review_form(request, product_id):
+    "A view that returns the contact page"
+    review_form = ReviewForm()
+
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST)
+        if review_form.is_valid:
+            review_form.save()
+            messages.success(request, 'Thank you for submitting that review.')
+            return redirect('review')
+
+    template = 'review/review.html'
+
+    context = {
+        'review_form': review_form,
+        'on_profile_page': True
+    }
+
+    return render(request, template, context)
+
+
 # Create your views here.
 def view_review(request, product_id):
     """"
@@ -21,37 +42,3 @@ def view_review(request, product_id):
     }
 
     return render(request, template, context)
-
-
-def add_review(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    review_list = Review.objects.all().filter(product=product)
-    """
-    When the add review button on the page is pressed the function is called
-    and given the product_id as an argument.
-    The validity of the form is checked and the review is added
-    to the database.
-    """
-
-    if request.method == "POST":
-        new_review = ReviewForm(request.POST)
-        if new_review.is_valid():
-            new_review.instance.product = product
-            new_review.instance.reviewer = request.POST.get('reviewer')
-            new_review.instance.review_text = request.POST.get('review_text')
-            new_review.save()
-            messages.success(request, 'Thankyou for submitting that review!')
-            return redirect('review')
-
-            template = 'review/review.html'
-            context = {
-                'review_list': review_list,
-                'product': product
-            }
-
-            return render(request, template, context)
-    else:
-        new_review = ReviewForm()
-
-    redirect_url = request.POST.get('redirect_url')
-    return redirect(redirect_url)
