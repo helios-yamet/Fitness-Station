@@ -5,6 +5,12 @@ from products.models import Product
 
 
 def bag_contents(request):
+    """
+    Define default bag variable,
+    create instance of bag item.
+    Calculates total to free delivery cost,
+    grand total equals delivery plus product total.
+    """
 
     bag_items = []
     total = 0
