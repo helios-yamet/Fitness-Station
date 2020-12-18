@@ -27,7 +27,6 @@
                 <!-- Shows the input form to add a review if logged on, else message is displayed to ask for login. -->
                 <div class="col-12 col-md-6 form-bg p-3">
                     <h4 class="mb-4 text-uppercase">Create a Review</h4>
-                    {% if user.is_authenticated %}
                     <form action="{% url 'review_form' product.id %}" method="POST" class="form-group">
                         {% csrf_token %}
                         {{ review_form|crispy }}
@@ -46,9 +45,6 @@
                         </button>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
-                    {% else %}
-                    <h5 class="mt-3">Please <a href="{% url 'account_login' %}" class="login-request-link">login</a> to add a review</h5>
-                    {% endif%}
                 </div>
             </div>
             <hr>
@@ -57,7 +53,7 @@
                 {% if review_list %}
                 <div class="row justify-content-around">
                     {% for review in review_list %}
-                    <div class="col-12 col-lg-5 border border-warning mb-2 mx-lg-2">
+                    <div class="card shadowp-3 bg-white rounded col-12 col-lg-5 mb-2 mx-lg-2">
                         <h4 class="mt-2 ">{{ review.name }}</h4>
                         <p>{{ review.review_text }}</p>
                         <h5 class="mb-2">{{ review.date }}</h5>
