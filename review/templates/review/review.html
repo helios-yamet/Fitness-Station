@@ -44,6 +44,7 @@
                         <i class="fas fa-plus-circle"></i>
                         </span>
                         </button>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
                     {% else %}
                     <h5 class="mt-3">Please <a href="{% url 'account_login' %}" class="login-request-link">login</a> to add a review</h5>
