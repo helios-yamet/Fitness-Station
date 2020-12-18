@@ -82,6 +82,7 @@ input[name='q']::placeholder {
     transform: scale(1.02);
 }
 
+
 /* ------------------------------- Homepage jumbotron header */
 .jumbotron {
     background-image: linear-gradient(#b9a2a5, #ffc342);
@@ -176,7 +177,7 @@ input[name='q']::placeholder {
 /*--------------------------------- Footer */
 
 footer .container-fluid {
-    padding-top: 60px;
+    padding-top: 3.75em;
 }
 
 .head1 {
@@ -238,7 +239,16 @@ footer .follow-text {
 }
 
 
-/* -------------------------------- Media Queries */
+/* -------------------------------- Media Queries& allauth forms */
+/* queries and allauth form formatting adapted fron boutique ado project:
+source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/base.css
+
+/*-------------------------------- shopping bag image height in mobile*/
+@media (max-height: 600px) {
+    .bag-image {
+        height: 4em;
+    }
+}
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -298,7 +308,7 @@ footer .follow-text {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #17a2b8;
 }
 
 
