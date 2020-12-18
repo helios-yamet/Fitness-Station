@@ -11,7 +11,7 @@ class Review(models.Model,):
     product = models.ForeignKey(
         Product, on_delete=models.SET_NULL, null=True, blank=True)
     review_text = models.TextField(max_length=200, blank=False, default='')
-    reviewer = models.CharField(max_length=100, blank=False, default='')
+    name = models.CharField(max_length=50, blank=False, default='')
     date = models.DateTimeField(default=timezone.now, blank=True)
 
     def __str__(self):
