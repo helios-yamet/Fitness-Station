@@ -107,12 +107,23 @@
                             </span>
                             <span class="text-uppercase">Keep Shopping</span>
                             </a>
+                            {% if user.is_authenticated %}
                             <a href="{% url 'checkout' %}" class="btn btn-success rounded-0 btn-lg">
                             <span class="text-uppercase">Secure Checkout</span>
                             <span class="icon">
                             <i class="fas fa-lock"></i>
                             </span>
                             </a>
+                            {% else %}
+                            <a href="#" class="btn btn-danger mx-3 mb-2 mb-sm-3">
+                                <span id="checkout-anchor" class="text-uppercase">Checkout</span>
+                            </a>
+                            {% endif%}
+                            <div id="cart-login-request" class="login-request-text ml-3 mb-2 mb-sm-0 mt-sm-1">
+                                <span>
+                                    Please <a href="{% url 'account_login' %}" class="login-request-link">login</a> to go to checkout
+                                </span>
+                            </div>
                         </td>
                     </tr>
                 </table>
