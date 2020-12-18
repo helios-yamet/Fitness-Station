@@ -88,16 +88,22 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 * What functionalities do competitors offer?
 
    * Product page filter, filters down product by gender, size and category.
+   
    * A variety of exercise plans, for different user age, gender, abilty and goals.
+   
    * Ability to share purchased products to social media.
+   
    * User search bar, user can type key words to find the product they are after.
 
 * What content do users need?
 
-  * Suitable products that enhance the gym going experience.
+  * Suitable products that meets the fitness requirements of users.
+  
   * Users need a description of each product.
+  
   * A profile so users can view previous orders; plus create, view, update and delete shipping/billing details form.
-  * About gym information, inform potential new members of gym location, facilities and contact details.
+  
+  * About gym information and contact page, to inform potential new members of gym location, facilities and contact.
 
 - 3 __Structure Level__
  
@@ -113,6 +119,8 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
    * If user has forgotten his/her password, they can reset it by entering their email address and a reset email will be sent.
    
    * If user is unsure of any past order costs, all orders are logged in the user profile.
+   
+   * If the user has a question, they can send a message via email or by phone call, details are provided on the site.
  
 * Is the architecture of the project understood by users?
    
@@ -120,15 +128,19 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
   
 * Does the design meet user expectations?
 
-   * The design will be aim to meet user expectations by strategically placing fitness station logo and signature colourways which users identify the fitness station brand by.
+   * The design will be aim to meet user expectations by strategically placing fitness station logo and signature colourways which users can identify the fitness station brand In additon there users can contact the gym directly and read about gym.
 
 - 4 __Layout Level__
 
-  * For each page I asked the below questions:
+ * For each page I asked the below questions:
 
-  * Does the prototype meet the required functionality and information architecture requirements?
+ * Does the prototype meet the required functionality and information architecture requirements?
+    
+    * With thorough testing, the function aspects of each feature satisfied requiremnts
 
   * Are content blocks conveniently located?
+     
+     * Content blocks are nicely displayed a convenient manner
 
   * Is the system convenient for users?
  
@@ -137,6 +149,17 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
   * Is this the best solution, or is it possible to optimize and improve something?
 
 - 5 __Surface Level__
+
+  
+ * Is our interface user-friendly?
+ 
+ * Does it solve the problems described in the first planes?
+ 
+ * Does it correspond to the functions that should be incorporated into it?
+ 
+ * Does the design help the user?
+ 
+ * Does the visual design solve the problems that were laid down in the design of the user experience?
 
 
 ## User Stories
