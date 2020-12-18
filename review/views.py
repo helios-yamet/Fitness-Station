@@ -14,34 +14,24 @@ def review_form(request, product_id):
         if review_form.is_valid:
             review_form.save()
             messages.success(request, 'Thank you for submitting that review.')
-            return redirect('review_form')
+            return redirect('view_review')
 
             template = 'review/review.html'
 
             context = {
-                'review_form': review_form,
+                'review_form': ReviewForm(),
                 'on_profile_page': True
             }
 
     return render(request, template, context)
 
 
-# Create your views here.
 def view_review(request, product_id):
     """"
-    Gets the id of the specific product and searches for all reviews
-    connect to it and puts them in review_list which is then returned
-    to the template (review.html)
+    Gets the id of the product and searches all reviews
+    connected to it, and attatches them in a review_list
+    which is returned to the template.
     """
-    review_form = ReviewForm()
-
-    if request.method == 'POST':
-        review_form = ReviewForm(request.POST)
-        if review_form.is_valid:
-            review_form.save()
-            messages.success(request, 'Thank you for submitting that review.')
-            return redirect('view_review')
-
     product = get_object_or_404(Product, pk=product_id)
     review_list = Review.objects.all().filter(product=product)
     template = 'review/review.html'

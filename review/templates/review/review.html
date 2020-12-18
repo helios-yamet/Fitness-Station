@@ -28,9 +28,16 @@
                 <div class="col-12 col-md-6 form-bg p-3">
                     <h4 class="mb-4 text-uppercase">Create a Review</h4>
                     {% if user.is_authenticated %}
-                    <form action="{% url 'view_review' product.id %}" method="POST" class="form-group">
+                    <form action="{% url 'review_form' product.id %}" method="POST" class="form-group">
                         {% csrf_token %}
                         {{ review_form|crispy }}
+                        <a href="{% url 'products' %}" class="btn btn-warning rounded-0 btn-lg">
+                            <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <!--User can keep shopping, button transport user to the products page-->
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
                         <button id="submit-button" class="btn btn-lg btn-success">
                         <span>Submit review</span>
                         <span class="icon">
@@ -49,8 +56,8 @@
                 {% if review_list %}
                 <div class="row justify-content-around">
                     {% for review in review_list %}
-                    <div class="col-12 col-lg-5 border border-dark mb-2 mx-lg-2">
-                        <h4 class="mt-2 ">{{ review.reviewer }}</h4>
+                    <div class="col-12 col-lg-5 border border-warning mb-2 mx-lg-2">
+                        <h4 class="mt-2 ">{{ name }}</h4>
                         <p>{{ review.review_text }}</p>
                         <h5 class="mb-2">{{ review.date }}</h5>
                     </div>
