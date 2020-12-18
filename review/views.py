@@ -41,10 +41,10 @@ def review_form(request, product_id):
             new_review.instance.review_text = request.POST.get('review_text')
             new_review.save()
             messages.success(request, "Thankyou for submitting a review!")
-            return redirect(f"eview_form/{product_id}")
 
             template = 'review/review.html'
             context = {
+                'review_form': ReviewForm(),
                 'review_list': review_list,
                 'product': product
             }
