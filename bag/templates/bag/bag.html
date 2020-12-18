@@ -35,6 +35,7 @@
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
+                    <!--Product image, quantity and price-->
                     {% for item in bag_items %}
                     <tr>
                         <td class="p-3 w-25">
@@ -48,6 +49,7 @@
                         <td class="py-3">
                             <p class="my-0">${{ item.product.price }}</p>
                         </td>
+                        <!--Product quantity incrementor and decrementor, user control product amount-->
                         <td class="py-3 w-25">
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
@@ -73,40 +75,49 @@
                                             </span>
                                             </button>
                                         </div>
+                                        <!--If statement asks whether product has sizes or not-->
                                         {% if item.product.has_sizes %}
                                         <input type="hidden" name="product_size" value="{{ item.size }}">
                                         {% endif %}
                                     </div>
                                 </div>
                             </form>
+                            <!--Update& remove product link, add or remove products from bag-->
                             <a class="update-link text-info"><small>Update</small></a>
                             <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
                         </td>
+                        <!--Combine product price& product quantity to calculate bag subtotal-->
                         <td class="py-3">
                             <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr>
+                        <!--Display shopping bag grand total-->
                         <td colspan="5" class="pt-5 text-right">
                             <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                             <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                            <!--If bag total greater than $50 user gets free delivery-->
                             {% if free_delivery_delta > 0 %}
                             <p class="mb-1 text-danger">
+                            <!--If bag total less than $50, inform user they are X amount from getting a free delivery-->
                                 You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
                             </p>
                             {% endif %}
                         </td>
                     </tr>
                     <tr>
+                        <!--Secure checkout button, transports user to checkout page-->
                         <td colspan="5" class="text-right">
                             <a href="{% url 'products' %}" class="btn btn-warning rounded-0 btn-lg">
                             <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                             </span>
+                            <!--User can keep shopping, button transport user to the products page-->
                             <span class="text-uppercase">Keep Shopping</span>
                             </a>
+                            <!--Checks whether user is logged in-->
                             {% if user.is_authenticated %}
                             <a href="{% url 'checkout' %}" class="btn btn-success rounded-0 btn-lg">
                             <span class="text-uppercase">Secure Checkout</span>
@@ -114,6 +125,7 @@
                             <i class="fas fa-lock"></i>
                             </span>
                             </a>
+                            <!--If user does not have an account, site requests user to login or register-->
                             {% else %}
                             <a href="#" class="btn btn-danger mx-3 mb-2 mb-sm-3">
                                 <span id="checkout-anchor" class="text-uppercase">Checkout</span>
@@ -166,8 +178,6 @@
              location.reload();
          });
     })
-
-    // stripe public key
     
 </script>
 {% endblock %}
