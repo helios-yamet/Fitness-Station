@@ -57,109 +57,25 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 - 1 __Strategy Level__
 
-* Why do we create a product? 
-  * To sell our fitness station goods.
 
-* What are our goals? 
-  * Create an intuitive eccommence site for the local gym in the community, providing exercise plans, branded merchardise and accessories.
-
-* Who are our users? Who are we making the product for?
-  * The site is open to all online users, especially members of the gym.
-
-* What tasks will we help users solve?
-  * The site will assist users in purchasing their desired products.
-
-* Why will they use our solution?
-  * Saves users time from having to visit the gym to purchase goods.
 
 - 2 __Feature Level__
 
-* What functions are needed to solve custom tasks?
 
-  * We will need a safe& secure payment system to take payments, to prevent transaction errors. 
-  * Order confirmation in user profile& email sent to address provided, so user knows the order has been processed. 
-  * A login& registration function with secure authentication, ensure users have an account with us. 
-  * A sort products category& products filter, so user can find the product they want.
-  * Shopping bag function, user can view, update and delete all products placed in bag.
-  * A GET& POST function to post blog posts, so user write of their product experience.
-  * Site notifications, when user adds product bag, the site should inform user that the product has been added.
-   
-
-* What functionalities do competitors offer?
-
-   * Product page filter, filters down product by gender, size and category.
-   
-   * A variety of exercise plans, for different user age, gender, abilty and goals.
-   
-   * Ability to share purchased products to social media.
-   
-   * User search bar, user can type key words to find the product they are after.
-
-* What content do users need?
-
-  * Suitable products that meets the fitness requirements of users.
-  
-  * Users need a description of each product.
-  
-  * A profile so users can view previous orders; plus create, view, update and delete shipping/billing details form.
-  
-  * About gym information and contact page, to inform potential new members of gym location, facilities and contact.
 
 - 3 __Structure Level__
  
- * How to help the user solve the problem in the minimum amount of time and the smallest number of steps?
-  
-   * A primary goal of site is to make purchasing our products as simple as possible; a main navigation bar will be implemented across site, this allows users to access every
-    page within seconds. 
-   
-   * Once user has inputted shipping/billing details once, those details are saved to the user profile and the checkout form is auto-filled, for future transactions, ensuring         a smooth checkout experience. 
-   
-   * If user shipping/billing details have changed; the user can update the existing details in their user profile.
-   
-   * If user has forgotten his/her password, they can reset it by entering their email address and a reset email will be sent.
-   
-   * If user is unsure of any past order costs, all orders are logged in the user profile.
-   
-   * If the user has a question, they can send a message via email or by phone call, details are provided on the site.
- 
-* Is the architecture of the project understood by users?
-   
-   * The project will apply well renowned fonts& icons and each to be defined by a title introducing the page which informs the user of the type of page.
-  
-* Does the design meet user expectations?
 
-   * The design will be aim to meet user expectations by strategically placing fitness station logo and signature colourways which users can identify the fitness station brand In additon there users can contact the gym directly and read about gym.
 
 - 4 __Layout Level__
 
- * For each page I asked the below questions:
 
- * Does the prototype meet the required functionality and information architecture requirements?
-    
-    * With thorough testing, the function aspects of each feature satisfied requiremnts
-
-  * Are content blocks conveniently located?
-     
-     * Content blocks are nicely displayed a convenient manner
-
-  * Is the system convenient for users?
- 
-  * Do the prototypes meet industry requirements and standards?
-
-  * Is this the best solution, or is it possible to optimize and improve something?
 
 - 5 __Surface Level__
 
   
- * Is our interface user-friendly?
- 
- * Does it solve the problems described in the first planes?
- 
- * Does it correspond to the functions that should be incorporated into it?
- 
- * Does the design help the user?
- 
- * Does the visual design solve the problems that were laid down in the design of the user experience?
+ See article below describing each plane and the project process from stratedgy to surface:
+  *https://github.com/michodgs25/Fitness-Station-360/issues/6#issue-770549917*
 
 
 ## User Stories
