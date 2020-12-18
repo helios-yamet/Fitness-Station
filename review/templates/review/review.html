@@ -57,7 +57,7 @@
                 <div class="row justify-content-around">
                     {% for review in review_list %}
                     <div class="col-12 col-lg-5 border border-warning mb-2 mx-lg-2">
-                        <h4 class="mt-2 ">{{ name }}</h4>
+                        <h4 class="mt-2 ">{{ review.name }}</h4>
                         <p>{{ review.review_text }}</p>
                         <h5 class="mb-2">{{ review.date }}</h5>
                     </div>
