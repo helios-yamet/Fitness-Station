@@ -1,4 +1,4 @@
-// This is just a sample script. Paste your real code (javascript or HTML) here.
+/*Code is adapted from stripe documentation& code institute project boutque ado*/
 /*
     Core logic/payment flow for this comes from here:
     https://stripe.com/docs/payments/accept-a-payment

@@ -4,7 +4,11 @@ from .forms import ContactForm
 
 
 def contact_form(request):
-    "A view that returns the contact page"
+    """A view that returns the contact page.
+    create contactform variable.
+    Run if statement, test form is valid.
+    Save form& return message, contact form template.
+    """
     contact_form = ContactForm()
 
     if request.method == 'POST':
