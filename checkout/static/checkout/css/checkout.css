@@ -1,3 +1,7 @@
+/*Stripe code adapted from code institute project boutique ado:
+https://github.com/ckz8780/boutique_ado_v1/blob/master/checkout/static/checkout/css/checkout.css*/
+
+
 .StripeElement,
 .stripe-style-input {
 	box-sizing: border-box;
@@ -11,6 +15,7 @@
 	transition: box-shadow 150ms ease;
 }
 
+/*--------------------------------- Checkout form stripe styling*/
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
@@ -46,6 +51,7 @@ select option[value=""] {
 	color: rgb(196, 196, 196);
 }
 
+/*Position spinner overlay*/
 #loading-overlay {
 	display: none;
 	position: fixed;
@@ -57,6 +63,8 @@ select option[value=""] {
 	z-index: 9999;
 }
 
+/*When payment is submitted, whilst order is processed,
+spinner is called*/
 .loading-spinner {
 	display: flex;
 	align-items: center;
