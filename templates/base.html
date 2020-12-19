@@ -12,9 +12,9 @@
         {% block corecss %}
         <!--Css custom and cdn frameworks-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap"/>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         {% endblock %}
         {% block extra_css %}
         {% endblock %}
@@ -25,20 +25,23 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <!-- Stripe payment cdn -->
-        <script src="https://js.stripe.com/v3/">
-            <script type="text/javascript">
-            //<![CDATA[
+        <script src="https://js.stripe.com/v3/"></script>
+        <!--call stripe key from settings-->
+        <script type="text/javascript">
+            //![CDATA[
             settings.STRIPE_PUBLIC_KEY = '{{ STRIPE_PUBLIC_KEY }}';
-            //]]>
+            //>]]
         </script>
         {% endblock %}
         {% block extra_js %}
         {% endblock %}
         <title>Fitness Station{% block extra_title %}{% endblock %}</title>
+    <!--Favicon, site icon-->
+    <link id="favicon" rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
     </head>
     <body>
         <header class="container-fluid fixed-top">
-            <div id="topnav" class="row bg-secondary pt-lg-2 d-none d-lg-flex">
+            <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
                         <h2 class="logo-font text-warning my-0"><strong>Fitness</strong> Station</h2>
@@ -105,7 +108,7 @@
                     </ul>
                 </div>
             </div>
-            <!--Import main navigation bar mobile header-->
+            <!--Import both main navigation& mobile header-->
             <div class="row bg-secondary">
                 <nav class="navbar navbar-expand-lg navbar-light w-100">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" 
@@ -117,6 +120,7 @@
                 </nav>
             </div>
         </header>
+        <!--Display toast response message to the user-->
         {% if messages %}
         <div class="message-container">
             {% for message in messages %}
@@ -143,5 +147,81 @@
             $('.toast').toast('show');
         </script>
         {% endblock %}
+        <!--Footer section, provides further navigation for user to explore the platform-->
+        <!--Code adapted from: https://bbbootstrap.com/snippets/footer-bottom-responsive-template-20401963-->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="heading text-center">
+                        <div class="head1">Discover more</div>
+                        <p class="bdr"></p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row m-0 pt-5">
+                            <div class="card col-12 col-md-3">
+                                <div class="card-content">
+                                    <i class="fas fa-tshirt fa-3x"></i>
+                                    <div class="card-title"> Activewear </div>
+                                    <div class="learn-more">
+                                        <a href="{% url 'products' %}?category=men's_activewear,women's_activewear" 
+                                            class="btn btn-success btn-lg">Go here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-12 col-md-3">
+                                <div class="card-content">
+                                    <i class="fas fa-bicycle fa-3x"></i>
+                                    <div class="card-title"> Accessories </div>
+                                    <div class="learn-more">
+                                        <a href="{% url 'products' %}?category=accessories" 
+                                            class="btn btn-success btn-lg">Go here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-12 col-md-3">
+                                <div class="card-content">
+                                    <i class="fas fa-dumbbell fa-3x"></i>
+                                    <div class="card-title"> Workout Plans </div>
+                                    <div class="learn-more">
+                                        <a href="{% url 'products' %}?category=workout_plans"
+                                            class="btn btn-success btn-lg">Go here</a>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="card col-12 col-md-3">
+                                <div class="card-content">
+                                    <i class="fas fa-phone-square fa-3x"></i>
+                                    <div class="card-title"> Contact Us</div>
+                                    <div class="learn-more">
+                                        <a href="{% url 'contact' %}" 
+                                            class="btn btn-success btn-lg">Contact Us </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--lower half of footer, displays social media& gym contact number-->
+                <div class="card-footer row m-0 bg-warning">
+                    <p>
+                        <i class="fas fa-phone fa-rotate-90 text-secondary"></i>
+                        <label> 
+                        Call Us Today: 01643 705299
+                        </label>
+                    </p>
+                    <div>
+                        <p> <small class="follow-text font-weight-bold">
+                            Follow Us On Social Media
+                            </small>
+                            <label class="footer-right">
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-facebook-square"></i>
+                            <i class="fab fa-twitter-square"></i> 
+                            </label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

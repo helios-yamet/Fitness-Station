@@ -455,7 +455,7 @@ Summary:
 
 These technologies helped create, shape and test my code
 
-* Kaggle.com - https://www.kaggle.com/dqmonn/zalando-store-crawl: provided the raw product datasets.
+* Kaggle.com - https://www.kaggle.com/dqmonn/zalando-store-crawl: provided the raw product images.
 
 * Balslamiq - https://balsamiq.com/:  provided tools to construct the wire-frames of the platform.
 

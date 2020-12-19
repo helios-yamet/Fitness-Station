@@ -8,36 +8,60 @@
 </div>
 {% endblock %}
 {% block content %}
-<div class="card-deck">
-    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-        <div class="card text-center text-light bg-warning mb-3">
-            <img src="media/homepage_images/workout-plan-category.jpg" class="card-img-top" alt="Workout plans category image">
-            <div class="card-body">
-                <h5 class="card-title">Workout Plans</h5>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<section id="home-header" class="jumbotron text-center">
+    <h1 class="display-3">Fitness Station</h1>
+    <h3 class="lead">Explore our amazing range of products below</h3>
+</section>
+<section id="gallery">
+    <div class="container">
+        <div class="row">
+            <!--Activewear product card, user can view activewear only-->
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="media/homepage_images/mens-activewear.jpg" alt="Activewear model image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Activewear</h5>
+                        <p class="card-text">Explore our amazing activewear range.</p>
+                        <a href="{% url 'products' %}?category=men's_activewear,women's_activewear" class="btn btn-outline-success btn-sm">Explore here</a>
+                    </div>
+                </div>
+            </div>
+            <!--Accessories product card, user can view accessories only-->
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="media/homepage_images/accessories-category.jpg" alt="Accessories category image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Accessories</h5>
+                        <p class="card-text">Explore our handy accessories range.</p>
+                        <a href="{% url 'products' %}?category=accessories" class="btn btn-outline-success btn-sm">Explore here</a>
+                    </div>
+                </div>
+            </div>
+            <!--Workout plans product card, user can view plans only-->
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="media/homepage_images/workout-plan-category.jpg" alt="Workout plan category image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Workout plans</h5>
+                        <p class="card-text">Explore our life changing workout plans range.</p>
+                        <a href="{% url 'products' %}?category=workout_plans" class="btn btn-outline-success btn-sm">Explore here</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-        <div class="card text-center text-light bg-warning mb-3">
-            <img src="media/homepage_images/mens-activewear.jpg" class="card-img-top" alt="Activewear category image">
-            <div class="card-body">
-                <h5 class="card-title">Men's Activewear</h5>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-    <div class="card text-center text-light bg-warning mb-3">
-        <img src="media/homepage_images/accessories-category.jpg" class="card-img-top" alt="Accessories card image">
-        <div class="card-body">
-            <h5 class="card-title">Accessories</h5>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-    </div>
+</section>
+<section>
+<!--Home enquires section, so user can contact the gym-->
+<div class="container-fluid jumbotron text-center">
+  <h1 class="display-4">Enquire about us</h1>
+  <p class="lead">Learn more about the amazing services we provide</p>
+  <hr class="my-4">
+  <div>
+    <a class="btn btn-success btn-lg" href="{% url 'contact' %}" role="button">Learn more
+        <i class="fas fa-book-reader"></i>
+    </a>
+  </div>
 </div>
-</div>
+</section>
 {% endblock %}

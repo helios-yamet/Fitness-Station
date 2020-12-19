@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<!--Informs user that action cannot be completed, for example site no longer stocks that product-->
 <div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
     <div class="arrow-up arrow-danger"></div>
     <div class="w-100 toast-capper bg-danger"></div>
@@ -7,7 +9,8 @@
         <span aria-hidden="true">&times;</span>
         </button>
     </div>
+    <!--Call toast error template tag message-->
     <div class="toast-body bg-danger">
-        {{ message }}        
+        {{ message }}
     </div>
 </div>
