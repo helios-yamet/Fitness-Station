@@ -5,8 +5,8 @@ from django.utils import timezone
 
 class Review(models.Model,):
     """
-    This model will store a review text, reviewer and
-    date of submission to a product.
+    This model will store a review text, username
+    and review submission date.
     """
     product = models.ForeignKey(
         Product, on_delete=models.SET_NULL, null=True, blank=True)
@@ -15,4 +15,4 @@ class Review(models.Model,):
     date = models.DateTimeField(default=timezone.now, blank=True)
 
     def __str__(self):
-        return self.reviewer
+        return self.name

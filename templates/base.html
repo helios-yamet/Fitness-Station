@@ -35,13 +35,13 @@
         {% endblock %}
         {% block extra_js %}
         {% endblock %}
-        <img href="media/favicon/favicon-16x16.png"><title>Fitness Station{% block extra_title %}{% endblock %}</title>
+        <title>Fitness Station{% block extra_title %}{% endblock %}</title>
     <!--Favicon, site icon-->
     <link id="favicon" rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
     </head>
     <body>
         <header class="container-fluid fixed-top">
-            <div id="topnav" class="row bg-secondary pt-lg-2 d-none d-lg-flex">
+            <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
                         <h2 class="logo-font text-warning my-0"><strong>Fitness</strong> Station</h2>
@@ -120,7 +120,7 @@
                 </nav>
             </div>
         </header>
-        <!--Display response message to the user-->
+        <!--Display toast response message to the user-->
         {% if messages %}
         <div class="message-container">
             {% for message in messages %}
