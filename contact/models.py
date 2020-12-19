@@ -3,7 +3,7 @@ from django.db import models
 
 class Contact(models.Model):
     """
-    Create contact model class, 
+    Create contact model class,
     attach message fields to contact model.
     """
     full_name = models.CharField(max_length=120, null=False, blank=False)
