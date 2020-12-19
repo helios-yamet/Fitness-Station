@@ -23,7 +23,11 @@ html {
 }
 
 
-/*------------------------- Platform buttons */
+/*------------------------- Platform buttons
+
+.btt-link {
+    margin-bottom: 10em;
+}*/
 
 .btn-outline-black {
     background: rgb(255, 255, 255);
