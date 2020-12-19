@@ -161,6 +161,12 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/*-------------------------------- Contact page gym description*/
+/*--------------- read more button, taken from https://www.w3schools.com/howto/howto_js_read_more.asp */
+#more {
+    display: none;
+}
+
 
 /* -------------------------------- Card image size */
 

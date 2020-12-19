@@ -1,8 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
-{% endblock %}
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -85,9 +82,6 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="contact-image">
-                <img src="../media/contact/fitness-station-contact.jpg" alt="Fitness station gym">
-            </div>
         </div>
         <!-- User inputs name, email, message and send to fitness station team. -->
         <div class="col-12 col-md-6 form-bg p-3">
