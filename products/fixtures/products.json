@@ -72,7 +72,7 @@
       "has_sizes": true,
       "price": "25.00",
       "rating": "3.80",
-      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/mens-addidas-short-sleeve-t.jpg",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/static/media/men's-activewear/mens-addidas-short-sleeve-t.jpg",
       "image": "mens-addidas-short-sleeve-t.jpg"
     }
   },
@@ -117,7 +117,7 @@
       "has_sizes": true,
       "price": "55.00",
       "rating": "4.00",
-      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/mens-gymshark-legins.jpg",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/static/media/men's-activewear/mens-gymshark-legins.jpg",
       "image": "mens-gymshark-legins.jpg"
     }
   },
@@ -132,7 +132,7 @@
       "has_sizes": true,
       "price": "60.00",
       "rating": "4.50",
-      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/men's-red-legins.jpg",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/static/media/men's-activewear/men's-red-legins.jpg",
       "image": "mens-red-legins.jpg"
     }
   },
@@ -147,7 +147,7 @@
       "has_sizes": true,
       "price": "20.00",
       "rating": "3.50",
-      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/men's-activewear/mens-nike-thick-socks%23.jpg",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/static/media/men's-activewear/mens-nike-thick-socks%23.jpg",
       "image": "mens-nike-thick-socks.jpg"
     }
   },
@@ -162,7 +162,7 @@
       "has_sizes": true,
       "price": "45.99",
       "rating": "4.00",
-      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/women's-activewear/womens-nike-zip-jumper.jpg",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/static/media/women's-activewear/womens-nike-zip-jumper.jpg",
       "image": "womens-nike-zip-jumper.jpg"
     }
   },
@@ -177,7 +177,7 @@
       "has_sizes": true,
       "price": "15.00",
       "rating": "3.00",
-      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/women's-activewear/womens-lime-green-t.jpg",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/static/media/women's-activewear/womens-lime-green-t.jpg",
       "image": "womens-lime-green-t.jpg"
     }
   },
@@ -192,7 +192,7 @@
       "has_sizes": true,
       "price": "9.99",
       "rating": "3.50",
-      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/media/women's-activewear/womens'-blue-shorts.jpg",
+      "image_url": "https://github.com/michodgs25/Fitness-Station-360/blob/master/static/media/women's-activewear/womens'-blue-shorts.jpg",
       "image": "womens-blue-shorts.jpg"
     }
   },
