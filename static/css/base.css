@@ -1,16 +1,9 @@
+/*Html document height*/
 html {
     height: 100%;
 }
 
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
+/*------------------------ navigation fonts */
 .logo-font {
     text-transform: uppercase;
 }
@@ -19,6 +12,8 @@ html {
     width: fit-content;
 }
 
+
+/*------------------------- Platform buttons */
 .btn-outline-black {
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -243,12 +238,6 @@ footer .follow-text {
 /* queries and allauth form formatting adapted fron boutique ado project:
 source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/base.css
 
-/*-------------------------------- shopping bag image height in mobile*/
-@media (max-height: 600px) {
-    .bag-image {
-        height: 4em;
-    }
-}
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -260,12 +249,12 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem;
+    color: rgb(130, 130, 130);
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: rgb(0, 0, 0);
     border-radius: 0;
 }
 
