@@ -6,7 +6,7 @@ class Category(models.Model):
         """
         Create product category model,
         add text fields to model.
-        Create friendly name, 
+        Create friendly name,
         which is displayed to the users.
         """
         verbose_name_plural = "Categories"
@@ -23,7 +23,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     """
-    Create product class, 
+    Create product class,
     attach category model to product class.
     Add product detail fields to model.
     """
