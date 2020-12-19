@@ -8,7 +8,11 @@ from .models import Product, Category
 
 
 def index(request):
-    """ A view to return the index page """
+    """ A view to return the index page.
+    Create product object filter function,
+    variables = none and return product context
+    and render homepage template.
+     """
     products = Product.objects.filter()
     query = None
     categories = None
@@ -21,7 +25,10 @@ def index(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """ A view to show individual product details.
+    Create instance of product and get product id.
+    Return rendered edit product template.
+    """
 
     product = get_object_or_404(Product, pk=product_id)
 

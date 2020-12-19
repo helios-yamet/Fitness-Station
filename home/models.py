@@ -3,6 +3,12 @@ from django.db import models
 
 class Category(models.Model):
     class Meta:
+        """
+        Create product category model,
+        add text fields to model.
+        Create friendly name, 
+        which is displayed to the users.
+        """
         verbose_name_plural = "Categories"
 
     name = models.CharField(max_length=254)
@@ -16,6 +22,11 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """
+    Create product class, 
+    attach category model to product class.
+    Add product detail fields to model.
+    """
     category = models.ForeignKey(
         "Category", null=True, blank=True, on_delete=models.SET_NULL
     )
