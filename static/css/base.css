@@ -1,9 +1,12 @@
 /*Html document height*/
+
 html {
     height: 100%;
 }
 
+
 /*------------------------ navigation fonts */
+
 .logo-font {
     text-transform: uppercase;
 }
@@ -14,6 +17,7 @@ html {
 
 
 /*------------------------- Platform buttons */
+
 .btn-outline-black {
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -32,16 +36,16 @@ html {
 }
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: rgb(255, 255, 255);
-	z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgb(255, 255, 255);
+    z-index: -1;
 }
 
-a.category-badge > span.badge:hover {
+a.category-badge>span.badge:hover {
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 }
@@ -64,24 +68,26 @@ input[name='q']::placeholder {
     color: rgb(181, 179, 174);
 }
 
+
 /* ------------------------------- homepage cards */
 
 .card {
     border-radius: 1em;
-    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s
-    -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
     cursor: pointer;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.02);
 }
 
 
 /* ------------------------------- Homepage jumbotron header */
+
 .jumbotron {
     background-image: linear-gradient(#b9a2a5, #ffc342);
 }
+
 
 /* ------------------------------- bootstrap toasts */
 
@@ -100,19 +106,23 @@ input[name='q']::placeholder {
     height: 0.125em;
 }
 
+
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 0.25em solid transparent;
-    border-right: 0.25em solid transparent; 
-    border-bottom:  0.625em solid rgb(0, 0, 0);
+    border-right: 0.25em solid transparent;
+    border-bottom: 0.625em solid rgb(0, 0, 0);
     position: absolute;
-    top:  -0.625em;
+    top: -0.625em;
     right: 2.25em;
 }
 
+
 /* Convenience classes - colors copied from Bootstrap */
+
 .arrow-primary {
     border-bottom-color: rgb(66, 114, 245);
 }
@@ -151,23 +161,31 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+
 /* -------------------------------- Card image size */
 
 .card img {
     height: 18em;
 }
 
+
 /* -------------------------------- sign out page */
+
 .logout-text {
     text-align: center;
     padding-top: 8em;
 }
 
+
 /*--------------------------------- Verify email */
+
+
 /*verify email text message*/
+
 .verify-title {
     padding-top: 5em;
 }
+
 
 /*--------------------------------- Footer */
 
@@ -235,16 +253,20 @@ footer .follow-text {
 
 
 /* -------------------------------- Media Queries& allauth forms */
+
+
 /* queries and allauth form formatting adapted fron boutique ado project:
 source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/base.css
 
 
 /* Slightly larger container on xl screens */
+
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
+
 
 /* Allauth form formatting */
 
@@ -268,8 +290,8 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -284,20 +306,19 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0;
-
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: rgb(255, 255, 255);
+.allauth-form-inner-content input[type='submit']:hover {
+    color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
     border-color: rgb(0, 0, 0);
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8;
+    color: #17a2b8;
 }
 
 
@@ -329,7 +350,9 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
     border-radius: 0;
 }
 
+
 /* fixed top navbar only on medium and up */
+
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -338,51 +361,45 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
         left: 0;
         z-index: 1030;
     }
-
     .header-container {
         padding-top: 10.25em;
     }
 }
 
+
 /* pad the top a bit when navbar is collapsed on mobile */
+
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
     }
-
     body {
         height: calc(100vh - 116px);
     }
-
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
-
     .nav-link {
         padding: 0.15rem;
     }
-
     .nav-link i.fa-lg {
         font-size: 1rem;
     }
-
     .navbar-toggler {
         padding: .6rem .6rem;
         font-size: 1rem;
     }
-
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
     }
-
     .btn.btn-outline-success.rounded-0.btn-lg,
     .btn.btn-warning.rounded-0.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
     }
-
-    .increment-qty, .decrement-qty {
+    .increment-qty,
+    .decrement-qty {
         padding: .25rem .5rem;
     }
 }

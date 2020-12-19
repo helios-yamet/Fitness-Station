@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <li class="list-inline-item">
     <!--Search bar dropdown in mobile view-->
     <a class="text-warning nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -27,7 +28,7 @@
     <a class="text-warning nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg"></i></div>
-            <p class="my-0">My Account</p>
+            <p class="my-0">Explore</p>
         </div>
     </a>
     <!--User and superuser authentication request, if user does not have an account, they must register-->
@@ -35,6 +36,7 @@
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
         <a href="{% url 'home' %}" class="dropdown-item">Home</a>
+        <a href="{% url 'contact' %}" class="dropdown-item">Contact us</a>
         <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
         {% endif %}
         <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
