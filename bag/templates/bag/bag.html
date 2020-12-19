@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
-
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -10,6 +9,7 @@
 </div>
 {% endblock %}
 {% block content %}
+<!--shopping bag, user views selected items before purchase-->
 <div class="overlay"></div>
 <div class="container mb-2">
     <div class="row">
@@ -19,14 +19,15 @@
             <hr>
         </div>
     </div>
+    <!--Shopping bag table, holds selected product information-->
     <div class="row">
         <div class="col">
             {% if bag_items %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
                     <thead class="text-black">
-                        <tr>
-                            <th scope="col">Product Info</th>
+                        <tr class="table-warning">
+                            <th scope="col">Product</th>
                             <th scope="col"></th>
                             <th scope="col">Price</th>
                             <th scope="col">Qty</th>
@@ -47,57 +48,67 @@
                             <p class="my-0">${{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
+                            <!--Adjust shopping bag, user can toggle number of products or can remove products-->
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group">
+                                        <!--User reduces product amount default is one item-->
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                            <button class="decrement-qty btn btn-sm btn-danger rounded-0" 
                                                 data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                             <span>
                                             <i class="fas fa-minus fa-sm"></i>
                                             </span>
                                             </button>
                                         </div>
+                                        <!--User adds product amount max amount is ten items-->
                                         <input class="form-control form-control-sm qty_input" type="number"
-                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                            name="quantity" value="{{ item.quantity }}" min="1" max="10"
                                             data-item_id="{{ item.item_id }}"
                                             id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                            <button class="increment-qty btn btn-sm btn-success rounded-0"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                             <span>
                                             <i class="fas fa-plus fa-sm"></i>
                                             </span>
                                             </button>
                                         </div>
+                                        <!--Check whether item has size-->
                                         {% if item.product.has_sizes %}
                                         <input type="hidden" name="product_size" value="{{ item.size }}">
                                         {% endif %}
                                     </div>
                                 </div>
+                                <!--User can update or remove product from bag-->
                             </form>
-                            <a class="update-link text-info"><small>Update</small></a>
-                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                <a class="update-link text-success float-right"><small>Update</small></a>
+                                <a class="remove-item text-danger" id="remove_{{ item.item_id }}"
+                                data-product_size="{{ item.size }}"><small>Remove</small></a>
                         </td>
+                        <!--Combine each product price& product quantity to produce bag subtotal-->
                         <td class="py-3">
                             <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr>
+                        <!--Convert bag total to a float format& calculate whether bag total exceeds free delivery minimum-->
                         <td colspan="5" class="pt-5 text-right">
                             <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                             <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
+                            <!--recommend to user that if they spend x amount they can get free delivery-->
                             <p class="mb-1 text-danger">
-                                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                Get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
                             </p>
                             {% endif %}
                         </td>
                     </tr>
                     <tr>
+                        <!--Back to shopping button, user can add further items to the bag-->
                         <td colspan="5" class="text-right">
                             <a href="{% url 'products' %}" class="btn btn-warning rounded-0 btn-lg">
                             <span class="icon">
@@ -105,12 +116,25 @@
                             </span>
                             <span class="text-uppercase">Keep Shopping</span>
                             </a>
+                            <!--Checks whether user is logged in-->	
+                            {% if user.is_authenticated %}
                             <a href="{% url 'checkout' %}" class="btn btn-success rounded-0 btn-lg">
                             <span class="text-uppercase">Secure Checkout</span>
                             <span class="icon">
                             <i class="fas fa-lock"></i>
                             </span>
                             </a>
+                            <!--If user does not have an account, site requests user to login or register-->
+                            {% else %}	
+                            <a href="{% url 'account_login' %}" class="btn btn-danger mx-3 mb-2 mb-sm-3">	
+                            <span id="checkout-anchor" class="text-uppercase">Login</span>
+                            </a>
+                            {% endif%}
+                            <div id="cart-login-request" class="login-request-text ml-3 mb-2 mb-sm-0 mt-sm-1">
+                                <span>
+                                Please <a href="{% url 'account_login' %}" class="login-request-link">login</a> to go to checkout
+                                </span>	
+                            </div>
                         </td>
                     </tr>
                 </table>
@@ -118,7 +142,7 @@
             <!--If bag has no product, user is offered to go back to products page, increase user time on site-->
             {% else %}
             <p class="lead mb-5">Your bag is empty.</p>
-            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+            <a href="{% url 'products' %}" class="btn btn-warning rounded-0 btn-lg">
             <span class="icon">
             <i class="fas fa-chevron-left"></i>
             </span>
@@ -132,6 +156,8 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+<!--Code adapted from boutique ado project:
+    https://github.com/ckz8780/boutique_ado_v1/blob/master/bag/templates/bag/bag.html-->
 <script type="text/javascript">
     // Update quantity on click
     $('.update-link').click(function(e) {
@@ -152,8 +178,6 @@
              location.reload();
          });
     })
-
-    // stripe public key
     
 </script>
 {% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="form-group">
+    <section class="container-fluid section-container">
+        <div class="row">
+            <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
+                <!-- Shows image of products reviews are for with name of the product -->
+                <h2> Reviews for {{ product.name }}</h2>
+                <hr>
+                <div class="row mt-4">
+                    <div class="col-4 col-sm-3 col-xl-2">
+                        <img class="w-100" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}"> 
+                    </div>
+                    <div class="col-6 mt-3">
+                        <p>{{ product.description }}</p>
+                    </div>
+                </div>
+                <hr>
+                <!-- Shows the input form to add a review if logged on, else message is displayed to ask for login. -->
+                <div class="col-12 col-md-6 form-bg p-3">
+                    <h4 class="mb-4 text-uppercase">Create a Review</h4>
+                    <form action="{% url 'review_form' product.id %}" method="POST" class="form-group">
+                        {% csrf_token %}
+                        {{ review_form|crispy }}
+                        <a href="{% url 'products' %}" class="btn btn-warning rounded-0 btn-lg">
+                            <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                            </span>
+                <!--User can keep shopping, button transport user to the products page-->
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                        <button id="submit-button" class="btn btn-lg btn-success">
+                        <span>Submit review</span>
+                        <span class="icon">
+                        <i class="fas fa-plus-circle"></i>
+                        </span>
+                        </button>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <!-- list of reviews for specified product -->
+            <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
+                {% if review_list %}
+                <div class="row justify-content-around">
+            <!--Display posted review details, all users including guests can view reviews-->
+                    {% for review in review_list %}
+                    <div class="card shadow p-3 bg-white rounded col-12 col-lg-5 mb-2 mx-lg-2">
+                        <h4 class="mt-2 ">{{ review.name }}</h4>
+                        <p>{{ review.review_text }}</p>
+                        <h5 class="mb-2">{{ review.date }}</h5>
+                    </div>
+            <!--Only users that have an account can post a review-->
+                    {% endfor %}
+                </div>
+                {% else %}
+                <h4 class="mt-3">There are no reviews for this product yet</h4>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

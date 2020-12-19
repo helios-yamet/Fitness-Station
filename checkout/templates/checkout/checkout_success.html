@@ -1,7 +1,8 @@
+<!--checkout success form is adapted from project boutique ado project:
+https://github.com/ckz8780/boutique_ado_v1/blob/master/checkout/templates/checkout/checkout_success.html-->
 {% extends "base.html" %}
 {% load static %}
 {% block extra_css %}
-
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 {% block page_header %}
@@ -20,9 +21,9 @@
             <h2 class="logo-font mb-4">Thank You</h2>
             <hr>
             <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
-            <img src="media/workout-plans/body-weight-plan.jpg" class="rounded float-right" alt="">
         </div>
     </div>
+    <!--If checkout is successful, platform returns success page-->
     <div class="row">
         <div class="col-12 col-lg-7">
             <div class="order-confirmation-wrapper p-2 border">
@@ -31,6 +32,7 @@
                         <small class="text-muted">Order Info:</small>
                     </div>
                 </div>
+                <!--The page will display order details, which is stored in the user profile-->
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Order Number</p>
@@ -64,6 +66,7 @@
                     </div>
                 </div>
                 {% endfor %}
+                <!--Display user delivery information provided in checkout or profile-->
                 <div class="row">
                     <div class="col">
                         <small class="text-muted">Delivering To:</small>
@@ -171,6 +174,7 @@
             </div>
         </div>
     </div>
+    <!--Return to products page button, allows user to explore further-->
     <div class="row">
         <div class="col-12 col-lg-7 text-right">
             <a href="{% url 'products' %}" class="btn btn-warning rounded-0 my-2">

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
@@ -12,19 +13,16 @@
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
-        <!--Workout plan products-->
+        <!--Workout plan products, allow user to view all plans -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-warning mr-5" href="#" id="plans-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Workout Plans
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="plan-link">
-                <a href="{% url 'products' %}?category=workout_plans" class="dropdown-item">Running</a>
-                <a href="{% url 'products' %}?category=workout_plans" class="dropdown-item">Get lean</a>
-                <a href="{% url 'products' %}?category=workout_plans" class="dropdown-item">Gain Muscle</a>
                 <a href="{% url 'products' %}?category=workout_plans" class="dropdown-item">All Workout Plans</a>
             </div>
         </li>
-        <!--Activewear& Accessories products-->
+        <!--Activewear& Accessories products, user can filter down products and view set products-->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-warning mr-5" href="#" id="Merchandise-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Activewear& Accessories
@@ -33,7 +31,7 @@
                 <a href="{% url 'products' %}?category=men's_activewear" class="dropdown-item">Mens Activewear</a>
                 <a href="{% url 'products' %}?category=women's_activewear" class="dropdown-item">Womens Activewear</a>
                 <a href="{% url 'products' %}?category=accessories" class="dropdown-item">Accessories</a>
-                <a href="" class="dropdown-item">All Activewear</a>
+                <a href="{% url 'products' %}?category=men's_activewear,women's_activewear" class="dropdown-item">All Activewear</a>
             </div>
         </li>
     </ul>

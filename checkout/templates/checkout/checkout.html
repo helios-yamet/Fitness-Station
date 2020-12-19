@@ -68,6 +68,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-6">
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded shopping-cart">
             <p class="text-muted">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
@@ -107,7 +108,7 @@
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
                 <div class="submit-button text-right mt-5 mb-2">
-                    <a href="{% url 'view_bag' %}" class="btn btn-outline-warning rounded-0">
+                    <a href="{% url 'view_bag' %}" class="btn btn-warning rounded-0">
                     <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                     </span>
@@ -127,6 +128,7 @@
                     </p>
                 </div>
             </form>
+            </div>
         </div>
     </div>
 </div>
