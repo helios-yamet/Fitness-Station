@@ -36,11 +36,11 @@
         {% block extra_js %}
         {% endblock %}
         <title>Fitness Station{% block extra_title %}{% endblock %}</title>
-    <!--Favicon, site icon-->
-    <link id="favicon" rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
+        <!--Favicon, site icon-->
+        <link id="favicon" rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
     </head>
     <body>
-        <header class="container-fluid fixed-top">
+        <header  id="top" class="container-fluid fixed-top">
             <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -144,7 +144,11 @@
         {% endblock %}
         {% block postloadjs %}
         <script type="text/javascript">
-            $('.toast').toast('show');
+            //toast notification listener
+                $('.toast').toast('show');
+                    $('.btt-link').click(function(e) {
+                        window.scrollTo(0,0)
+                    })
         </script>
         {% endblock %}
         <!--Footer section, provides further navigation for user to explore the platform-->
@@ -188,7 +192,7 @@
                                     </div>
                                 </div>
                             </div>
-                                <div class="card col-12 col-md-3">
+                            <div class="card col-12 col-md-3">
                                 <div class="card-content">
                                     <i class="fas fa-phone-square fa-3x"></i>
                                     <div class="card-title"> Contact Us</div>

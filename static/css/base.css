@@ -2,6 +2,7 @@
 
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 
@@ -23,11 +24,7 @@ html {
 }
 
 
-/*------------------------- Platform buttons
-
-.btt-link {
-    margin-bottom: 10em;
-}*/
+/*------------------------- Platform buttons*/
 
 .btn-outline-black {
     background: rgb(255, 255, 255);
@@ -80,7 +77,7 @@ input[name='q']::placeholder {
 }
 
 
-/* ------------------------------- homepage cards */
+/* ------------------------------- platflorm cards */
 
 .card {
     border-radius: 1em;
@@ -100,7 +97,9 @@ input[name='q']::placeholder {
 }
 
 
-/* ------------------------------- bootstrap toasts */
+/* ------------------------------- bootstrap toast messages,
+adapted from boutique ad project: 
+https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/base.css*/
 
 .message-container {
     position: fixed;
@@ -173,7 +172,8 @@ input[name='q']::placeholder {
 }
 
 /*-------------------------------- Contact page gym description*/
-/*--------------- read more button, taken from https://www.w3schools.com/howto/howto_js_read_more.asp */
+/*read more button, taken from:
+https://www.w3schools.com/howto/howto_js_read_more.asp */
 #more {
     display: none;
 }
@@ -205,6 +205,7 @@ input[name='q']::placeholder {
 
 
 /*--------------------------------- Footer */
+
 
 footer .container-fluid {
     padding-top: 3.75em;
@@ -419,4 +420,12 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
     .decrement-qty {
         padding: .25rem .5rem;
     }
+}
+
+/* Smooth scrolling IF user doesn't have a preference due to motion sensitivities*/
+@media screen and (prefers-reduced-motion: no-preference) {
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
 }
