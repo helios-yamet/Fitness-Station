@@ -8,4 +8,8 @@ os.environ["STRIPE_WH_SECRET"] = "whsec_KwfZBWjFeFiShX6seq0MrogTqTzyqguz"
 
 os.environ["SECRET_SECRET"] = "qf$1nf%$a1+lskb^qp5ev=0(69f^axe1mjiz94tgnb(26bs_o!"
 
+os.environ["AWS_ACCESS_KEY_ID"] = "AKIA5XJJZGDLGEOW3B6N"
+
+os.environ["AWS_SECRET_ACCESS_KEY"] = "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"
+
 os.environ["SENDGRID_API_KEY"] = "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"
