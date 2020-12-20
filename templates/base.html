@@ -26,12 +26,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <!-- Stripe payment cdn -->
         <script src="https://js.stripe.com/v3/"></script>
-        <!--call stripe key from settings-->
-        <script type="text/javascript">
-            //![CDATA[
-            settings.STRIPE_PUBLIC_KEY = '{{ STRIPE_PUBLIC_KEY }}';
-            //>]]
-        </script>
         {% endblock %}
         {% block extra_js %}
         {% endblock %}
