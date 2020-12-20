@@ -22,7 +22,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = SECRET_KEY = os.environ.get("SECRET_KEY", '')
 
 if os.path.exists("env.py"):
     import env
@@ -37,7 +37,7 @@ SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['fitness-station.herokuapp.com', 'localhost']
 
