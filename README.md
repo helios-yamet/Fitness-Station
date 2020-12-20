@@ -183,7 +183,7 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 ### There are three key sections that make up the design of the platform:
 
-1.  Homepage, Products, profile page, Order history and blog page
+1.  Homepage, Products, profile page, Order history, review and contact pages
 
 2. Registration& Login pages and verify, confirmation pages
 
@@ -455,7 +455,7 @@ Summary:
 
 These technologies helped create, shape and test my code
 
-* Kaggle.com - https://www.kaggle.com/dqmonn/zalando-store-crawl: provided the raw product images.
+* Kaggle.com - https://www.kaggle.com/dqmonn/zalando-store-crawl: provided some raw product images.
 
 * Balslamiq - https://balsamiq.com/:  provided tools to construct the wire-frames of the platform.
 
@@ -593,3 +593,5 @@ __See feedback below__:
 
 ## External Media 
 All images were take from Google images advanced search with filter - __"free to use or share"__
+
+* https://bbbootstrap.com/snippets/footer-bottom-responsive-template-20401963 - credit this resource for the footer template
