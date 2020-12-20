@@ -521,38 +521,72 @@ I personally used github on my local machine to develop the site using Python 3.
 
 5. Run the app.py file as appropriate to your chosen environment and os.
 
-6. You should now be able to view the site on your localhost on port 5000.
+6. You should now be able to view the site on your localhost on port 8000.
 
 
 ## Remote Deployment
+Deployment: Heroku
 
-#### Instructions
-To deploy this app to Heroku you need to follow the steps below:
+I decided to deploy the project to Heroku so I could see, test
+and update the site in real-time. Here is my deployment process.
 
-- Create a **requirements.txt** file so that Heroku can install all the dependencies required to run the app.
-  `pip freeze > requirements.txt`
+__Phase one__
 
-- Create a **Procfile** with the command:
-  `echo web: python app.py > Procfile`
+1. Open up https://dashboard.heroku.com/ and logged into my account
+2. Create a new app: fitness station, selecting the location nearest me (Europe)
+3. Under the ‘Resources’ tab, search for and add on the ‘Heroku Postgress DB’ app
+4. In the project terminal, install ‘dj_database_url’ & ‘psycopg2’ by using the following
+commands:
+a. pip3 install dj_database_url
+b. pip3 install psycopg2-binary
 
-- In this step, you have to create a free account on the [Heroku website](https://signup.heroku.com/).
--  Login to the account, click on new and then create a new app. In the following screen, you need to give a name and choose the Europe region.
--  In the menu access the **Deploy** option, after that click on Connect to Github. Just below provide the information from the app's repository on GitHub and select the option Enable Automatic Deploy.
-- On the Dashboard of the APP, click on Settings and then click on the option **Reveal config Vars**.
-- Now you need to add the following variables to **Reveal config Vars**:
-  - **IP**: `0.0.0.0`
-  - **PORT**: `5000`
-  - **MONGO_URI**: `link to your Mongo DB`
-  - **SECRET_KEY**: `your chosen secret key`
-- You are now ready to access the deployed app on Heroku.
+5. Next, I froze the requirements(pip3 freeze > requirments.txt) to ’requirements.txt’ to make sure Heroku installs all our
+apps’ requirements when we deploy the project.
 
-<details>
-  <summary>deploy heroku</summary>
-<div align="center">
-<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/heroku-connect.jpg" 
-     target="_blank" rel=""/>
-  </div>
-  </details>
+6. In settings.py at the top, import the DJ database: ‘import dj_database_url’
+
+7. Comment out the current ‘DATABASE’ settings (we will need them later), and add:
+- a. ‘default’: dj_database_url.parse(insert database URL)
+- b. Add the Database URL into the () which you can find in the Heroku app under
+Settings – Reveal Config Vars - DATABASE_URL
+
+8. Now we need to run all the migrations to get our database set up:
+a. python3 manage.py migrate
+
+9. Next, create a superuser using the command: python3 manage.py createsuperuser. 
+
+10. Now back in settings.py, remove the new database settings and uncomment out the original
+settings. This stops the database URL going into version control.
+
+11. Update the Database settings in settings.py with an if statement, so that when we are
+running the app on Heroku it will connect to the database URL, otherwise we connect to site
+to Sequel light.
+
+__Phase Two__
+
+1. Now to install gunicorn which will act as our webserver:
+a. pip3 install gunicorn
+
+2. Freeze it to our requirements.TXT file as before
+
+3. Create Procfile to tell Heroku to create a web dynamo, which will run unicorn and serve our
+Django app:
+
+4. Add this line of text to the Procfile: web: gunicorn fitness-station.wsgi:application
+
+5. Log into Heroku via the terminal with the command: heroku login -i
+
+6. Temporarily disable collect static using the following command: heroku config:set
+DISABLE_COLLECTSTATIC=1 –app fitness-station (--app fitness-station must be added as I
+have more than 1 app in Heroku)
+
+7. In settings.py, update the ‘ALLOWED_HOSTS settings. ‘Localhost’ allows GitPod to still work
+too.
+a. ALLOWED_HOSTS = [magnetic-eyes.herokuapp.com', 'localhost']
+
+8. Finally, for this step, copy all the environment variables for the project from Gitpod settings
+to Heroku – Settings - Config Vars.
+
 
 ## Travis continuous integration 
 
@@ -568,8 +602,6 @@ As a continuous integration platform, Travis CI supports the development process
 * A GitHub or Bitbucket or GitLab.
 
 * Owner permission for a project hosted on the above platforms.
-
-
 
 ------
 
