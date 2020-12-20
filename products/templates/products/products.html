@@ -142,12 +142,8 @@
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
-    $('.btt-link').click(function(e) {
-    	window.scrollTo(0,0)
-    })
-</script>
-<!--Js filter by price category, adapted from boutique ado project-->
+<!--Js filter by price category, adapted from boutique ado project
+https://github.com/ckz8780/boutique_ado_v1-->
 <script type="text/javascript">
     $('#sort-selector').change(function() {
         var selector = $(this);
