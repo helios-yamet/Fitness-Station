@@ -203,6 +203,12 @@ https://www.w3schools.com/howto/howto_js_read_more.asp */
     padding-top: 5em;
 }
 
+/*--------------------------------- Review page form */
+.form-control {
+    border: 0.125em solid rgb(0, 0, 0);
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 
 /*--------------------------------- Footer */
 
