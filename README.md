@@ -24,8 +24,7 @@ __Get Fit with Fitness Station__
      * [Colours](#Colours)
      * [Icons](#Icons)
      * [Wire-Frames](#Wire-Frames)
-* [CRUD and MongoDB](#CRUD-and-MongoDB)
-     * [Features](#Features)
+* [Features](#Features)
      * [Features left to be implemented](#Features-left-to-be-implemented)
      * [issues-and-bugs](#issues-and-bugs)
      * [Technologies](#Technologies)
@@ -92,7 +91,7 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 -  As a user I want to purchase my favorite Merchandise online with ease, because I want to support the gym financially beyond paying a subscription.
 
-- As a returning user, I would like to see new products, as I like buying the latest products.
+- As a returning user, I would like to see view the highest rated products, as I like to know which products are most popular.
 
 - As a frequent user, I want the site to be familiar by using fitness station branding akin to the gym itself, as this reaffirms that I on the right website.
 
@@ -102,11 +101,9 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 #### Main site content - Purchasing products
 
--  As a subscriber, I want to be able to share my posts to social media, as I want to share my fitness journey and any products I have purchased.
+-  As a returning subscriber, I want to view all my purchases on one page, this helps me keep a log of what I have purchased and when.
 
--  As a returning subscriber, I want to view all my purchases subscriptions on one page, this makes it easy to access each plan.
-
--  As a subscriber, I want to view my plan on one page and look at the calendar to see what workouts I have coming next, this enable me to plan my week.
+-  As a new user, I want to recieve a confirmation of my purchase to ensure my payment has gone through.
 
 #### Searching, Sorting and Reviewing products
 
