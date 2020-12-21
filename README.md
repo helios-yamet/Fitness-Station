@@ -588,6 +588,79 @@ a. ALLOWED_HOSTS = [magnetic-eyes.herokuapp.com', 'localhost']
 8. Finally, for this step, copy all the environment variables for the project from Gitpod settings
 to Heroku – Settings - Config Vars.
 
+#### First deployment attempt:
+
+1. Commit all changes to Gitpod
+
+2. Push all changes to Gitpod
+
+3. As I am using GitPod online, I must first initialise the Heroku before pushing to Heroku:
+- a. git remote: heroku git:remote -a fitness-station
+
+4. Finally, deploy to Heroku:
+- a. Git push Heroku master
+
+5. Once the build in Heroku has completed, open the app by either clicking the link in the
+terminal, or the ‘Open App’ button in Heroku.
+
+Set up auto deploy:
+To auto-deploy the website every time you make a ‘git push’:
+
+1. In Heroku, head to the Deploy tab, select GitHub from the options, search for the magnetic
+eyes repository and click connect
+
+2. Beneath this, click ‘Enable Automatically Deploy’
+Deployment: Amazon Web Services (AWS)
+Now we need somewhere to store static and media files. For this project, we will be using
+Amazon Web Services (AWS). This is how to set it up.
+
+1. Visit https://signin.aws.amazon.com/. I already had an AWS account from a previous
+project, but otherwise, you would need to sign up and search for the S3 service.
+
+2. Create a new bucket:
+i. Name the bucket. I kept it simple using the name fitness-station-360
+
+ii. Select the area closest to me (EU (London) EU-west-2
+
+iii. Uncheck the box to block all public access and acknowledge that the bucket
+
+will be accessible by the public. This is because we need public access to our
+static files.
+
+iv. Create Bucket.
+
+3. Set up a few basic settings for the bucket:
+a. Properties: Select static website hosting – enable.
+
+b. Permissions: Cross-origin resource sharing (CORS). Add the code as per below
+provided by the course material for the Boutiqe Ado project:
+[
+ {
+ "AllowedHeaders": [
+ "Authorization"
+ ],
+ "AllowedMethods": [
+ "GET"
+ ],
+ "AllowedOrigins": [
+ "*"
+ ],
+ "ExposeHeaders": []
+ }
+]
+i. Bucket Policy: select ‘Policy Generator’ to create a security policy for the
+bucket. Select the policy type: S3 Bucket Policy. Add * to Principal to allow
+all principals
+
+ii. Action: Get Object. Copy the Amazon Resource Name (ARN) from the Edit
+Bucket Policy tab and add to the form (in this case it is arn:aws:s3:::magneticeyes)
+
+iii. Click ‘add statement’
+iv. Generate policy. Copy the policy provided and paste it into the Edit
+Bucket Policy box on the AWS S3 page and add a /* on the end of the
+resource key to allow access to all resources in the bucket. Save
+changes
+
 
 ## Travis continuous integration 
 
