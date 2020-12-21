@@ -1,28 +1,50 @@
 from django.test import TestCase
-from .forms import ItemForm
+from checkout.forms import MakePaymentForm
+from django.contrib.auth.models import User
+from django.core.management import call_command
+from datetime import datetime
+from fitness_station.settings import STRIPE_SECRET_KEY
 
 
-def test_item_name_is_required(self):
-    form = ItemForm({'name': ''})
-    self.assertFalse(form.is_valid())
-    self.assertIn('name', form.errors.keys())
-    self.assertEqual(form.errors['full_name', 'email', 'phone_number',
-                                 'street_address1', 'street_address2',
-                                 'town_or_city', 'postcode', 'country',
-                                 'county'][0], 'This field is required.')
+class TestMakePaymentForm(TestCase):
+    """
+    Test MakePayment Form
+    """
 
+    @classmethod
+    def setUpTestData(self):
+        # set up db, order matters because of Many to Many Relationships
 
-def test_done_field_is_not_required(self):
-    form = ItemForm({'full_name': 'Test checkout Item'})
-    self.assertFalse(form.is_valid())
+        # set up 3 base products from json
+        call_command('loaddata',
+                     'products/fixtures/servicelevel.json', verbosity=0)
 
+        # create users
+        user = User(
+            username='testing_{1',
+            email='testing_1@test.com',
+            password='Tester_1234!'
+        )
+        user.save()
+        self.user = user
+        self.year = int(datetime.now().strftime("%Y")) + 1
+        self.month = int(datetime.now().strftime("%m"))
 
-def test_fields_are_explicit_in_form_metaclass(self):
-    form = ItemForm()
-    self.assertEqual(form.Meta.fields, ['full_name', 'email',
-                                            'phone_number',
-                                            'street_address1',
-                                            'street_address2',
-                                            'town_or_city',
-                                            'postcode', 'country',
-                                            'county'])
+    def test_make_payment_form_success(self):
+        form = MakePaymentForm({
+            'credit_card_number': '4242424242424242',
+            'ccv': 'test_user1',
+            'expiry_month': self.month,
+            'expiry_year':  self.year,
+            'stripe_id': STRIPE_SECRET_KEY,
+        })
+        self.assertTrue(form.is_valid())
+
+    def test_make_payment_form_invalid(self):
+        form = MakePaymentForm({
+            'credit_card_number': '4242424242424242',
+            'ccv': 'test_user1',
+            'expiry_month': self.month,
+            'expiry_year': self.year,
+        })
+        self.assertFalse(form.is_valid())
