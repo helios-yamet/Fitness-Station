@@ -113,13 +113,13 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 - As a user, after I have made a purchase I would like to leave review of the product I have bought, because I want to provide my opinion of a product.
 
-#### Blog 
+#### review
 
-- As a returning user, I would like to chat about experience of the product, as I'd like to give my feedback on products.
+- As a returning user, I would like to provide my opinion on purchased products, as I'd like to give my feedback on products.
 
 - As a regular Gym member, I want to blog about my daily workouts, as I want to share my experience with others.
 
-- As a social media influencer who visits the gym on week, I want to entertain my followers by blogging about experiences, as this increases my online following.
+- As a first time buyer I would like to give constructive feedback on products.
 
 #### Shopping Cart and Checkout
 
@@ -203,7 +203,10 @@ See full article on design here __https://github.com/michodgs25/Fitness-Station/
 
 ### Colours
 
-*https://github.com/michodgs25/Sprint/issues/3#issue-716076941*
+<div align="center">
+<img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/media/readme/platform-colors.png" 
+     target="_blank" rel="noopener" alt="Platform colors">
+</div>
 
 ------
 

@@ -91,7 +91,8 @@ input[name='q']::placeholder {
 }
 
 
-/* ------------------------------- Homepage jumbotron header */
+/* ------------------------------- Homepage jumbotron header&
+                                    style for all jumbtrons on platform*/
 
 .jumbotron {
     background-image: linear-gradient(#b9a2a5, #ffc342);
