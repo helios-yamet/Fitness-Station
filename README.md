@@ -74,7 +74,7 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 - 5 __Surface Level__
 
   
- See article below describing each plane and the project process from stratedgy to surface:
+ See article below I describe the process of creating the platform each plane phase; from stratedgy to surface level:
   *https://github.com/michodgs25/Fitness-Station-360/issues/6#issue-770549917*
 
 
