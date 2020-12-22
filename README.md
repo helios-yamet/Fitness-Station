@@ -86,8 +86,6 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 -  As a first time user I want to be able to navigate each section of the platform with ease, because this helps me find the product I want.
 
--  As a user I want the homepage to be have imagery and appropriate color contrasts, as I like the site to be fun to visit.
-
 -  As a frequent user I can view the gym fitness plans, so that I can purchase a subscription without having to phone up or pay upon arrival.
 
 -  As a user I want to purchase my favorite Merchandise online with ease, because I want to support the gym financially beyond paying a subscription.
@@ -250,59 +248,74 @@ These wireframes were designed with Balsamiq Mockups.
 
 ### Homepage feature
 
-* *The homepage consists of an automatic image carousel, which has the day/week/month/year product offers.*
+* *The homepage consists of navigation bar(or mobile if using mobile devices), see navigation feature for details.*
 
-* *Each images takes the user to the product page.*
+* *Below the main navigation, is a jumbotron which displays the gym title and motto.*
+
+* *Directly after the jumbtron are three cards(isplayed horizontally on desktop and vertically on mobile) displaying the three product categories - Activewear, accessories and workout plans. The user can choose a card and is transported to that category products page.*
+
+* *Immediately below the products category cards is a contact us jumbotron, has a description and the button transports user to contact page.*
+
+* *At the foot of the page is the platform footer which displays all products and contact page in bootstrap cards format.*
 
 <details>
-  <summary>Welcome page: Desktop top: Tablet left: Mobile right</summary>
+  <summary>Homepage</summary>
   <br>
 <div align="center">
-<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/sprint-welcome-page.jpg" target="_blank" rel=""/>
+<img src="" target="_blank" rel=""/>
   </div>
   </details>
-  
-  #### Welcome page Summary: 
-   - *This feature was inspired by user stories, to be appealing and landing page designs via Google Images.*
    
    ----
 
-### Plans and Merchardise pages
+### Products page
 
-* **
+* *Again at top of the products page is the navigation bar, see all details at navigation feature.*
+
+* *Below the page title is a sort products filter, which drops down and the user can toggle products from high-low, A-B, rating& price vice versa.*
+
+* *The product images are displayed horizontally in fours and stacked vertically in mobile.*
+
+* *Each product image, details, rating, price and review button is stored in a bootstrap card. The image in the header and the rest in the card footer.*
+
+* *The user can click on the review button, which takes the user to the review product page where the user can create a review of the product or just look at previous reviews posted.*
+
+* *If user clicks on image, it will take the user to the product detail page, where the user can add the product to their bag, or just keep shopping. The user can select their product size(if applicable). Once product is added, the user will be notified via a notification.*
+
+* *At the foot of the page is the platform footer which displays all products and contact page in bootstrap cards format.*
 
 <details>
-  <summary>Homepage, Desktop top: Tablet left: Mobile right</summary>
+  <summary>Products Page</summary>
 <div align="center">
 <img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/sprint-homepage.jpg" target="_blank" rel=""/>
   </div>
   </details>
-  
-*The button is moved to the center of the card, as it looked better in that position.*
-  
-  #### Home page Summary:
-   - **
-   
-   ----
 
-### 
+--------
 
-* **
+### Bag page
+
+* *The bag page displays all the products the user has added.*
+
+* *The product image, name, quantity and product cost is displayed in table format.*
+
+* *User can toggle each product quantity or remove the product from the bag entirely.*
+
+* *Below the table, bottom right; the grand-total of the bag is displayed.*
+
+* *Below the grand total are two buttons: a keep shopping button and either a secure checkout if user is logged in or a login button if the user is not signed/does not have an account.*
+
+* *At the foot of the page is the platform footer which displays all products and contact page in bootstrap cards format.*
 
 <details>
-  <summary>The create activity page, Desktop top: Tablet left: Mobile right</summary>
+  <summary>Bag page</summary>
 <div align="center">
 <img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/sprint-create.jpg" 
      target="_blank" rel=""/>
   </div>
   </details>
-  
-   #### Summary:
-   - **
    
-   ----
-   
-   ### feature
+### Checkout
 
 * **
 
