@@ -16,9 +16,10 @@ html {
     width: fit-content;
 }
 
+
 /*------------------------- mobile nav toggler*/
-.navbar-light 
-.navbar-toggler {
+
+.navbar-light .navbar-toggler {
     color: rgb(252, 178, 18);
     background-color: rgb(255, 255, 255);
 }
@@ -173,9 +174,13 @@ https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/base.css*/
     overflow-y: auto;
 }
 
+
 /*-------------------------------- Contact page gym description*/
+
+
 /*read more button, taken from:
 https://www.w3schools.com/howto/howto_js_read_more.asp */
+
 #more {
     display: none;
 }
@@ -205,15 +210,17 @@ https://www.w3schools.com/howto/howto_js_read_more.asp */
     padding-top: 5em;
 }
 
+
 /*--------------------------------- Review page form */
+
 .form-control {
     border: 0.125em solid rgb(0, 0, 0);
     border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-/*--------------------------------- Footer */
 
+/*--------------------------------- Footer */
 
 footer .container-fluid {
     padding-top: 3.75em;
@@ -293,20 +300,19 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
     }
 }
 
+
 /* ------------------------------- login& registration */
 
 .bg-img {
-  /* The image used */
-  background-image: url("/media/homepage_images/jump-fitness-workout.jpg");
-
-  /* Control the height of the image */
-  min-height: 23.75em;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+    /* The image used */
+    background-image: url("/media/homepage_images/jump-fitness-workout.jpg");
+    /* Control the height of the image */
+    min-height: 23.75em;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 
@@ -445,10 +451,12 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
     }
 }
 
+
 /* Smooth scrolling IF user doesn't have a preference due to motion sensitivities*/
+
 @media screen and (prefers-reduced-motion: no-preference) {
-  html,
-  body {
-    scroll-behavior: smooth;
-  }
+    html,
+    body {
+        scroll-behavior: smooth;
+    }
 }
