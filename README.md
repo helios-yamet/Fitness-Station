@@ -25,6 +25,7 @@ __Get Fit with Fitness Station__
      * [Icons](#Icons)
      * [Wire-Frames](#Wire-Frames)
 * [Features](#Features)
+     * [Schema-Design](#Schema-Design)
      * [Features left to be implemented](#Features-left-to-be-implemented)
      * [issues-and-bugs](#issues-and-bugs)
      * [Technologies](#Technologies)
@@ -34,6 +35,7 @@ __Get Fit with Fitness Station__
      * [Version-control](#Version-control)
      * [Deployment](#Deployment)
      * [Remote Deployment](#Remote-Deployment)
+     * [Travis-continuous-integration](#Travis-Continuous-Integration)
 * [Acknowledgements](#Acknowledgements)
      * [External-Media](#External-Media)
 
@@ -446,6 +448,18 @@ Summary:
 
 -------
  
+ 
+ 
+### Schema Design
+
+<h2 align="center">Database Schema</h2>
+<div align="center">
+<img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/media/readme/data-base-mockup.png" 
+     target="_blank" rel="noopener" alt="Database mockup image">
+</div>
+
+
+--------
 ## Libraries and Frameworks 
 
 - Python 3.7: https://www.python.org/
@@ -511,21 +525,23 @@ This sites version control is through github linked to the heroku app, using git
 #### git push index.html
  - *This pushes the file to the github project repository.*
   
+
 ## Deployment
 
-
 #### Requirements 
-You will need the following tools installed on your system:
+You will need the following tools& accounts installed on your system and an account with:
 
 Python 3 - https://www.python.org/downloads/
-An IDE such as Visual Studio, gitpod, Code, or like this project gitpod
-An account at MongoDB Atlas - https:https://github.com/michodgs25/Sprint//www.mongodb.com/
-Git - https://gist.github.com/derhuerst/1b15ff4652a867391f03
 
+An IDE such as Visual Studio, gitpod, Code, or like this project gitpod
+
+An account at Heroku - https://dashboard.heroku.com/apps
+
+An account with AWS(Amazon web services) - https://aws.amazon.com/console/
 
 I personally used github on my local machine to develop the site using Python 3.7.3 and deployed to Heroku via Github.
 
-1. To download or clone the site to your local machine you will need to go to my repo [here.](https://github.com/michodgs25/Sprint) and see deployment steps in https://help.github.com/en/articles/cloning-a-repository
+1. To download or clone the site to your local machine you will need to go to my repo [here.](https://github.com/michodgs25/fitness-station-360) and see deployment steps in https://help.github.com/en/articles/cloning-a-repository
 
 2. Before you download or clone the site you will need to ensure you have Python 3.7 installed.
 
@@ -538,142 +554,14 @@ I personally used github on my local machine to develop the site using Python 3.
 6. You should now be able to view the site on your localhost on port 8000.
 
 
-## Remote Deployment
-Deployment: Heroku
+### Deployment: Heroku
 
 I decided to deploy the project to Heroku so I could see, test
 and update the site in real-time. Here is my deployment process.
 
-__Phase one__
+See full deployment process here: __https://github.com/michodgs25/Fitness-Station-360/issues/7#issue-772489110__
 
-1. Open up https://dashboard.heroku.com/ and logged into my account
-2. Create a new app: fitness station, selecting the location nearest me (Europe)
-3. Under the ‘Resources’ tab, search for and add on the ‘Heroku Postgress DB’ app
-4. In the project terminal, install ‘dj_database_url’ & ‘psycopg2’ by using the following
-commands:
-a. pip3 install dj_database_url
-b. pip3 install psycopg2-binary
-
-5. Next, I froze the requirements(pip3 freeze > requirments.txt) to ’requirements.txt’ to make sure Heroku installs all our
-apps’ requirements when we deploy the project.
-
-6. In settings.py at the top, import the DJ database: ‘import dj_database_url’
-
-7. Comment out the current ‘DATABASE’ settings (we will need them later), and add:
-- a. ‘default’: dj_database_url.parse(insert database URL)
-- b. Add the Database URL into the () which you can find in the Heroku app under
-Settings – Reveal Config Vars - DATABASE_URL
-
-8. Now we need to run all the migrations to get our database set up:
-a. python3 manage.py migrate
-
-9. Next, create a superuser using the command: python3 manage.py createsuperuser. 
-
-10. Now back in settings.py, remove the new database settings and uncomment out the original
-settings. This stops the database URL going into version control.
-
-11. Update the Database settings in settings.py with an if statement, so that when we are
-running the app on Heroku it will connect to the database URL, otherwise we connect to site
-to Sequel light.
-
-__Phase Two__
-
-1. Now to install gunicorn which will act as our webserver:
-a. pip3 install gunicorn
-
-2. Freeze it to our requirements.TXT file as before
-
-3. Create Procfile to tell Heroku to create a web dynamo, which will run unicorn and serve our
-Django app:
-
-4. Add this line of text to the Procfile: web: gunicorn fitness-station.wsgi:application
-
-5. Log into Heroku via the terminal with the command: heroku login -i
-
-6. Temporarily disable collect static using the following command: heroku config:set
-DISABLE_COLLECTSTATIC=1 –app fitness-station (--app fitness-station must be added as I
-have more than 1 app in Heroku)
-
-7. In settings.py, update the ‘ALLOWED_HOSTS settings. ‘Localhost’ allows GitPod to still work
-too.
-a. ALLOWED_HOSTS = [magnetic-eyes.herokuapp.com', 'localhost']
-
-8. Finally, for this step, copy all the environment variables for the project from Gitpod settings
-to Heroku – Settings - Config Vars.
-
-#### First deployment attempt:
-
-1. Commit all changes to Gitpod
-
-2. Push all changes to Gitpod
-
-3. As I am using GitPod online, I must first initialise the Heroku before pushing to Heroku:
-- a. git remote: heroku git:remote -a fitness-station
-
-4. Finally, deploy to Heroku:
-- a. Git push Heroku master
-
-5. Once the build in Heroku has completed, open the app by either clicking the link in the
-terminal, or the ‘Open App’ button in Heroku.
-
-Set up auto deploy:
-To auto-deploy the website every time you make a ‘git push’:
-
-1. In Heroku, head to the Deploy tab, select GitHub from the options, search for the magnetic
-eyes repository and click connect
-
-2. Beneath this, click ‘Enable Automatically Deploy’
-Deployment: Amazon Web Services (AWS)
-Now we need somewhere to store static and media files. For this project, we will be using
-Amazon Web Services (AWS). This is how to set it up.
-
-1. Visit https://signin.aws.amazon.com/. I already had an AWS account from a previous
-project, but otherwise, you would need to sign up and search for the S3 service.
-
-2. Create a new bucket:
-i. Name the bucket. I kept it simple using the name fitness-station-360
-
-ii. Select the area closest to me (EU (London) EU-west-2
-
-iii. Uncheck the box to block all public access and acknowledge that the bucket
-
-will be accessible by the public. This is because we need public access to our
-static files.
-
-iv. Create Bucket.
-
-3. Set up a few basic settings for the bucket:
-a. Properties: Select static website hosting – enable.
-
-b. Permissions: Cross-origin resource sharing (CORS). Add the code as per below
-provided by the course material for the Boutiqe Ado project:
-[
- {
- "AllowedHeaders": [
- "Authorization"
- ],
- "AllowedMethods": [
- "GET"
- ],
- "AllowedOrigins": [
- "*"
- ],
- "ExposeHeaders": []
- }
-]
-i. Bucket Policy: select ‘Policy Generator’ to create a security policy for the
-bucket. Select the policy type: S3 Bucket Policy. Add * to Principal to allow
-all principals
-
-ii. Action: Get Object. Copy the Amazon Resource Name (ARN) from the Edit
-Bucket Policy tab and add to the form (in this case it is arn:aws:s3:::magneticeyes)
-
-iii. Click ‘add statement’
-iv. Generate policy. Copy the policy provided and paste it into the Edit
-Bucket Policy box on the AWS S3 page and add a /* on the end of the
-resource key to allow access to all resources in the bucket. Save
-changes
-
+----------
 
 ## Travis continuous integration 
 
