@@ -25,6 +25,7 @@ __Get Fit with Fitness Station__
      * [Icons](#Icons)
      * [Wire-Frames](#Wire-Frames)
 * [Features](#Features)
+     * [Defensive-design](#Defensive-Design)
      * [Schema-Design](#Schema-Design)
      * [Features left to be implemented](#Features-left-to-be-implemented)
      * [issues-and-bugs](#issues-and-bugs)
@@ -448,9 +449,34 @@ Summary:
 
 -------
  
- 
+## Defensive design
+Certain measure were taken to prevent users from making mistakes or malicious actions.
+
+- General form validation
+- Stripe has its own security system in place. I took nearly every part of code concerning stripe from the Boutique Ado project of the Code Institute.
+- Several get_object_or_404 instances in the views.
+- The checkout button is not available when the user is not logged on or does not have an account.
+- The checkout view has @login_required tagged.(so no access when typing the url of the checkout page in the addressbar)
+- As a measure to prevent users from putting to0 many products in the cart, the user is only able to have a maximum of 10 items of each product in the bag.
+
+-------
  
 ### Schema Design
+
+After careful consideration and taking into account all the different parts of the website and needs of the database, I designed the schema in five main models:
+
+- Profiles: These are the details that the user saves to their profile for quick checkouts in the future. The username, email address and password details are set when the user registers for the site, and the delivery details are added when the user makes a purchase and selects to save those details to their profile.
+
+- Orders: This includes the overall order in full, including the delivery details from (from or added to the user profile) and the order_line_items.
+- order_line_items: This includes details of each product the user orders, the details of each product are linked to the products section.
+
+products: This includes all the information related to each product, including the product item price, SKU, image, name, descriptions, category. Products can only be added by a Superuser/Authenticated user.
+
+category: Linking to the category field in the products section, the Category model simply holds the categories which are chosen in the product model. These categories are pre-set and can only be modified or added to by a Superuser/Authenticated user.
+
+Contact: This section is non-relational to the rest of the database, and it holds details of the blog posts including the blog title, author, status, image, image_url and the post itself. The blog can only be added by a Superuser/Authenticated user.
+
+blog Comment: If a user is signed into their account and they wish to leave a comment on the blog, the email field required in the form will be linked to their account and pre-filled with the user’s email. The blog comment models also require a name, comment body, date it was created on and the active status (published or draft).
 
 <h2 align="center">Database Schema</h2>
 <div align="center">
