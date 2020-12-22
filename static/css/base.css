@@ -300,7 +300,7 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
   background-image: url("/media/homepage_images/jump-fitness-workout.jpg");
 
   /* Control the height of the image */
-  min-height: 380px;
+  min-height: 23.75em;
 
   /* Center and scale the image nicely */
   background-position: center;
