@@ -29,12 +29,13 @@ __Get Fit with Fitness Station__
      * [Schema-Design](#Schema-Design)
      * [Features left to be implemented](#Features-left-to-be-implemented)
      * [issues-and-bugs](#issues-and-bugs)
-     * [Technologies](#Technologies)
+* [Technologies](#Technologies)
      * [Languages](#Languages)
      * [Libraries](#Libraries)
 * [Testing](#Testing)
      * [Version-control](#Version-control)
-     * [Deployment](#Deployment)
+     * [Branches](#Branches) 
+* [Deployment](#Deployment)
      * [Remote Deployment](#Remote-Deployment)
      * [Travis-continuous-integration](#Travis-Continuous-Integration)
 * [Acknowledgements](#Acknowledgements)
@@ -465,18 +466,27 @@ Certain measure were taken to prevent users from making mistakes or malicious ac
 
 After careful consideration and taking into account all the different parts of the website and needs of the database, I designed the schema in five main models:
 
-- Profiles: These are the details that the user saves to their profile for quick checkouts in the future. The username, email address and password details are set when the user registers for the site, and the delivery details are added when the user makes a purchase and selects to save those details to their profile.
+1. 
+Profiles: These are the details that the user saves to their profile for quick checkouts in the future. The username, email address and password details are set when the user registers for the site, and the delivery details are added when the user makes a purchase and selects to save those details to their profile.
 
-- Orders: This includes the overall order in full, including the delivery details from (from or added to the user profile) and the order_line_items.
+
+2.
+Orders: This includes the overall order in full, including the delivery details from (from or added to the user profile) and the order_line_items.
 - order_line_items: This includes details of each product the user orders, the details of each product are linked to the products section.
 
+3. 
 products: This includes all the information related to each product, including the product item price, SKU, image, name, descriptions, category. Products can only be added by a Superuser/Authenticated user.
 
 category: Linking to the category field in the products section, the Category model simply holds the categories which are chosen in the product model. These categories are pre-set and can only be modified or added to by a Superuser/Authenticated user.
 
+4. Checkout:
+
+
+5. 
 Contact: This section is non-relational to the rest of the database, and it holds details of the blog posts including the blog title, author, status, image, image_url and the post itself. The blog can only be added by a Superuser/Authenticated user.
 
-blog Comment: If a user is signed into their account and they wish to leave a comment on the blog, the email field required in the form will be linked to their account and pre-filled with the user’s email. The blog comment models also require a name, comment body, date it was created on and the active status (published or draft).
+6.
+Review post: If a user is signed into their account and they wish to leave a review on a particular product, they can do so by clicking the review button on the desired product card in the products page, however this section is also non-relational to the rest of the database, this allows for creative freedom and allows users to retain anonymity. The review post models also require a name, review text amd date it was created on.
 
 <h2 align="center">Database Schema</h2>
 <div align="center">
@@ -550,6 +560,31 @@ This sites version control is through github linked to the heroku app, using git
  
 #### git push index.html
  - *This pushes the file to the github project repository.*
+ 
+ 
+ Branches - 
+ 
+Requirements may be different for other sevices, for this project I used Git.
+ 
+ To implement my review& contact us features I created new branches in my github repository.
+ 
+ Git branches are effectively a pointer to a snapshot of your changes. When you want to add a new feature or fix a bug—no matter how big or how small—you spawn a new branch to
+ encapsulate your changes. This makes it harder for unstable code to get merged into the main code base, and it gives you the chance to clean up your future's history before
+ merging it into the main branch. - https://www.atlassian.com/git/tutorials/using-branches
+ 
+ Using the atlassian git using branches tutorial guide - https://www.atlassian.com/git/tutorials/using-branches: 
+ 
+ Create new Branch and move into newly created branch - 
+ 
+ type into your terminal: git checkout -b *new-branch-name* 
+ 
+ *Warning* -  
+ my review branch for this project is called new_branch, due to the first time I have implemented branches. 
+ My contact page branch is aptly named: contact_branch, I advise all developers to provide a branch name that represents the purpose of the branch, this keeps things clear for
+ other developers who may view your project. 
+ 
+ 
+ ------
   
 
 ## Deployment
