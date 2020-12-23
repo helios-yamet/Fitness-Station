@@ -3,6 +3,11 @@ from review.forms import ReviewForm
 
 
 class TestReviewForm(TestCase):
+    """
+    define name& review text is required,
+    if user inputs text, form returns valid.
+    if user leaves empty field, form returns field required.
+    """
 
     def test_name_is_required(self):
         form = ReviewForm({'name': 'Test name'})
