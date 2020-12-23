@@ -3,6 +3,13 @@ from checkout.forms import OrderForm
 
 
 class TestOrderForm(TestCase):
+    """
+    define checkout form field requirments,
+    self.assertFalse(form.is_valid),
+    even if field is empty,
+    the checkout form returns valid.
+    If field is empty and required, form will return invalid.
+    """
 
     def test_full_name_is_required(self):
         form = OrderForm({'full_name': 'Test name'})
@@ -36,7 +43,7 @@ class TestOrderForm(TestCase):
         self.assertIn('town_or_city', form.errors.keys())
         self.assertEqual(form.errors['town_or_city'][0],
                          'This field is required.')
-                         
+
     def test_phone_number_is_required(self):
         form = OrderForm({'phone_number': ''})
         self.assertFalse(form.is_valid())

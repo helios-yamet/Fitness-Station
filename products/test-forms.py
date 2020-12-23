@@ -3,6 +3,13 @@ from products.forms import ProductForm
 
 
 class TestProductForm(TestCase):
+    """
+    define product form field requirment,
+    self.assertFalse(form.is_valid),
+    even if field is empty,
+    the add product form is valid.
+    If field is required, form will return invalid.
+    """
 
     def test_sku_is_not_required(self):
         form = ProductForm({'name': 'Test Name'
@@ -29,6 +36,12 @@ class TestProductForm(TestCase):
 
 
 class TestViews(TestCase):
+    """
+    Define view products object,
+    test response to user request to view products,
+    respond with code 200 - server successfully answered the http request
+    and fetches the products template.
+    """
 
     def test_view_products(self):
         response = self.client.get('/products/')
