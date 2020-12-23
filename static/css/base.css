@@ -175,7 +175,7 @@ https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/base.css*/
 }
 
 
-/*-------------------------------- Contact page gym description*/
+/*-------------------------------- Contact page */
 
 
 /*read more button, taken from:
@@ -185,6 +185,12 @@ https://www.w3schools.com/howto/howto_js_read_more.asp */
     display: none;
 }
 
+/*read more lead text*/
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+}
 
 /* -------------------------------- Card image size */
 
