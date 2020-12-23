@@ -18,9 +18,13 @@
      * [issues-and-bugs](#issues-and-bugs)
 * [Django-local-tests](#Django-Local-Tests)
      * [Checkout-form-tests](#Checkout-Form-Tests)
+     * [Test-products-review-form](#Test-Products-Review-Form)
      * [Allauth-authentication](Allauth-Authentication)
 * [Stripe-Testing](#Stripe-Testing)
 * [Automated-local-testing](#Automated-Local-Testing)
+
+---------------------
+
 
 ## Responsiveness
 
@@ -280,6 +284,17 @@ class TestOrderForm(TestCase):
 ```
 
 -------
+
+
+#### Test products review form:
+
+https://github.com/michodgs25/Fitness-Station-360/issues/9#issue-773380139
+
+
+#### Test add products form: 
+
+https://github.com/michodgs25/Fitness-Station-360/issues/8#issue-773365697
+
 
 
 #### Allauth-authentication
