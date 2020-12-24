@@ -158,7 +158,9 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 - As the gym owner I want to edit product information, so I can control costs.
 
-- As the gym owner I want to be able to remove products from the site, if no longer selling those products.
+- As the gym owner I want to be able to remove products from the site, if no longer selling those products. 
+
+- As the gym owner I want to be able to limit the amount of products one user can purchase, so I can control stock quantity.
 
 #### Site control
 
@@ -192,7 +194,12 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 The website design is inspired by other e-sites such as Amazon and ebay, which introduce the site primarily through imagery, images of the product categories on the homepage to be exact; which encourages the user to explore our products immediately. The reason for this display on the homepage, is to get immediate user interaction with purchasing those products, which increases the likelihood of products being sold. The goal being to simplify users buying products and keeping that process simple is key.
 
-On the homepage the user can explore the site using the search bar on the navigation, shop by category tabs just below the search bar, which takes user to the products and if they clicked the merchandise tab the page will show merchandise product only, same vice versa for workout plans. On the product page there are filters place at the top of the page below the navigation bar; which allows the user to sort through all the products until they find what they like.
+On the homepage the user can explore the site using the search bar on the navigation, below the search bar, are three separate products dropdown tabs aligned horizontally:
+- All products
+- workout plans
+- activewear& accessories
+
+Which when the user clicks each tab displays a range of product options the user can choose to filter available products. 
 
 See full article on design here __https://github.com/michodgs25/Fitness-Station/issues/1__
 
@@ -229,6 +236,7 @@ See bootstrap documentation for full range of colors - https://getbootstrap.com/
 
 The icons used in this project are provided by [Font Awesome 5.14.0](https://fontawesome.com/).
 
+-------------
 
 # Wire-Frames
 These wireframes were designed with Balsamiq Mockups. 
@@ -237,7 +245,7 @@ These wireframes were designed with Balsamiq Mockups.
   <summary>Desktop</summary>
   <br>
 <div align="center">
-<img src="https://github.com/michodgs25/Fitness-Station/blob/master/fitness_station/static/wire-frames/desktop.png" target="_blank" rel=""/>
+<img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/static/wireframes/desktop/desktop.png" target="_blank" rel=""/>
 </div>
   </details>
 
@@ -253,7 +261,7 @@ These wireframes were designed with Balsamiq Mockups.
    <summary>Mobile</summary>
   <br>
 <div align="center">
-<img src="https://github.com/michodgs25/Fitness-Station/blob/master/fitness_station/static/wire-frames/mobile.png" target="_blank" rel=""/>
+<img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/static/wireframes/mobile/mobile.png" target="_blank" rel=""/>
 </div>
   </details> 
 
