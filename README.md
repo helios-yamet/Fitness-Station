@@ -259,7 +259,7 @@ These wireframes were designed with Balsamiq Mockups.
 <div align="center">
 <img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/static/wireframes/tablet/tablet.png" target="_blank" rel=""/>
 </div>
- </det ails>
+ </details>
  
  <details>
    <summary>Mobile</summary>
@@ -334,7 +334,8 @@ These wireframes were designed with Balsamiq Mockups.
 
 * *Once order has been processed, the user is redirected to checkout success page which contains the order details and is notified a confirmation is sent to the email the user provided.*
 
-* *The order info:
+* *Order detail example:*
+
 Order Info:
 Order Number: *C585D9AC53E140D7A4CAC685DCAEAD94*
 
@@ -342,9 +343,11 @@ Order Date: Dec. 24, 2020, 2:29 a.m.
 
 Order Details: Jump Rope - 1 @ $30.00 each
 
-__Delivering to__ To: Full Name: *testname*  Address 1: *testaddress*, Address 2: *testaddress*, County: *testcounty*, Town or City: *testtownorcity*, Postal Code: *testpostal*, Country: *testGB*, Phone Number: *+44000000000*, 
+__Delivering to__ To: 
+Full Name: *testname*  Address 1: *testaddress*, Address 2: *testaddress*, County: *testcounty*, Town or City: *testtownorcity*, Postal Code: *testpostal*, Country: *testGB*, Phone Number: *+44000000000*, 
 
-__Billing Info:__ Order Total: *30.00*, Delivery: *3.00* Grand Total: *33.00*
+__Billing Info:__ 
+Order Total: *30.00*, Delivery: *3.00* Grand Total: *33.00*
 
 * *The order is also stored to the user profile which the user can access via their profile.*
 
