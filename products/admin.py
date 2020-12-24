@@ -5,6 +5,10 @@ from .models import Product, Category
 
 
 class ProductAdmin(admin.ModelAdmin):
+    """
+    Create product detail list.
+    Order product by Sku value.
+    """
     list_display = (
         "sku",
         "name",
@@ -18,6 +22,10 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
+    """
+    Create friendly name variable for products.
+    Then register product and product categories.
+    """
     list_display = (
         "friendly_name",
         "name",

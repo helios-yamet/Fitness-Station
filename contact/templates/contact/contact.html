@@ -11,18 +11,23 @@
 <!--About gym desciption, user can learn more about the gym by clicking read more button-->
 <div class="jumbotron">
     <h3 class="display-4">About Fitness Station</h3>
-    <p class="lead">Looking to sign up at a local gym in Minehead? 
-        Get in touch with Fitness Station. Our state-of-the-art gym has the facilities and equipment to cater for people of all abilities. 
-        We strive to offer our customers the best services and equipment when visiting our gym.<span id="dots">...</span><span id="more">
-        For this reason, we not only offer professional personal training, but we also ensure all our gym memberships and 
-        fitness services are available at affordable and competitive prices.
-        Whether you are in training for a half marathon and need to work on your cardiovascular fitness or would like to improve on your muscular strength, we can help you. 
-        As well as Olympic class equipment, we also provide a tanning station, available for both gym members and members of the public.</span>
+    <p class="lead">Looking to sign up at a local gym in Minehead?
+        Get in touch with Fitness Station. Our state-of-the-art gym has the facilities and equipment to cater for people
+        of all abilities.
+        We strive to offer our customers the best services and equipment when visiting our gym.<span
+            id="dots">...</span><span id="more">
+            For this reason, we not only offer professional personal training, but we also ensure all our gym
+            memberships and
+            fitness services are available at affordable and competitive prices.
+            Whether you are in training for a half marathon and need to work on your cardiovascular fitness or would
+            like to improve on your muscular strength, we can help you.
+            As well as Olympic class equipment, we also provide a tanning station, available for both gym members and
+            members of the public.</span>
     </p>
     <button onclick="myFunction()" id="myBtn">Read more</button>
     <hr class="my-4">
-    <p>If you would like to book an appointment or take out a gym membership with us, why not get in touch? 
-        We will help you to organise and arrange a gym plan that is tailored to your personal requirements. 
+    <p>If you would like to book an appointment or take out a gym membership with us, why not get in touch?
+        We will help you to organise and arrange a gym plan that is tailored to your personal requirements.
     </p>
 </div>
 <!-- User inputs name, email, message and send to fitness station team. -->
@@ -39,8 +44,9 @@
             <p class="font-weight-bold">Phone: 01643 705299 <i class="fas fa-phone fa-rotate-90 text-secondary"></i></p>
             <p class="font-weight-bold">Email: fitness-station@gmail.com</p>
             <h4 class="mb-4 text-uppercase">Visit us</h4>
-            <p class="font-weight-bold">Address: 3 Hawksworth Rd, Minehead TA24 5BZ <i class="far fa-address-card"></i></p>
-            <!--Week opening times for the gym-->
+            <p class="font-weight-bold">Address: 3 Hawksworth Rd, Minehead TA24 5BZ <i class="far fa-address-card"></i>
+            </p>
+            <!--Week opening times for the gym, informs when to visit-->
             <h4 class="mb-4">Opening Times</h4>
             <table class="table table-hover">
                 <thead>
@@ -90,10 +96,10 @@
                 {% csrf_token %}
                 {{ contact_form | crispy }}
                 <button id="submit-button" class="btn btn-lg btn-success">
-                <span class="text-uppercase">Send message</span>
-                <span class="icon">
-                <i class="far fa-envelope"></i>
-                </span>
+                    <span class="text-uppercase">Send message</span>
+                    <span class="icon">
+                        <i class="far fa-envelope"></i>
+                    </span>
                 </button>
             </form>
         </div>
