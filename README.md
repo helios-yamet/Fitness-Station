@@ -211,6 +211,18 @@ See full article on design here __https://github.com/michodgs25/Fitness-Station/
      target="_blank" rel="noopener" alt="Platform colors">
 </div>
 
+-  Bootstrap fonts& colors are applied:
+
+For this plaform I applied:
+
+.text-success - Used for buttons to view products, secure checkout and view product reviews.
+
+.text-danger - Used as login button if use does not have an account or needs to login before completing checkout and login 'forgot password' text.
+
+.text-warning - used as product card body, contact page, review page backgrounds.
+
+See bootstrap documentation for full range of colors - https://getbootstrap.com/docs/4.0/utilities/colors/
+
 ------
 
 ### Icons
