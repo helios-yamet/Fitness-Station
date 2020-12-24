@@ -52,8 +52,10 @@ class OrderForm(forms.ModelForm):
 
 class MakePaymentForm(forms.Form):
     """
-    Input for StripE Payment Collection
+    Input for Stripe Payment Collection
     Default Expiration Year Range to current Year
+    Create month& year variables attach year range.
+    Create credit card form field and expiry stripe variables.
     """
     MONTH_CHOICES = [(i, i) for i in range(1, 13)]
     YEAR_CHOICES = [(i, i) for i in range(year, year + 20)]
