@@ -9,7 +9,7 @@
 __Get Fit with Fitness Station__
 
 *Here at Fitness station we put the individual needs first, providing first class exercise plans; whether you are starting out or have years of experience we have the plan for you. In addition you can support us by purchasing our fantastic merchandise, from T-shirts to workout Joggers!* 
-#### You can visit us here [here.]()
+#### You can visit us here [here.](https://fitness-station.herokuapp.com/)
 
 ## Contents
 * [Project purpose](#Project-Purpose)
@@ -253,7 +253,7 @@ These wireframes were designed with Balsamiq Mockups.
    <summary>Tablet</summary>
   <br>
 <div align="center">
-<img src="https://github.com/michodgs25/Fitness-Station/blob/master/fitness_station/static/wire-frames/tablet.png" target="_blank" rel=""/>
+<img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/static/wireframes/tablet/tablet.png" target="_blank" rel=""/>
 </div>
  </details>
  
@@ -281,14 +281,6 @@ These wireframes were designed with Balsamiq Mockups.
 * *Immediately below the products category cards is a contact us jumbotron, has a description and the button transports user to contact page.*
 
 * *At the foot of the page is the platform footer which displays all products and contact page in bootstrap cards format.*
-
-<details>
-  <summary>Homepage</summary>
-  <br>
-<div align="center">
-<img src="" target="_blank" rel=""/>
-  </div>
-  </details>
    
    ----
 
@@ -296,9 +288,9 @@ These wireframes were designed with Balsamiq Mockups.
 
 * *Again at top of the products page is the navigation bar, see all details at navigation feature.*
 
-* *Below the page title is a sort products filter, which drops down and the user can toggle products from high-low, A-B, rating& price vice versa.*
+* *Below the page title to far right, is a sort products filter, which drops down and the user can toggle products from high-low, A-B, rating& price vice versa.*
 
-* *The product images are displayed horizontally in fours and stacked vertically in mobile.*
+* *The product images are displayed horizontally in fours for desktop& tablet and stacked vertically on mobile screens.*
 
 * *Each product image, details, rating, price and review button is stored in a bootstrap card. The image in the header and the rest in the card footer.*
 
@@ -308,12 +300,7 @@ These wireframes were designed with Balsamiq Mockups.
 
 * *At the foot of the page is the platform footer which displays all products and contact page in bootstrap cards format.*
 
-<details>
-  <summary>Products Page</summary>
-<div align="center">
-<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/sprint-homepage.jpg" target="_blank" rel=""/>
-  </div>
-  </details>
+* *On any of the products pages, there is a scroll to top button to the far right of the page, which takes the user back to top of the page.*
 
 --------
 
@@ -323,7 +310,7 @@ These wireframes were designed with Balsamiq Mockups.
 
 * *The product image, name, quantity and product cost is displayed in table format.*
 
-* *User can toggle each product quantity or remove the product from the bag entirely.*
+* *User can toggle each product quantity or remove the product from the bag entirely, toggler is located in the 'qty' section.*
 
 * *Below the table, bottom right; the grand-total of the bag is displayed.*
 
@@ -331,126 +318,85 @@ These wireframes were designed with Balsamiq Mockups.
 
 * *At the foot of the page is the platform footer which displays all products and contact page in bootstrap cards format.*
 
-<details>
-  <summary>Bag page</summary>
-<div align="center">
-<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/sprint-create.jpg" 
-     target="_blank" rel=""/>
-  </div>
-  </details>
    
-### Checkout
+### Checkout and Checkout Success
 
-* **
+* *Checkout page is only available if user has an account with the platform.*
 
-<details>
-  <summary>The explore activities page, Desktop top: Tablet left: Mobile right</summary>
-<div align="center">
-<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/sprint-explore.jpg" 
-     target="_blank" rel=""/>
-  </div>
-  </details>
-  
-   #### Summary:
-   - *Explore activities page is very positive feature of this site as this increases user interaction by exploring through their own activity logs.*
+* *Checkout page is divided into two primary sections, left hand side is the checkout form, which the user is required to input personal and billing/shipping details. The right hand side of the page hold the order summary, number of items, product names, size if applicable(otherwise n/a), subtotal, then below delivery cost if item subtotal does not pass free delivery threshold($50) delivery costing $3, and grand total of the bag.*
+
+* *User once completed all checkout form details can tick a box after country select field, to save details to their profile.*
+
+* *At the bottom of the checkout form, are two buttons 'adjust bag' and 'complete checkout', adjust bag transports user back to bag page and complete order processes order but only if the checkout form is valid. If the form is valid and is submitted, the platform processes the payment, redirect user to the checkout success page.*
+
+* *Once order has been processed, the user is redirected to checkout success page which contains the order details and is notified a confirmation is sent to the email the user provided.*
+
+* *The order info:
+Order Info:
+Order Number: *C585D9AC53E140D7A4CAC685DCAEAD94*
+
+Order Date: Dec. 24, 2020, 2:29 a.m.
+
+Order Details: Jump Rope - 1 @ $30.00 each
+
+__Delivering to__ To: Full Name: *testname*  Address 1: *testaddress*, Address 2: *testaddress*, County: *testcounty*, Town or City: *testtownorcity*, Postal Code: *testpostal*, Country: *testGB*, Phone Number: *+44000000000*, 
+
+__Billing Info:__ Order Total: *30.00*, Delivery: *3.00* Grand Total: *33.00*
+
+* *The order is also stored to the user profile which the user can access via their profile.*
+
+* *At the bottom of the order is a button with the caption "Now checkout our other products", which transports the user to the all products page.*
    
-   ----
-   
-   #### feature:
-   
-   **
-   
-   
-   <details>
-  <summary>Accordian</summary>
-<div align="center">
-<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/accordian-feature.jpg" 
-     target="_blank" rel=""/>
-  </div>
-  </details>
-  
-  
-   #### Summary:
-   - **
-   
-   -------
-   
-   ### Navigation bar and sidenav features
-   
- * **
- 
-* **
+--------
 
-<details>
-  <summary>Navigation(top) and sidenav(bottom):</summary>
-<div align="center">
-<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/nav-sidenav.jpg" 
-     target="_blank" rel=""/>
-  </div>
-  </details>
-  
-  **
-  
-----
+## User Profile
 
+* *User profile is created automatically when user register their account with the platform.*
 
-### Search bar feature
-* **
+* *The profile has a default delivery information which is blank until the user either completes an order and ticks the save delivery information box addING the details to the profile, or user adds the details manually upon completing registration. User can update these details, at any point and details are automatically filled when user secures checkout.* 
 
-* **
+--------
 
-* **
+## Navigation Bar and Mobile Nav
 
+* *Is displayed on every single page of the platform, allowing the user to navigate with ease.*
 
-<details>
-  <summary>Search bar</summary>
-<div align="center">
-<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/search.jpg" 
-     target="_blank" rel=""/>
-  </div>
-  </details>
+* *Bar holds the fitness station logo(far left), search bar and product dropdown tabs(center), explore dropdown tab and bag.*
 
+* *The search bar allows the user to search all products on the platform.*
 
--------
-   
-   ### Edit activity feature
+* *The products dropdown tabs, aligned horizontally:*
+- All products: user can filter by price, rating, category and view all products
+- workout plans: user can view all workout plans
+- activewear& accessories: User can filter by mens activewear only, womens activewear only, accessories only, all activewear.
+Which when the user clicks each tab displays a range of product options the user can choose to filter available products. 
 
-* **
+- *Bag icon, is white when empty, orange when holding items and displays bag total, user can view bag when icon is clicked.* 
+Notifications appear from the bag icon, displaying dropdown box messages, for example: success message when user adds a product to the bag, the notification displays a minified bag page view within the confines of the message box with all the bag details, and has a secure checkout button.*
 
-<details>
-  <summary>The edit activity, Desktop top: Tablet left: Mobile right</summary>
-<div align="center">
-<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/sprint-edit.jpg" 
-     target="_blank" rel=""/>
-  </div>
-  </details>
-  
-   #### Edit activity Summary:
-   - **
-   
- -----
- 
- ### feature
- 
- * **
- 
- * **
- 
- 
-<details>
-  <summary></summary>
-<div align="center">
-<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/readme/error-feature.jpg" 
-     target="_blank" rel=""/>
-  </div>
-  </details>
-  
-  ####  Summary:
-  
-  * *Using a defensive programmer approach, the addition of the error page guards against any unforseen circumstance of a log still existing on a different tab after being deleted on the explore page.*
- 
- ------
-    
+* *The mobile nav contains four icons, from left to right:*
+
+- burger icon dropdown: contains three tabs, which functions the same as main navigation dropdown tabs *all products, workout plans, activewear& accessories.*
+- search icon: search bar dropdowns and user can search products.
+- Bag icon, functions the same as the main navigation bag.
+
+* *Both main navigation& mobile nav are fixed and follow the user scroll, so user could get to the bottom of the page and can still access the navigation.*
+
+---------
+
+## Footer feature
+
+* *Footer is displayed at the foot of each page on the platform, the footer consists of four bootstrap cards displayed horizonally on a wide bootstrap card:*
+- Activewear, takes user to all activewear page.
+- Accessories, takes user to all accessories page.
+- workout plans, transports user to respective page.
+- contact us page, takes user to contact page.
+
+* *User accesses each page by clicking the button on the card below the icon& name.*
+
+* *Below horizontal card is the gym contact number far left.*
+
+-----------    
    
 ## Features left to be implemented
 
