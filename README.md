@@ -192,7 +192,7 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 3. Shopping Cart and Checkout pages
 
 
-The website design is inspired by other e-sites such as Amazon and ebay, which introduce the site primarily through imagery, images of the product categories on the homepage to be exact; which encourages the user to explore our products immediately. The reason for this display on the homepage, is to get immediate user interaction with purchasing those products, which increases the likelihood of products being sold. The goal being to simplify users buying products and keeping that process simple is key.
+The website design is inspired by other e-sites such as Amazon and ebay, which introduce the site primarily through imagery, images of the product categories on the homepage to be exact; which encourages the user to explore our products immediately. The reason for this display on the homepage, is to get immediate user interaction time, which increases the likelihood of products being purchased. A goal of the platform is to simplify the process of purchasing products.
 
 On the homepage the user can explore the site using the search bar on the navigation, below the search bar, are three separate products dropdown tabs aligned horizontally:
 - All products
@@ -218,15 +218,19 @@ See full article on design here __https://github.com/michodgs25/Fitness-Station/
      target="_blank" rel="noopener" alt="Platform colors">
 </div>
 
--  Bootstrap fonts& colors are applied:
-
-For this plaform I applied:
+-  Bootstrap fonts& colors are are used throughout the site:
 
 .text-success - Used for buttons to view products, secure checkout and view product reviews.
 
 .text-danger - Used as login button if use does not have an account or needs to login before completing checkout and login 'forgot password' text.
 
 .text-warning - used as product card body, contact page, review page backgrounds.
+
+
+The purpose for implementing these bootstrap styles are two-fold:
+
+1. Mimic the traffic light system, danger being danger(stop/alert), warning(information/wait) and success(go). 
+2. Practical, allows for quicker development time without compromising UX.
 
 See bootstrap documentation for full range of colors - https://getbootstrap.com/docs/4.0/utilities/colors/
 
@@ -255,7 +259,7 @@ These wireframes were designed with Balsamiq Mockups.
 <div align="center">
 <img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/static/wireframes/tablet/tablet.png" target="_blank" rel=""/>
 </div>
- </details>
+ </det ails>
  
  <details>
    <summary>Mobile</summary>
@@ -272,7 +276,7 @@ These wireframes were designed with Balsamiq Mockups.
 
 ### Homepage feature
 
-* *The homepage consists of navigation bar(or mobile if using mobile devices), see navigation feature for details.*
+* *The homepage consists of navigation bar(or mobile if using mobile devices), see navigation feature for details in navigation feature.*
 
 * *Below the main navigation, is a jumbotron which displays the gym title and motto.*
 
@@ -406,10 +410,6 @@ Summary:
 
 ----------
 
-
-### Issues and bugs
-*This section looks into what existing issues that are still present in the project& what future iterations could do to resolve these issues:*
-
 ### Issues and bugs
 *This section looks into what existing issues that are still present in the project& what future iterations could do to resolve these issues:*
 
@@ -430,7 +430,7 @@ Certain measure were taken to prevent users from making mistakes or malicious ac
  
 ### Schema Design
 
-After careful consideration and taking into account all the different parts of the website and needs of the database, I designed the schema in five main models:
+After careful consideration and taking into account all the different parts of the website and needs of the database, I designed the schema in six main models:
 
 1. 
 Profiles: These are the details that the user saves to their profile for quick checkouts in the future. The username, email address and password details are set when the user registers for the site, and the delivery details are added when the user makes a purchase and selects to save those details to their profile.
@@ -445,8 +445,9 @@ products: This includes all the information related to each product, including t
 
 category: Linking to the category field in the products section, the Category model simply holds the categories which are chosen in the product model. These categories are pre-set and can only be modified or added to by a Superuser/Authenticated user.
 
-4. Checkout:
-
+4. 
+Checkout:
+This section takes in the user personal, billing and card details. User does have the option save the billing details near to their profile
 
 5. 
 Contact: This section is non-relational to the rest of the database, and it holds details of the blog posts including the blog title, author, status, image, image_url and the post itself. The blog can only be added by a Superuser/Authenticated user.
@@ -463,6 +464,8 @@ Review post: If a user is signed into their account and they wish to leave a rev
 
 --------
 ## Libraries and Frameworks 
+
+- Heroku: https://dashboard.heroku.com/apps
 
 - Python 3.7: https://www.python.org/
 
@@ -509,7 +512,7 @@ These technologies helped create, shape and test my code
 
 ## Testing
 
-Summary: *During the development of this project, I had the experience of facing some problems, exhaustively testing the functionality of each part of the platform and managed to solve most of the problems that arose before writing this document.*
+Summary: *During the development of this project, I experience some minor issues, exhaustively testing the functionality of each part of the platform and managed to solve most of the problems that arose before writing this document.*
 
 *I received help from some family and friends to do the tests on the platform resources and all the problems presented were solved without problems for example my brother found that on his mobile device there was x-scroll on the create sprint page."*
 
@@ -586,7 +589,7 @@ I personally used github on my local machine to develop the site using Python 3.
 I decided to deploy the project to Heroku so I could see, test
 and update the site in real-time. Here is my deployment process.
 
-See full deployment process here: __https://github.com/michodgs25/Fitness-Station-360/issues/7#issue-772489110__
+See full deployment process here: *https://github.com/michodgs25/Fitness-Station-360/issues/7#issue-772489110*
 
 ----------
 
@@ -605,21 +608,27 @@ As a continuous integration platform, Travis CI supports the development process
 
 * Owner permission for a project hosted on the above platforms.
 
+For this project I used github and followed these steps:
+
+1. Go to Travis-ci.com and Sign up with GitHub.
+
+2. Accept the Authorization of Travis CI. You’ll be redirected to GitHub. For any doubts on the Travis CI GitHub Authorized OAuth App access rights message, please read more details below
+
+3. Click on your profile picture in the top right of your Travis Dashboard, click Settings and then the green Activate button, and select the repositories you want to use with Travis CI.
+
+For more details see full documentation *https://docs.travis-ci.com/user/tutorial/*
+
 ------
 
 ## Acknowledgements
 
+I would like to acknowledge code institute Boutique Ado project for providing a strong base for me to create my project.
+
 Very Special Thanks to:
-- My mentor with Code Institute **Rohit** and the code institute tech support team, who had all the patience to explain and make me understand certain concepts and peculiarities of the project .
+- My mentor with Code Institute **Rohit** and the code institute tech support team, who had all the patience to explain and make me understand certain concepts and peculiarities of the project.
+I woulld also like to thank the code institute tutors __Johann, Stephen, Scott, Michael, Samantha, Haley, Cormac and Alan__ for their amazing support throughout the project.
+
 - Family, friends, who have tested the platform on their real devices, reporting to me about any usability issues and giving improvement tips to improve the usability.
-
-## Slack feedback
-
-Special thanks to the valuable feedback given by slack, I implemented the feedback on navigation font-size and seriously looked into adding a login page. 
-__See feedback below__:
-
-
-#### Read full article here - https://github.com/michodgs25/Sprint/blob/master/static/docs/Sprint_peer%20group%20feedback%20review_09102020.pdf
 
 -----
   
