@@ -271,7 +271,6 @@ These wireframes were designed with Balsamiq Mockups.
 
 ------- 
 
-
 # Features
 
 ### Homepage feature
@@ -530,8 +529,7 @@ This sites version control is through github linked to the heroku app, using git
 #### git push index.html
  - *This pushes the file to the github project repository.*
  
- 
- Branches - 
+#### Git Branches - 
  
 Requirements may be different for other sevices, for this project I used Git.
  
@@ -552,8 +550,7 @@ Requirements may be different for other sevices, for this project I used Git.
  My contact page branch is aptly named: contact_branch, I advise all developers to provide a branch name that represents the purpose of the branch, this keeps things clear for
  other developers who may view your project. 
  
- 
- ------
+------
   
 
 ## Deployment
@@ -638,4 +635,3 @@ I woulld also like to thank the code institute tutors __Johann, Stephen, Scott, 
 All images were take from Google images advanced search with filter - __"free to use or share"__
 
 * https://bbbootstrap.com/snippets/footer-bottom-responsive-template-20401963 - credit this resource for the footer template
-
