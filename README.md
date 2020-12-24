@@ -638,3 +638,4 @@ I woulld also like to thank the code institute tutors __Johann, Stephen, Scott, 
 All images were take from Google images advanced search with filter - __"free to use or share"__
 
 * https://bbbootstrap.com/snippets/footer-bottom-responsive-template-20401963 - credit this resource for the footer template
+
