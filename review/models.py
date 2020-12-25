@@ -7,6 +7,8 @@ class Review(models.Model,):
     """
     This model will store a review text, username
     and review submission date.
+    Create product review variable& add field requirements.
+    Return product model.
     """
     product = models.ForeignKey(
         Product, on_delete=models.SET_NULL, null=True, blank=True)

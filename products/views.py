@@ -85,7 +85,8 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add a product to the Gym,
+    """login required to complete this action.
+    Add a product to the Gym,
     if user does not have superuser privelege,
     return error.
     """
@@ -123,7 +124,8 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product,
+    """login required to complete this action.
+    Edit a product,
     only superuser can do this.
     If not a superuser, error message is returned.
     Redirected to homepage.
@@ -166,8 +168,11 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the Gym,
+    """login required to complete this action.
+    Delete a product from the Gym,
     only superusers can delete products.
+    If superuser submits valid form, product is submitted.
+    Return product deleted.
     """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only Gym owners can do that.')

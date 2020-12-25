@@ -9,7 +9,7 @@ class ReviewForm(forms.ModelForm):
 
     class Meta:
         """
-        Call model& add fields
+        Call model& add fields to meta class.
         """
         model = Review
         fields = ('name', 'review_text', 'date')

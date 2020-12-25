@@ -9,7 +9,8 @@ from checkout.models import Order
 
 @login_required
 def profile(request):
-    """ Display the user's profile,
+    """Login is required for this action.
+    Display the user's profile,
     user must register to have a profile.
     User profile form, billing& shipping details,
     details are saved to profile.

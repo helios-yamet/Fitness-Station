@@ -17,7 +17,7 @@
                 <hr>
                 <div class="row mt-4">
                     <div class="col-4 col-sm-3 col-xl-2">
-                        <img class="w-100" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}"> 
+                        <img class="w-100" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}">
                     </div>
                     <div class="col-6 mt-3">
                         <p>{{ product.description }}</p>
@@ -32,16 +32,16 @@
                         {{ review_form|crispy }}
                         <a href="{% url 'products' %}" class="btn btn-warning rounded-0 btn-lg">
                             <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
+                                <i class="fas fa-chevron-left"></i>
                             </span>
-                <!--User can keep shopping, button transport user to the products page-->
+                            <!--User can keep shopping, button transport user to the products page-->
                             <span class="text-uppercase">Keep Shopping</span>
                         </a>
                         <button id="submit-button" class="btn btn-lg btn-success">
-                        <span>Submit review</span>
-                        <span class="icon">
-                        <i class="fas fa-plus-circle"></i>
-                        </span>
+                            <span>Submit review</span>
+                            <span class="icon">
+                                <i class="fas fa-plus-circle"></i>
+                            </span>
                         </button>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
@@ -52,14 +52,14 @@
             <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
                 {% if review_list %}
                 <div class="row justify-content-around">
-            <!--Display posted review details, all users including guests can view reviews-->
+                    <!--Display posted review details, all users including guests can view reviews-->
                     {% for review in review_list %}
                     <div class="card shadow p-3 bg-white rounded col-12 col-lg-5 mb-2 mx-lg-2">
                         <h4 class="mt-2 ">{{ review.name }}</h4>
                         <p>{{ review.review_text }}</p>
                         <h5 class="mb-2">{{ review.date }}</h5>
                     </div>
-            <!--Only users that have an account can post a review-->
+                    <!--Only users that have an account can post a review-->
                     {% endfor %}
                 </div>
                 {% else %}

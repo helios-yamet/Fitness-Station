@@ -20,6 +20,7 @@
             <hr>
         </div>
     </div>
+    <!--Display user default delivery information, user can update information.-->
     <div class="row">
         <div class="col-12 col-lg-6">
             <p class="fw-bold">Default Delivery Information</p>
@@ -29,6 +30,7 @@
                 <button class="btn btn-success rounded-0 text-uppercase float-right">Update Information</button>
             </form>
         </div>
+        <!--History of previous orders, displayed in table format-->
         <div class="col-12 col-lg-6">
             <p class="text-bold">Order History</p>
             <div class="order-history table-responsive">
@@ -45,9 +47,9 @@
                         {% for order in orders %}
                         <tr>
                             <td>
-                                <a href="{% url 'order_history' order.order_number %}"
-                                    title="{{ order.order_number }}">
-                                {{ order.order_number|truncatechars:6 }}
+                                <!--Previous order url, opens separate page displaying order details-->
+                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                                    {{ order.order_number|truncatechars:6 }}
                                 </a>
                             </td>
                             <td>{{ order.date }}</td>

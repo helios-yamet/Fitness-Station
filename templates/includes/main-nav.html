@@ -2,10 +2,11 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-warning mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-warning mr-5" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
-            <!--Search sorting product filters-->
+            <!--Search sorting product filters, user filter down available products-->
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
@@ -15,7 +16,8 @@
         </li>
         <!--Workout plan products, allow user to view all plans -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-warning mr-5" href="#" id="plans-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-warning mr-5" href="#" id="plans-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Workout Plans
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="plan-link">
@@ -24,14 +26,16 @@
         </li>
         <!--Activewear& Accessories products, user can filter down products and view set products-->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-warning mr-5" href="#" id="Merchandise-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-warning mr-5" href="#" id="Merchandise-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Activewear& Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
                 <a href="{% url 'products' %}?category=men's_activewear" class="dropdown-item">Mens Activewear</a>
                 <a href="{% url 'products' %}?category=women's_activewear" class="dropdown-item">Womens Activewear</a>
                 <a href="{% url 'products' %}?category=accessories" class="dropdown-item">Accessories</a>
-                <a href="{% url 'products' %}?category=men's_activewear,women's_activewear" class="dropdown-item">All Activewear</a>
+                <a href="{% url 'products' %}?category=men's_activewear,women's_activewear" class="dropdown-item">All
+                    Activewear</a>
             </div>
         </li>
     </ul>

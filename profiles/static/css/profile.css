@@ -1,5 +1,9 @@
+/*code adapted from:
+https://github.com/ckz8780/boutique_ado_v1/tree/master/profiles/static/profiles/css*/
+
+/* height of profile form + submit button */
 .order-history {
-    max-height: 416px; /* height of profile form + submit button */
+    max-height: 26em;
     overflow-y: auto;
 }
 
@@ -8,14 +12,14 @@
 }
 
 #profile-update-form input::placeholder {
-    color: #aab7c4;
+    color: 237, 237, 235;
 }
 
 #id_default_country,
 #id_default_country option:not(:first-child) {
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 
 #id_default_country option:first-child {
-    color: #aab7c4;
+    color: rgb(237, 237, 235);
 }
