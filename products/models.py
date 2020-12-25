@@ -17,6 +17,14 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """
+    Create product model class,
+    Add category variable and attach model key.
+    Create product variables, sku, name, has_sizes,
+    price and rating.
+    Add default required elements to each product variable field.
+    Return product.
+    """
     category = models.ForeignKey(
         "Category", null=True, blank=True, on_delete=models.SET_NULL
     )
