@@ -43,8 +43,11 @@
     </div>
 </div>
 {% endblock %}
+<!--code adapted from code institute walkthrough project:
+https://github.com/ckz8780/boutique_ado_v1/blob/master/products/templates/products/add_product.html-->
 {% block postloadjs %}
 {{ block.super }}
+<!--User can add an image to the new product-->
 <script type="text/javascript">
     $('#new-image').change(function () {
         var file = $('#new-image')[0].files[0];
