@@ -119,9 +119,11 @@ __Checkout page__ -
 
 __Checkout success page__ - 
 
-__Enquiries page__ - 
+__Contact page__ - 
 
+__Profile page__ -
 
+__Past order__ -
  
  ----
 
