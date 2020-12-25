@@ -11,7 +11,12 @@ from .forms import ProductForm
 
 
 def all_products(request):
-    """ A view to show all products, including sorting and search queries """
+    """ A view to show all products, including sorting and search queries.
+    Create and attach all product object and search objects = none.
+    Create get sort, attach sortkey to request.
+    Instruct if product or category name is requested.
+    Return product or category and list in descending order.
+    """
 
     products = Product.objects.all()
     query = None
@@ -40,6 +45,10 @@ def all_products(request):
             categories = Category.objects.filter(name__in=categories)
 
         if "q" in request.GET:
+            """
+            If user enter invalid search,
+            return error page with error message.
+            """
             query = request.GET["q"]
             if not query:
                 messages.error(request,
@@ -63,7 +72,7 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """ A view to show individual product details"""
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -76,18 +85,28 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add a product to the Gym """
+    """ Add a product to the Gym,
+    if user does not have superuser privelege,
+    return error.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only Gym owners can do that.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
+        """
+        If request to post product is valid, return success message.
+        """
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
+            """
+            If request invalid, return error message,
+            product is not added.
+            """
             messages.error(request,
                            ('Failed to add product. '
                             'Please ensure the form is valid.'))
@@ -104,19 +123,31 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the Gym """
+    """ Edit a product,
+    only superuser can do this.
+    If not a superuser, error message is returned.
+    Redirected to homepage.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only Gym owners can do that.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
+        """
+        Superuser submits valid product update,
+        return success message.
+        """
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
+            """
+            If invalid product update,
+            return error message.
+            """
             messages.error(request,
                            ('Failed to update product. '
                             'Please ensure the form is valid.'))
@@ -135,7 +166,9 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the Gym """
+    """ Delete a product from the Gym,
+    only superusers can delete products.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only Gym owners can do that.')
         return redirect(reverse('home'))
