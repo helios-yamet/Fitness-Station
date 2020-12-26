@@ -11,8 +11,8 @@ https://github.com/ckz8780/boutique_ado_v1/tree/master/profiles/static/profiles/
     color: rgb(0, 0, 0);
 }
 
-#profile-update-form input::placeholder {
-    color: 237, 237, 235;
+#profile-update-form, input::placeholder {
+    color: rgb(237, 237, 235);
 }
 
 #id_default_country,
@@ -20,6 +20,6 @@ https://github.com/ckz8780/boutique_ado_v1/tree/master/profiles/static/profiles/
     color: rgb(0, 0, 0);
 }
 
-#id_default_country option:first-child {
+#id_default_country, option:first-child {
     color: rgb(237, 237, 235);
 }
