@@ -650,4 +650,6 @@ I woulld also like to thank the code institute tutors __Johann, Stephen, Scott, 
 ## External Media 
 All images were take from Google images advanced search with filter - __"free to use or share"__
 
+* Multitude of code adapted from code institutes Project Boutique Ado, individual pieces of code attributed within each document - https://github.com/ckz8780/boutique_ado_v1
+
 * https://bbbootstrap.com/snippets/footer-bottom-responsive-template-20401963 - credit this resource for the footer template
