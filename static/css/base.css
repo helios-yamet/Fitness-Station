@@ -453,7 +453,8 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
         padding: .375rem .375rem;
     }
     .btn.btn-outline-success.rounded-0.btn-lg,
-    .btn.btn-warning.rounded-0.btn-lg {
+    .btn.btn-warning.rounded-0.btn-lg 
+    .btn.btn-danger{
         padding: .375rem .375rem;
         font-size: .75rem;
     }

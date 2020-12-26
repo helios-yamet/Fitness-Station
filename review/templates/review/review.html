@@ -30,14 +30,14 @@
                     <form action="{% url 'review_form' product.id %}" method="POST" class="form-group">
                         {% csrf_token %}
                         {{ review_form|crispy }}
-                        <a href="{% url 'products' %}" class="btn btn-warning rounded-0 btn-lg">
+                        <a href="{% url 'products' %}" class="btn btn-info rounded-0 btn-lg">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
                             <!--User can keep shopping, button transport user to the products page-->
                             <span class="text-uppercase">Keep Shopping</span>
                         </a>
-                        <button id="submit-button" class="btn btn-lg btn-success">
+                        <button id="submit-button" class="btn btn-lg btn-success rounded-0 btn-lg">
                             <span>Submit review</span>
                             <span class="icon">
                                 <i class="fas fa-plus-circle"></i>
