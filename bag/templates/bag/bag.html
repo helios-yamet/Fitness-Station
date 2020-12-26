@@ -127,14 +127,17 @@
                             </a>
                             <!--If user does not have an account, site requests user to login or register-->
                             {% else %}
-                            <a href="{% url 'account_login' %}" class="btn btn-danger mx-3 mb-2 mb-sm-3">
-                                <span id="checkout-anchor" class="text-uppercase">Login</span>
+                            <a href="{% url 'account_login' %}" class="btn btn-danger rounded-0 btn-lg">
+                                <span id="checkout-anchor" class="text-uppercase">Login
+                                    <i class="fas fa-sign-in-alt"></i>
+                                </span>
                             </a>
                             {% endif%}
                             <div id="cart-login-request" class="login-request-text ml-3 mb-2 mb-sm-0 mt-sm-1">
                                 <span>
                                     Please <a href="{% url 'account_login' %}" class="login-request-link">login</a> to
                                     go to checkout
+                                    <i class="fas fa-sign-in-alt"></i>
                                 </span>
                             </div>
                         </td>
@@ -158,7 +161,7 @@
 {% block postloadjs %}
 {{ block.super }}
 <!--Code adapted from boutique ado project:
-    https://github.com/ckz8780/boutique_ado_v1/blob/master/bag/templates/bag/bag.html-->
+https://github.com/ckz8780/boutique_ado_v1/blob/master/bag/templates/bag/bag.html-->
 <script type="text/javascript">
     // Update quantity on click
     $('.update-link').click(function (e) {

@@ -8,7 +8,7 @@ https://github.com/ckz8780/boutique_ado_v1/tree/master/profiles/static/profiles/
 }
 
 #profile-update-form .form-control {
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 
 #profile-update-form input::placeholder {
