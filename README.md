@@ -403,6 +403,12 @@ Notifications appear from the bag icon, displaying dropdown box messages, for ex
 * *Below horizontal card is the gym contact number far left.*
 
 -----------    
+
+## Login and Registration Features
+
+
+
+---------
    
 ## Features left to be implemented
 
@@ -421,11 +427,18 @@ Summary:
 ## Defensive design
 Certain measure were taken to prevent users from making mistakes or malicious actions.
 
+- Login& registration authentication in place, users must create an account to be able to purchase any product on the platform. 
+
 - General form validation
+
 - Stripe has its own security system in place. I took nearly every part of code concerning stripe from the Boutique Ado project of the Code Institute.
+
 - Several get_object_or_404 instances in the views.
+
 - The checkout button is not available when the user is not logged on or does not have an account.
+
 - The checkout view has @login_required tagged.(so no access when typing the url of the checkout page in the addressbar)
+
 - As a measure to prevent users from putting to0 many products in the cart, the user is only able to have a maximum of 10 items of each product in the bag.
 
 -------
