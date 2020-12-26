@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
+{% include 'products/includes/quantity_input_script.html' %}
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -65,16 +66,15 @@
                                             </button>
                                         </div>
                                         <!--User adds product amount max amount is ten items-->
-                                        <input class="form-control form-control-sm qty_input" type="number"
-                                            name="quantity" value="{{ item.quantity }}" min="1" max="10"
-                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-success rounded-0"
-                                                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                <span>
-                                                    <i class="fas fa-plus fa-sm"></i>
-                                                </span>
-                                            </button>
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1"
+                                        min="1" max="10" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn btn-success rounded-0"
+                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-plus fa-sm"></i>
+                                            </span>
+                                        </button>
                                         </div>
                                         <!--Check whether item has size-->
                                         {% if item.product.has_sizes %}
@@ -157,7 +157,6 @@
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
 <!--Code adapted from boutique ado project:
     https://github.com/ckz8780/boutique_ado_v1/blob/master/bag/templates/bag/bag.html-->
 <script type="text/javascript">
