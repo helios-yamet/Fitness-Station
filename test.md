@@ -81,9 +81,11 @@ Results below:
   <summary>Lighthouse</summary>
   <br>
   <div align="center">
-    <img src=""
+    <img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/media/readme/fitness-lighthouse.png"
          </div>
     </details>
+    
+ * *Lighthouse result solid to positive test results.
 
 ----
 
@@ -94,7 +96,7 @@ Results below:
   <summary>MobiReady</summary>
   <br>
   <div align="center">
-    <img src=""
+    <img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/media/readme/fitness-mobi-ready.png"
          </div>
     </details>
 
