@@ -156,22 +156,12 @@ For the other Html templates barring the jinja template code, all came back erro
 * *Goal - to ensure CSS is error free*
 
   - [The W3C Markup Validation Service](https://jigsaw.w3.org/css-validator)
-  
-<details>
-  <summary>Base CSS test</summary>
-  <br>
-<div align="center">
-<img src="" target="_blank" rel=""/>
-</div>
-  </details>
-
-* No errors found, goal achieved.
 
 <details>
-  <summary>Checkout Css</summary>
+  <summary>Base and Checkout Css</summary>
   <br>
 <div align="center">
-<img src="" target="_blank" rel=""/>
+<img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/media/readme/css-validate.png" target="_blank" rel=""/>
 </div>
   </details>
   
@@ -187,12 +177,11 @@ For the other Html templates barring the jinja template code, all came back erro
   <summary>JS-hint test</summary>
   <br>
 <div align="center">
-<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/test-results/js-test.jpg" target="_blank" rel=""/>
+<img src="" target="_blank" rel=""/>
 </div>
   </details>
 
-*  Two undefined variable which is the dollar sign, this js code was adapted from materialize js, future iterations to explore this. 
-However No errors found, goal achieved.
+*  .
 
 #### Python Code Test
 
@@ -204,7 +193,7 @@ However No errors found, goal achieved.
   <summary>Pep8 test</summary>
   <br>
 <div align="center">
-<img src="https://github.com/michodgs25/Sprint/blob/master/static/images/test-results/pep-test.png" target="_blank" rel=""/>
+<img src="" target="_blank" rel=""/>
 </div>
   </details>
  
@@ -271,8 +260,7 @@ class TestOrderForm(TestCase):
 
 ```
 
--------
-
+See additional automated testing issues below:
 
 #### Test products review form:
 
@@ -283,7 +271,7 @@ https://github.com/michodgs25/Fitness-Station-360/issues/9#issue-773380139
 
 https://github.com/michodgs25/Fitness-Station-360/issues/8#issue-773365697
 
-
+------------
 
 #### Allauth-authentication
 
