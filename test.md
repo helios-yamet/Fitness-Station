@@ -195,11 +195,11 @@ For the other Html templates barring the jinja template code, all came back erro
   <summary>Pep8 test</summary>
   <br>
 <div align="center">
-<img src="" target="_blank" rel=""/>
+<img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/media/readme/pep8.png" target="_blank" rel=""/>
 </div>
   </details>
  
- * No errors found, goal achieved.
+ * No errors apart from a few lines that are two long but cutting them, negatively affected the other code, so left alone.
 
 ---- 
 
