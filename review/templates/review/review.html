@@ -37,6 +37,8 @@
                             <!--User can keep shopping, button transport user to the products page-->
                             <span class="text-uppercase">Keep Shopping</span>
                         </a>
+                        <!--Checks whether user is logged in-->
+                        {% if user.is_authenticated %}
                         <button id="submit-button" class="btn btn-lg btn-success rounded-0 btn-lg">
                             <span>Submit review</span>
                             <span class="icon">
@@ -44,6 +46,21 @@
                             </span>
                         </button>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <!--If user does not have an account, site requests user to login or register-->
+                        {% else %}
+                        <a href="{% url 'account_login' %}" class="btn btn-danger rounded-0 btn-lg">
+                            <span id="checkout-anchor" class="text-uppercase">Login
+                                <i class="fas fa-sign-in-alt"></i>
+                            </span>
+                        </a>
+                        {% endif%}
+                        <div id="review-login-request" class="login-request-text ml-3 mb-2 mb-sm-0 mt-sm-1">
+                            <span>
+                                Please <a href="{% url 'account_login' %}" class="login-request-link">login</a> to
+                                submit a review
+                                <i class="fas fa-sign-in-alt"></i>
+                            </span>
+                        </div>
                     </form>
                 </div>
             </div>
