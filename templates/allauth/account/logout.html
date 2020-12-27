@@ -9,15 +9,16 @@
         <form method="post" action="{% url 'account_logout' %}">
             {% csrf_token %}
             {% if redirect_field_value %}
-            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
             {% endif %}
             <a href="{% url 'products' %}" class="btn btn-warning rounded-0 btn-lg">
-            <span class="icon">
-            <i class="fas fa-chevron-left"></i>
-            </span>
-            <span class="text-uppercase">Keep Shopping</span>
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
             </a>
-            <button type="submit" class="btn btn-danger rounded-0 btn-lg">{% trans 'Sign Out' %} <i class="fas fa-sign-out-alt"></i></button>
+            <button type="submit" class="btn btn-danger rounded-0 btn-lg">{% trans 'Sign Out' %} <i
+                    class="fas fa-sign-out-alt"></i></button>
         </form>
     </div>
 </div>
