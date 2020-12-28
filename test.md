@@ -113,7 +113,7 @@ To ensure each feature works as intended, I manually tested each platform featur
  
 __Products Page__ - 
 
-__Product Review page -
+__Product Review page__ -
 
 __Bag page__ - 
 
@@ -160,7 +160,7 @@ For the other Html templates barring the jinja template code, all came back erro
   - [The W3C Markup Validation Service](https://jigsaw.w3.org/css-validator)
 
 <details>
-  <summary>Base and Checkout Css</summary>
+  <summary>Base, Profile and Checkout Css</summary>
   <br>
 <div align="center">
 <img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/media/readme/css-validate.png" target="_blank" rel=""/>
@@ -209,9 +209,10 @@ Using django testing immediately after installing and implementing django applic
 
 #### Checkout form tests
 
-I ran'python3 manage.py test' in my gitpod terminal to run all tests(6), the purpose of this test is to automate that if hypothetically a user left a *required* field empty the form would return invalid. 
+I ran 'python3 manage.py test' in my gitpod terminal to run all tests(6), the purpose of this test is to automate filling out the checkout form, and returning each field.
+Results came back successful 'OK'
 
-Results came back successful.
+See checkout test code below:
 
 ```
 from django.test import TestCase                 
@@ -298,6 +299,27 @@ LOGIN_REDIRECT_URL = '/success' - Url to redirect to, once logged in.
 * I logged out and tried again to login, this time I got a 404 page with the  request message: "//localhost:8000/success", this means that the authentication works as we have been redirected to the /success url we set which confirms authentication is working. 
 
 * After authentication test is over I change the redirect url from /success to '/' in settings.py.
+
+#### User Authentication error and resolution
+
+I deployed the platform and sent it to my friends for testing, an immediate issue came up, user would register an account, confirmation link recieved and is clicked, the user is then taken back to the verify email page(not logged in) and another link sent to the user address.
+
+The reason for this issue, was never discovered during a prolonged investigation period, but a resolution/compromise was found:
+
+```
+ACCOUNT_CONFIRM_EMAIL_ON_GET = False
+ACCOUNT_EMAIL_VERIFICATION = None
+```
+the above code is placed below:
+
+```
+ACCOUNT_CONFIRM_EMAIL_ON_GET = False
+```
+in settings.py
+
+this essentially bypasses the need for the user to verify their email address by going to their email account.
+
+Valid email and password safeguards to ensure platform safety....
 
 ## Stripe Testing
 
