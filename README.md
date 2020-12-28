@@ -418,9 +418,8 @@ Which when the user clicks each tab displays a range of product options the user
 
 * *A messages store feature, like the order the feature, when user sends a message to the gym, the message is saved to the profile and the user can view the status of each message i.e. "Unread", "Read", "Responded".*
 
-* **
+-----
 
---------
 
 ### Issues and bugs
 This section looks into what existing issues that are still present in the project& what future iterations could do to resolve these issues:
