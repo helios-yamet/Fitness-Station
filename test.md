@@ -178,11 +178,11 @@ For the other Html templates barring the jinja template code, all came back erro
   <summary>JS-hint test</summary>
   <br>
 <div align="center">
-<img src="" target="_blank" rel=""/>
+<img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/media/readme/js-hint.png" target="_blank" rel=""/>
 </div>
   </details>
 
-*  .
+*  Ran js files through
 
 #### Python Code Test
 
