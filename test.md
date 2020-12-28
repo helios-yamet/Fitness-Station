@@ -130,7 +130,7 @@ __Past order page__ -
 
 ## Code validity
 
-### Testing Code validity - iiii.
+### Testing Code validity
 Tested html and css code formatting with https://validator.w3.org/ - done by copying& pasting the code via direct input into the site text box. 
 
 Tested the JavaScript code with https://jshint.com/ - done by copying& pasting the code via direct imput into the site text-area. 
@@ -182,7 +182,7 @@ For the other Html templates barring the jinja template code, all came back erro
 </div>
   </details>
 
-*  Ran js files through
+*  Ran js files through Js, results came back successful.
 
 #### Python Code Test
 
@@ -303,7 +303,7 @@ LOGIN_REDIRECT_URL = '/success' - Url to redirect to, once logged in.
 
 #### User Authentication error and resolution
 
-I deployed the platform and sent it to my friends for testing, an immediate issue came up, user would register an account, confirmation link recieved and is clicked, the user is then taken back to the verify email page(not logged in) and another link sent to the user address.
+I deployed the platform and sent it to my friends for testing, an immediate issue came up, user would register an account, confirmation link recieved and is clicked, the user is then taken back to the verify email page(not logged in) and another link is sent to the user address.
 
 The reason for this issue, was never discovered during a prolonged investigation period with both my mentor and code institute tutors, but a resolution/compromise was found:
 
@@ -323,6 +323,8 @@ this essentially bypasses the need for the user to verify their email address by
 * The positive effect is that it reduces the time users have to spend registering to site.
 
 * The negative conotation is that it undercuts secure user authentication, although user still has to enter valid email& password when registering, thanks to django form control.
+
+I will keep the email verification files and code as for future iterations of the platform where I hope to resolve the email verification.
 
 -----------
 
