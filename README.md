@@ -428,15 +428,19 @@ Which when the user clicks each tab displays a range of product options the user
 
 * *A messages store feature, like the order the feature, when user sends a message to the gym, the message is saved to the profile and the user can view the status of each message i.e. "Unread", "Read", "Responded".*
 
+* *Add more products to the collection.*
+
+* *Add a google maps feature for the gym.*
+
 -----
 
 
 ### Issues and bugs
 This section looks into what existing issues that are still present in the project& what future iterations could do to resolve these issues:
 
-* *On the bag page in mobile view, there is slight x-scroll, for future iterations look at reducing the table size for smaller screens.*
+* *On the profile page, some of the user detail fields are coming back with errors in the browser, this may be coming from an impaired file link at aws, so future iteration to look into this. Page function and appearance is not affected despite this.* 
 
-* *On the profile page, some of the user detail fields are coming back with errors in the browser, this may be coming from an impaired file link at aws so future iteration to look into this. Page functionality is not affected despite this.*
+* *On narrow screen sizes, the products images are a little stretched, a potential resolution is add a media query to reduce the height for narrower screens.* 
 
 -------
  
@@ -445,7 +449,7 @@ Certain measure were taken to prevent users from making mistakes or malicious ac
 
 - Login& registration authentication in place, users must create an account to be able to purchase any product on the platform. 
 
-- General form validation
+- General form validation for all forms on the platform with key fields such as first name being required.
 
 - Stripe has its own security system in place. I took nearly every part of code concerning stripe from the Boutique Ado project of the Code Institute.
 
@@ -472,14 +476,12 @@ Orders: This includes the overall order in full, including the delivery details 
 - order_line_items: This includes details of each product the user orders, the details of each product are linked to the products section.
 
 3. 
-products: This includes all the information related to each product, including the product item price, SKU, image, name, descriptions, category. 
+Products: This includes all the information related to each product, including the product item price, SKU, image, name, descriptions, category. 
 Products can only be added by a Superuser/Authenticated user.
-
-category: Linking to the category field in the products section, the Category model simply holds the categories which are chosen in the product model. These categories are pre-set and can only be modified or added to by a Superuser/Authenticated user.
+The product category linking to the category field in the products section, the Category model simply holds the categories which are chosen in the product model. These categories are pre-set and can only be modified or added to by a Superuser/Authenticated user.
 
 4. 
-Checkout:
-This section takes in the user personal, billing and card details. User does have the option save the billing details near to their profile
+Checkout: This section takes in the user personal, billing and card details. User does have the option save the billing details near to their profile. Stripe is the cornerstone of processing secure payments for products.
 
 5. 
 Contact: This section is non-relational to the rest of the database, and it holds details of the blog posts including the blog title, author, status, image, image_url and the post itself. The blog can only be added by a Superuser/Authenticated user.
@@ -497,19 +499,19 @@ Review post: If a user is signed into their account and they wish to leave a rev
 --------
 ## Libraries and Frameworks 
 
-- Heroku: https://dashboard.heroku.com/apps
+- Heroku: https://dashboard.heroku.com/apps - used to deploy my project.
 
-- Python 3.7: https://www.python.org/
+- Amazon Web Services(AWS): https://aws.amazon.com/ - holds project file in an online storage.
 
-- Font Awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css
+- Font Awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css - used for all platform icons.
 
-- JQuery library: https://jquery.com/ 
+- JQuery library: https://jquery.com/ - provides interactivity such as the read more button on contact page.
 
-- Google fonts: https://fonts.google.com/
+- Google fonts: https://fonts.google.com/ - Provide the text fonts for the platform.
 
-- Django: https://www.djangoproject.com/start/
+- Django: https://www.djangoproject.com/start/ - provide the basic web app of the platform
 
-- Bootstrap: https://getbootstrap.com/
+- Bootstrap: https://getbootstrap.com/ - provides key styling such as product cards, colors and bag table.
 
 ## Languages
 
