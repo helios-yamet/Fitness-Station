@@ -19,8 +19,8 @@
      * [Checkout-form-tests](#Checkout-Form-Tests)
      * [Test-products-review-form](#Test-Products-Review-Form)
      * [Allauth-authentication](Allauth-Authentication)
+     * [User-Authentication-error-and-resolution](User-Authentication-Error-And-Resolution)
 * [Stripe-Testing](#Stripe-Testing)
-* [Automated-local-testing](#Automated-Local-Testing)
 
 ---------------------
 
@@ -124,7 +124,7 @@ __Contact page__ -
 
 __Profile page__ -
 
-__Past order__ -
+__Past order page__ -
  
  ----
 
@@ -191,7 +191,7 @@ For the other Html templates barring the jinja template code, all came back erro
  - PEP8 (http://pep8online.com/)
  
  <details>
-  <summary>Pep8 test</summary>
+  <summary>Pep8 test of all python files</summary>
   <br>
 <div align="center">
 <img src="https://github.com/michodgs25/Fitness-Station-360/blob/master/media/readme/pep8.png" target="_blank" rel=""/>
@@ -262,7 +262,7 @@ class TestOrderForm(TestCase):
 
 ```
 
-See additional automated testing issues below:
+See additional automated testing documentation below:
 
 #### Test products review form:
 
@@ -299,6 +299,8 @@ LOGIN_REDIRECT_URL = '/success' - Url to redirect to, once logged in.
 
 * After authentication test is over I change the redirect url from /success to '/' in settings.py.
 
+------------
+
 #### User Authentication error and resolution
 
 I deployed the platform and sent it to my friends for testing, an immediate issue came up, user would register an account, confirmation link recieved and is clicked, the user is then taken back to the verify email page(not logged in) and another link sent to the user address.
@@ -318,7 +320,11 @@ DEFAULT_FROM_EMAIL = 'fitnessstation@example.com' - code starts at line 230 in s
 
 this essentially bypasses the need for the user to verify their email address by going to their email account and clicking the verify your email url. 
 
-Valid email and password safeguards.....
+* The positive effect is that it reduces the time users have to spend registering to site.
+
+* The negative conotation is that it undercuts secure user authentication, although user still has to enter valid email& password when registering, thanks to django form control.
+
+-----------
 
 ## Stripe Testing
 
