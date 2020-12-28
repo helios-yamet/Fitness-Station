@@ -404,17 +404,23 @@ Notifications appear from the bag icon, displaying dropdown box messages, for ex
 
 -----------    
 
-## Login and Registration Features
+## Login and Registration Authentication Features
 
+* *A Login& registration feature is implemented for this platform, the purpose of having this feature is to protect users and the platform.* 
 
+* *Users that signup to the platform will be able to purchase products and leave a review.*
+
+* *Users will need an account to leave a review, this will decrease the misuse of product reviews.*
+
+* *Users will need an account to purchase items, this allows for greater data protection and user can view order and other past orders(if applicable) in profile(created when user makes an account).*
 
 ---------
    
 ## Features left to be implemented
 
+* *A messages store feature, like the order the feature, when user sends a message to the gym, the message is saved to the profile and the user can view the status of each message i.e. "Unread", "Read", "Responded".*
 
-Summary:
-
+* **
 
 ----------
 
@@ -433,19 +439,19 @@ Certain measure were taken to prevent users from making mistakes or malicious ac
 
 - Stripe has its own security system in place. I took nearly every part of code concerning stripe from the Boutique Ado project of the Code Institute.
 
-- Several get_object_or_404 instances in the views.
+- Several get_object_or_404 instances in each application views.
 
 - The checkout button is not available when the user is not logged on or does not have an account.
 
 - The checkout view has @login_required tagged.(so no access when typing the url of the checkout page in the addressbar)
 
-- As a measure to prevent users from putting to0 many products in the cart, the user is only able to have a maximum of 10 items of each product in the bag.
+- As a measure to prevent users from putting too many items in the bag, the user is only able to have a maximum of 10 items of each product in the bag.
 
 -------
  
 ### Schema Design
 
-After careful consideration and taking into account all the different parts of the website and needs of the database, I designed the schema in six main models:
+After careful consideration and taking into account all the different parts of the website and needs of the database, I designed the schema into six main models:
 
 1. 
 Profiles: These are the details that the user saves to their profile for quick checkouts in the future. The username, email address and password details are set when the user registers for the site, and the delivery details are added when the user makes a purchase and selects to save those details to their profile.
