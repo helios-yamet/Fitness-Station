@@ -14,7 +14,6 @@ __Get Fit with Fitness Station__
 ## Contents
 * [Project purpose](#Project-Purpose)
      * [UX](#UX)
-     * [UI](#UI)
 * [User-Stories](#User-Stories)
      * [Gym-members-and-subscribers](#Gym-members-and-Subscribers)
      * [Gym-owner](#Gym-Owner)
@@ -90,9 +89,9 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 -  As a first time user I want to be able to navigate each section of the platform with ease, because this helps me find the product I want.
 
--  As a frequent user I can view the gym fitness plans, so that I can purchase a subscription without having to phone up or pay upon arrival.
+-  As a frequent user I can view the gym fitness plans, so that I can purchase a subscription product without having to phone up or pay upon arrival.
 
--  As a user I want to purchase my favorite Merchandise online with ease, because I want to support the gym financially beyond paying a subscription.
+-  As a user I want to purchase my favorite Merchandise online with ease, because I want to support the gym financially beyond paying a membership.
 
 - As a returning user, I would like to see view the highest rated products, as I like to know which products are most popular.
 
@@ -104,7 +103,7 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 #### Main site content - Purchasing products
 
--  As a returning subscriber, I want to view all my purchases on one page, this helps me keep a log of what I have purchased and when.
+-  As a returning member, I want to view all my purchases on one page, this helps me keep a log of what I have purchased and when.
 
 -  As a new user, I want to recieve a confirmation of my purchase to ensure my payment has gone through.
 
@@ -116,21 +115,17 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 - As a user, after I have made a purchase I would like to leave review of the product I have bought, because I want to provide my opinion of a product.
 
-#### review
-
-- As a returning user, I would like to provide my opinion on purchased products, as I'd like to give my feedback on products.
-
-- As a regular Gym member, I want to blog about my daily workouts, as I want to share my experience with others.
+- As the user who wrote the review, I would like to see my review below the product I had just reviewed.
 
 - As a first time buyer I would like to give constructive feedback on products.
 
-#### Shopping Cart and Checkout
+#### Shopping bag and Checkout
 
 -  As a user I want a notification when I make a purchase, so I know that the payment has gone through.
 
 -  As a user I can view all selected products on one page with the total cost, so I know exactly what products I am purchasing.
 
--  As a user, I want to be able to add or remove products from the cart, so I can update my shopping cart at will.
+-  As a user, I want to be able to add or remove products from the cart, so I can update my shopping bag at will.
 
 -  As a frequent user, I want to be able to select the size(if applicable) and quantity of the product, so the product suits my personal requirements.
 
@@ -192,7 +187,8 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 3. Shopping Cart and Checkout pages
 
 
-The website design is inspired by other e-sites such as Amazon and ebay, which introduce the site primarily through imagery, images of the product categories on the homepage to be exact; which encourages the user to explore our products immediately. The reason for this display on the homepage, is to get immediate user interaction time, which increases the likelihood of products being purchased. A goal of the platform is to simplify the process of purchasing products.
+The website design is inspired by other e-sites such as Amazon and ebay, which introduces the site through a combination of imagery and icons. 
+Images of the product categories on the homepage to be exact; which encourages the user to explore our products immediately. 
 
 On the homepage the user can explore the site using the search bar on the navigation, below the search bar, are three separate products dropdown tabs aligned horizontally:
 - All products
@@ -224,7 +220,9 @@ See full article on design here __https://github.com/michodgs25/Fitness-Station/
 
 .text-danger - Used as login button if use does not have an account or needs to login before completing checkout and login 'forgot password' text.
 
-.text-warning - used as product card body, contact page, review page backgrounds.
+.text-info - Used for review page back to shopping button(button previously text warning but blended into background).
+
+.text-warning - used as product card body, contact page backgrounds.
 
 
 The purpose for implementing these bootstrap styles are two-fold:
@@ -279,13 +277,13 @@ These wireframes were designed with Balsamiq Mockups.
 
 * *Below the main navigation, is a jumbotron which displays the gym title and motto.*
 
-* *Directly after the jumbtron are three cards(isplayed horizontally on desktop and vertically on mobile) displaying the three product categories - Activewear, accessories and workout plans. The user can choose a card and is transported to that category products page.*
+* *Directly after the jumbtron are three cards(displayed horizontally on desktop and vertically on mobile) displaying the three product categories - Activewear, accessories and workout plans. The user can choose a card and is transported to that category products page.*
 
 * *Immediately below the products category cards is a contact us jumbotron, has a description and the button transports user to contact page.*
 
 * *At the foot of the page is the platform footer which displays all products and contact page in bootstrap cards format.*
    
-   ----
+-------
 
 ### Products page
 
@@ -334,7 +332,7 @@ These wireframes were designed with Balsamiq Mockups.
 
 * *Once order has been processed, the user is redirected to checkout success page which contains the order details and is notified a confirmation is sent to the email the user provided.*
 
-* *Order detail example:*
+* *Order detail example below:*
 
 Order Info:
 Order Number: *C585D9AC53E140D7A4CAC685DCAEAD94*
@@ -357,9 +355,9 @@ Order Total: *30.00*, Delivery: *3.00* Grand Total: *33.00*
 
 ## User Profile
 
-* *User profile is created automatically when user register their account with the platform.*
+* *User profile is created automatically when user registers their account with the platform.*
 
-* *The profile has a default delivery information which is blank until the user either completes an order and ticks the save delivery information box addING the details to the profile, or user adds the details manually upon completing registration. User can update these details, at any point and details are automatically filled when user secures checkout.* 
+* *The profile has a default delivery information which is blank until the user either completes an order and ticks the save delivery information box adding the details to the profile, or user adds the details manually upon completing registration. User can update these details, at any point and details are automatically filled when user secures checkout.* 
 
 --------
 
@@ -378,7 +376,7 @@ Order Total: *30.00*, Delivery: *3.00* Grand Total: *33.00*
 Which when the user clicks each tab displays a range of product options the user can choose to filter available products. 
 
 - *Bag icon, is white when empty, orange when holding items and displays bag total, user can view bag when icon is clicked.* 
-Notifications appear from the bag icon, displaying dropdown box messages, for example: success message when user adds a product to the bag, the notification displays a minified bag page view within the confines of the message box with all the bag details, and has a secure checkout button.*
+*Notifications appear from the bag icon, displaying dropdown box messages, for example: success message when user adds a product to the bag, the notification displays a minified bag page view within the confines of the message box with all the bag details, and has a secure checkout button.*
 
 * *The mobile nav contains four icons, from left to right:*
 
@@ -422,11 +420,14 @@ Notifications appear from the bag icon, displaying dropdown box messages, for ex
 
 * **
 
-----------
+--------
 
 ### Issues and bugs
-*This section looks into what existing issues that are still present in the project& what future iterations could do to resolve these issues:*
+This section looks into what existing issues that are still present in the project& what future iterations could do to resolve these issues:
 
+* *On the bag page in mobile view, there is slight x-scroll, for future iterations look at reducing the table size for smaller screens.*
+
+* *On the profile page, some of the user detail fields are coming back with errors in the browser, this may be coming from an impaired file link at aws so future iteration to look into this. Page functionality is not affected despite this.*
 
 -------
  
@@ -462,7 +463,8 @@ Orders: This includes the overall order in full, including the delivery details 
 - order_line_items: This includes details of each product the user orders, the details of each product are linked to the products section.
 
 3. 
-products: This includes all the information related to each product, including the product item price, SKU, image, name, descriptions, category. Products can only be added by a Superuser/Authenticated user.
+products: This includes all the information related to each product, including the product item price, SKU, image, name, descriptions, category. 
+Products can only be added by a Superuser/Authenticated user.
 
 category: Linking to the category field in the products section, the Category model simply holds the categories which are chosen in the product model. These categories are pre-set and can only be modified or added to by a Superuser/Authenticated user.
 
@@ -535,7 +537,7 @@ These technologies helped create, shape and test my code
 
 Summary: *During the development of this project, I experience some minor issues, exhaustively testing the functionality of each part of the platform and managed to solve most of the problems that arose before writing this document.*
 
-*I received help from some family and friends to do the tests on the platform resources and all the problems presented were solved without problems for example my brother found that on his mobile device there was x-scroll on the create sprint page."*
+*I received help from my family& friends by using the platform features and providing me with valuable feedback such as, ."*
 
 __See testing documentation here: https://github.com/michodgs25/Sprint/blob/master/test.md__
 
