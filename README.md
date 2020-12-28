@@ -285,7 +285,7 @@ These wireframes were designed with Balsamiq Mockups.
    
 -------
 
-### Products page
+### Products page feature
 
 * *Again at top of the products page is the navigation bar, see all details at navigation feature.*
 
@@ -305,7 +305,7 @@ These wireframes were designed with Balsamiq Mockups.
 
 --------
 
-### Bag page
+### Bag page feature
 
 * *The bag page displays all the products the user has added.*
 
@@ -318,6 +318,16 @@ These wireframes were designed with Balsamiq Mockups.
 * *Below the grand total are two buttons: a keep shopping button and either a secure checkout if user is logged in or a login button if the user is not signed/does not have an account.*
 
 * *At the foot of the page is the platform footer which displays all products and contact page in bootstrap cards format.*
+
+---------
+
+### Contact Page feature
+
+* *Provide description of the services that the gym provides at the top of the page in a jumbotron container.*
+
+* *Allows user to send a text message to the gym, input name, email address and text message which are required to submit a message.*
+
+* *A submit button at the foot of the form, when user submits the form, user is notified via a message on the platform, that the gym will respond to the provided email address within 24hrs.*
 
    
 ### Checkout and Checkout Success
