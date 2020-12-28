@@ -1,94 +1,94 @@
 /*Html document height*/
 
 html {
-    height: 100%;
-    scroll-behavior: smooth;
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
 
 /*------------------------ navigation fonts */
 
 .logo-font {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .main-logo-link {
-    width: fit-content;
+  width: fit-content;
 }
 
 
 /*------------------------- mobile nav toggler*/
 
 .navbar-light .navbar-toggler {
-    color: rgb(252, 178, 18);
-    background-color: rgb(255, 255, 255);
+  color: rgb(252, 178, 18);
+  background-color: rgb(255, 255, 255);
 }
 
 
 /*------------------------- Platform buttons*/
 
 .btn-outline-black {
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border: 0.0625em solid rgb(252, 178, 18);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 0.0625em solid rgb(252, 178, 18);
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .border-black {
-    border: 0.0625em solid rgb(0, 0, 0);
+  border: 0.0625em solid rgb(0, 0, 0);
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: rgb(255, 255, 255);
-    z-index: -1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgb(255, 255, 255);
+  z-index: -1;
 }
 
 a.category-badge>span.badge:hover {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .btt-button {
-    height: 2.625em;
-    width: 2.625em;
-    position: fixed;
-    bottom: 0.625em;
-    right: 0.625em;
-    z-index: 99;
+  height: 2.625em;
+  width: 2.625em;
+  position: fixed;
+  bottom: 0.625em;
+  right: 0.625em;
+  z-index: 99;
 }
 
 .btt-link,
 .update-link,
 .remove-item {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 input[name='q']::placeholder {
-    color: rgb(181, 179, 174);
+  color: rgb(181, 179, 174);
 }
 
 
 /* ------------------------------- platflorm cards */
 
 .card {
-    border-radius: 1em;
-    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
-    cursor: pointer;
+  border-radius: 1em;
+  transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+  cursor: pointer;
 }
 
 .card:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 
@@ -96,7 +96,7 @@ input[name='q']::placeholder {
                                     style for all jumbtrons on platform*/
 
 .jumbotron {
-    background-image: linear-gradient(#b9a2a5, #ffc342);
+  background-image: linear-gradient(#b9a2a5, #ffc342);
 }
 
 
@@ -105,73 +105,73 @@ adapted from boutique ad project:
 https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/base.css*/
 
 .message-container {
-    position: fixed;
-    top: 4.5em;
-    right: 0.9375em;
-    z-index: 99999999999;
+  position: fixed;
+  top: 4.5em;
+  right: 0.9375em;
+  z-index: 99999999999;
 }
 
 .custom-toast {
-    overflow: visible;
+  overflow: visible;
 }
 
 .toast-capper {
-    height: 0.125em;
+  height: 0.125em;
 }
 
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 
 .arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 0.25em solid transparent;
-    border-right: 0.25em solid transparent;
-    border-bottom: 0.625em solid rgb(0, 0, 0);
-    position: absolute;
-    top: -0.625em;
-    right: 2.25em;
+  width: 0;
+  height: 0;
+  border-left: 0.25em solid transparent;
+  border-right: 0.25em solid transparent;
+  border-bottom: 0.625em solid rgb(0, 0, 0);
+  position: absolute;
+  top: -0.625em;
+  right: 2.25em;
 }
 
 
 /* Convenience classes - colors copied from Bootstrap */
 
 .arrow-primary {
-    border-bottom-color: rgb(66, 114, 245);
+  border-bottom-color: rgb(66, 114, 245);
 }
 
 .arrow-secondary {
-    border-bottom-color: rgb(166, 166, 166);
+  border-bottom-color: rgb(166, 166, 166);
 }
 
 .arrow-success {
-    border-bottom-color: rgb(66, 245, 66);
+  border-bottom-color: rgb(66, 245, 66);
 }
 
 .arrow-danger {
-    border-bottom-color: rgb(252, 3, 3);
+  border-bottom-color: rgb(252, 3, 3);
 }
 
 .arrow-warning {
-    border-bottom-color: rgb(252, 178, 18);
+  border-bottom-color: rgb(252, 178, 18);
 }
 
 .arrow-info {
-    border-bottom-color: rgb(3, 240, 252);
+  border-bottom-color: rgb(3, 240, 252);
 }
 
 .arrow-light {
-    border-bottom-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(255, 255, 255);
 }
 
 .arrow-dark {
-    border-bottom-color: rgb(0, 0, 0);
+  border-bottom-color: rgb(0, 0, 0);
 }
 
 .bag-notification-wrapper {
-    height: 6.25em;
-    overflow-x: hidden;
-    overflow-y: auto;
+  height: 6.25em;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 
@@ -182,28 +182,28 @@ https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/base.css*/
 https://www.w3schools.com/howto/howto_js_read_more.asp */
 
 #more {
-    display: none;
+  display: none;
 }
 
 /*read more lead text*/
 .lead {
-    font-size: 1.25rem;
-    font-weight: 300;
-    color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
 }
 
 /* -------------------------------- Card image size */
 
 .card img {
-    height: 18em;
+  height: 18em;
 }
 
 
 /* -------------------------------- sign out page */
 
 .logout-text {
-    text-align: center;
-    padding-top: 8em;
+  text-align: center;
+  padding-top: 8em;
 }
 
 
@@ -213,87 +213,87 @@ https://www.w3schools.com/howto/howto_js_read_more.asp */
 /*verify email text message*/
 
 .verify-title {
-    padding-top: 5em;
+  padding-top: 5em;
 }
 
 
 /*-------------------------------- forgot password*/
 .forgot-password {
-    margin-top: 8em;
+  margin-top: 8em;
 }
 
 
 /*--------------------------------- Review page form */
 
 .form-control {
-    border: 0.125em solid rgb(0, 0, 0);
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  border: 0.125em solid rgb(0, 0, 0);
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 
 /*--------------------------------- Footer */
 
 footer .container-fluid {
-    padding-top: 3.75em;
+  padding-top: 3.75em;
 }
 
 .head1 {
-    font-weight: 900;
-    font-size: 1.875em;
+  font-weight: 900;
+  font-size: 1.875em;
 }
 
 .bdr {
-    border-bottom: 1.5px solid rgb(252, 178, 18);
-    width: 6.25em;
-    margin-right: auto;
-    margin-left: auto
+  border-bottom: 1.5px solid rgb(252, 178, 18);
+  width: 6.25em;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 footer .card-footer {
-    justify-content: space-between;
-    border: none;
-    background: none;
-    border-bottom: 0.09375em solid rgb(130, 130, 130);
+  justify-content: space-between;
+  border: none;
+  background: none;
+  border-bottom: 0.09375em solid rgb(130, 130, 130);
 }
 
 .footer-right>i {
-    margin-left: 1.875em;
+  margin-left: 1.875em;
 }
 
 footer .card-title {
-    margin-bottom: .75rem;
-    font-weight: 900;
-    font-size: 0.9375em;
-    margin-top: 1em;
+  margin-bottom: .75rem;
+  font-weight: 900;
+  font-size: 0.9375em;
+  margin-top: 1em;
 }
 
 .learn-more {
-    color: rgb(252, 178, 18);
+  color: rgb(252, 178, 18);
 }
 
 .fa-3x {
-    color: rgb(252, 178, 18);
+  color: rgb(252, 178, 18);
 }
 
 footer .card-content {
-    padding-right: 2.5em;
-    padding-left: 1.875em;
-    padding-bottom: 0.3125em;
-    padding-top: 0.3125em;
+  padding-right: 2.5em;
+  padding-left: 1.875em;
+  padding-bottom: 0.3125em;
+  padding-top: 0.3125em;
 }
 
 footer .card-content>p {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 footer .heading {
-    position: relative;
-    top: 1.875em;
+  position: relative;
+  top: 1.875em;
 }
 
 footer .follow-text {
-    color: inherit;
+  color: inherit;
 }
 
 
@@ -307,9 +307,9 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
 /* Slightly larger container on xl screens */
 
 @media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
+  .container {
+    max-width: 80%;
+  }
 }
 
 
@@ -317,151 +317,160 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
 
 .bg-img {
     /* The image used */
-    background-image: url("/media/homepage_images/jump-fitness-workout.jpg");
+  background-image: url("/media/homepage_images/jump-fitness-workout.jpg");
     /* Control the height of the image */
-    min-height: 23.75em;
+  min-height: 23.75em;
     /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem;
-    color: rgb(130, 130, 130);
+  margin-top: 1.5rem;
+  color: rgb(130, 130, 130);
 }
 
 .allauth-form-inner-content input {
-    border-color: rgb(0, 0, 0);
-    border-radius: 0;
+  border-color: rgb(0, 0, 0);
+  border-radius: 0;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
-    display: none;
+  display: none;
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: rgb(130, 130, 130);
+  color: rgb(130, 130, 130);
 }
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-    display: inline-block;
-    font-weight: 400;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: rgb(0, 207, 10);
-    border: 1px solid rgb(0, 0, 0);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0;
+  display: inline-block;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: rgb(0, 207, 10);
+  border: 1px solid rgb(0, 0, 0);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0;
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    border-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
 }
 
 .allauth-form-inner-content a {
-    color: rgb(252, 3, 3);
+  color: rgb(252, 3, 3);
 }
 
 
 /* Product Form */
 
 .btn-file {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: rgb(252, 3, 3);
+  border-radius: 0;
+  border-color: rgb(252, 3, 3);
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: rgb(252, 3, 3);
-    border-color: rgb(252, 3, 3);
-    border-radius: 0;
+  background-color: rgb(252, 3, 3);
+  border-color: rgb(252, 3, 3);
+  border-radius: 0;
 }
 
 
 /* fixed top navbar only on medium and up */
 
 @media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-    .header-container {
-        padding-top: 10.25em;
-    }
+  .fixed-top-desktop-only {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+
+  .header-container {
+    padding-top: 10.25em;
+  }
 }
 
 
 /* pad the top a bit when navbar is collapsed on mobile */
 
 @media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-    body {
-        height: calc(100vh - 116px);
-    }
-    .display-4.logo-font.text-black {
-        font-size: 2rem;
-    }
-    .nav-link {
-        padding: 0.15rem;
-    }
-    .nav-link i.fa-lg {
-        font-size: 1rem;
-    }
-    .navbar-toggler {
-        padding: .6rem .6rem;
-        font-size: 1rem;
-    }
-    .btn.btn-outline-black.rounded-0,
+  .header-container {
+    padding-top: 116px;
+  }
+
+  body {
+    height: calc(100vh - 116px);
+  }
+
+  .display-4.logo-font.text-black {
+    font-size: 2rem;
+  }
+
+  .nav-link {
+    padding: 0.15rem;
+  }
+
+  .nav-link i.fa-lg {
+    font-size: 1rem;
+  }
+
+  .navbar-toggler {
+    padding: .6rem .6rem;
+    font-size: 1rem;
+  }
+
+  .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
-        padding: .375rem .375rem;
-    }
-    .btn.btn-outline-success.rounded-0.btn-lg,
+    padding: .375rem .375rem;
+  }
+
+  .btn.btn-outline-success.rounded-0.btn-lg,
     .btn.btn-warning.rounded-0.btn-lg 
-    .btn.btn-danger{
-        padding: .375rem .375rem;
-        font-size: .75rem;
-    }
-    .increment-qty,
+    .btn.btn-danger {
+    padding: .375rem .375rem;
+    font-size: .75rem;
+  }
+
+  .increment-qty,
     .decrement-qty {
-        padding: .25rem .5rem;
-    }
+    padding: .25rem .5rem;
+  }
 }
 
 
@@ -472,4 +481,11 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
     body {
         scroll-behavior: smooth;
     }
+}
+
+/* reduce body size for mobile*/
+@media only screen and (max-width: 768px) {
+body {
+    font-size: 0.625em;
+     }
 }
