@@ -483,9 +483,10 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
     }
 }
 
-/* reduce body size for mobile*/
+/*----------------------------------------- reduce bag table size for mobile*/
+
 @media only screen and (max-width: 768px) {
-body {
+.bag {
     font-size: 0.625em;
      }
 }
