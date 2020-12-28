@@ -6,6 +6,12 @@ html {
 }
 
 
+/*-------------------------------- navigation search bar placeholder text*/
+
+input[name='q']::placeholder {
+  color: rgb(166, 166, 166);
+}
+
 /*------------------------ navigation fonts */
 
 .logo-font {
@@ -33,6 +39,8 @@ html {
   border: 0.0625em solid rgb(252, 178, 18);
 }
 
+/*Default button styling*/
+
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
@@ -40,9 +48,7 @@ html {
   color: rgb(255, 255, 255);
 }
 
-.border-black {
-  border: 0.0625em solid rgb(0, 0, 0);
-}
+/*overlay for each page*/
 
 .overlay {
   height: 100%;
@@ -54,10 +60,14 @@ html {
   z-index: -1;
 }
 
+/*bootstrap badge hover*/ 
+
 a.category-badge>span.badge:hover {
   background: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 }
+
+/*platform button dimensions*/
 
 .btt-button {
   height: 2.625em;
@@ -68,14 +78,12 @@ a.category-badge>span.badge:hover {
   z-index: 99;
 }
 
+/*button url display url*/
+
 .btt-link,
 .update-link,
 .remove-item {
   cursor: pointer;
-}
-
-input[name='q']::placeholder {
-  color: rgb(181, 179, 174);
 }
 
 
@@ -238,10 +246,14 @@ footer .container-fluid {
   padding-top: 3.75em;
 }
 
+/*footer header*/
+
 .head1 {
   font-weight: 900;
   font-size: 1.875em;
 }
+
+/*header underline*/
 
 .bdr {
   border-bottom: 1.5px solid rgb(252, 178, 18);
@@ -249,6 +261,8 @@ footer .container-fluid {
   margin-right: auto;
   margin-left: auto;
 }
+
+/*footer cards, display product& contact us options*/
 
 footer .card-footer {
   justify-content: space-between;
@@ -268,13 +282,14 @@ footer .card-title {
   margin-top: 1em;
 }
 
-.learn-more {
-  color: rgb(252, 178, 18);
-}
+/*footer card title& icon color*/
 
+.learn-more,
 .fa-3x {
   color: rgb(252, 178, 18);
 }
+
+/* footer card positioning*/
 
 footer .card-content {
   padding-right: 2.5em;
@@ -282,6 +297,8 @@ footer .card-content {
   padding-bottom: 0.3125em;
   padding-top: 0.3125em;
 }
+
+/*footer background card*/
 
 footer .card-content>p {
   color: rgb(255, 255, 255);
@@ -304,7 +321,7 @@ footer .follow-text {
 source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/base.css
 
 
-/* Slightly larger container on xl screens */
+/*------------------------------ A larger container for xl screen types */
 
 @media (min-width: 1200px) {
   .container {
@@ -313,14 +330,11 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
 }
 
 
-/* ------------------------------- login& registration */
+/* ------------------------------- login& registration background image */
 
 .bg-img {
-    /* The image used */
   background-image: url("/media/homepage_images/jump-fitness-workout.jpg");
-    /* Control the height of the image */
   min-height: 23.75em;
-    /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -328,7 +342,7 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
 }
 
 
-/* Allauth form formatting */
+/*----------------------------------- Allauth form formatting */
 
 .allauth-form-inner-content p {
   margin-top: 1.5rem;
@@ -381,7 +395,7 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
 }
 
 
-/* Product Form */
+/*----------------- Product Form */
 
 .btn-file {
   position: relative;
@@ -410,7 +424,7 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
 }
 
 
-/* fixed top navbar only on medium and up */
+/* fixed top navbar only on tablet and desktop */
 
 @media (min-width: 992px) {
   .fixed-top-desktop-only {
@@ -427,7 +441,7 @@ source code: https://github.com/ckz8780/boutique_ado_v1/blob/master/static/css/b
 }
 
 
-/* pad the top a bit when navbar is collapsed on mobile */
+/* create space at the when navbar is collapsed on mobile */
 
 @media (max-width: 991px) {
   .header-container {
