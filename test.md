@@ -15,7 +15,6 @@
      * [CSS-Code-Test](#CSS-Code-Test)
      * [JavaScript-Code-Test](#JavaScript-Code-Test)
      * [Python-Code-Test](#Python-Code-Test)
-     * [issues-and-bugs](#issues-and-bugs)
 * [Django-local-tests](#Django-Local-Tests)
      * [Checkout-form-tests](#Checkout-Form-Tests)
      * [Test-products-review-form](#Test-Products-Review-Form)
@@ -304,7 +303,7 @@ LOGIN_REDIRECT_URL = '/success' - Url to redirect to, once logged in.
 
 I deployed the platform and sent it to my friends for testing, an immediate issue came up, user would register an account, confirmation link recieved and is clicked, the user is then taken back to the verify email page(not logged in) and another link sent to the user address.
 
-The reason for this issue, was never discovered during a prolonged investigation period, but a resolution/compromise was found:
+The reason for this issue, was never discovered during a prolonged investigation period with both my mentor and code institute tutors, but a resolution/compromise was found:
 
 ```
 ACCOUNT_CONFIRM_EMAIL_ON_GET = False
@@ -313,13 +312,13 @@ ACCOUNT_EMAIL_VERIFICATION = None
 the above code is placed below:
 
 ```
-ACCOUNT_CONFIRM_EMAIL_ON_GET = False
+# email verification
+DEFAULT_FROM_EMAIL = 'fitnessstation@example.com' - code starts at line 230 in settings.py
 ```
-in settings.py
 
-this essentially bypasses the need for the user to verify their email address by going to their email account.
+this essentially bypasses the need for the user to verify their email address by going to their email account and clicking the verify your email url. 
 
-Valid email and password safeguards to ensure platform safety....
+Valid email and password safeguards.....
 
 ## Stripe Testing
 
