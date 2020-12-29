@@ -58,7 +58,7 @@ Fitness station has a thriving exercise community, that I aim to capture, allowi
 
 ## UI 
 
-Using the five planes of UX model created by Jesse Garrett, below are the names of the five planes and the article url:
+Using the five planes of UX model created by Jesse Garrett, I formed a solid foundation for my project, below are the names of the five planes and the article url that goes into detail how I developed my project:
 
 - 1 __Strategy Level__
 
@@ -74,9 +74,8 @@ Using the five planes of UX model created by Jesse Garrett, below are the names 
 
 - 5 __Surface Level__
 
-  
- See article below I describe the process of creating the platform each plane phase; from strategy to surface level:
- *https://github.com/michodgs25/Fitness-Station-360/issues/6#issue-770549917*
+
+*https://github.com/michodgs25/Fitness-Station-360/issues/6#issue-770549917*
 
 
 ## User Stories
@@ -116,6 +115,12 @@ Using the five planes of UX model created by Jesse Garrett, below are the names 
 - As the user who wrote the review, I would like to see my review below the product I had just reviewed.
 
 - As a first time buyer I would like to give constructive feedback on products.
+
+#### Contact the Gym page
+
+- As a new member to the gym, I want to be able to check the gym opening& closing times, so I can plan my visit.
+
+- A a frequent user, I want to be to contact the gym directly, so I can ask any questions.
 
 #### Shopping bag and Checkout
 
@@ -160,9 +165,6 @@ Using the five planes of UX model created by Jesse Garrett, below are the names 
 - As the gym owner, I would like my own account with specific privileges, to control the content of the site.
 
 - As the gym owner, I want the site to be secure, as I could lose business.
-
-- As the gym owner, I would like an email every time a user places an order, as I can then process and send the product to the user.
-
 
 ## Developer
 
@@ -283,7 +285,7 @@ These wireframes were designed with Balsamiq Mockups.
    
 -------
 
-### Products page feature
+### Products page and Product review features
 
 * *Again at top of the products page is the navigation bar, see all details at navigation feature.*
 
@@ -293,14 +295,19 @@ These wireframes were designed with Balsamiq Mockups.
 
 * *Each product image, details, rating, price and review button is stored in a bootstrap card. The image in the header and the rest in the card footer.*
 
-* *The user can click on the review button, which takes the user to the review product page where the user can create a review of the product or just look at previous reviews posted.*
-
 * *If user clicks on image, it will take the user to the product detail page, where the user can add the product to their bag, or just keep shopping. The user can select their product size(if applicable). Once product is added, the user will be notified via a notification.*
 
 * *At the foot of the page is the platform footer which displays all products and contact page in bootstrap cards format.*
 
 * *On any of the products pages, there is a scroll to top button to the far right of the page, which takes the user back to top of the page.*
 
+* *The user can click on the review button, which takes the user to the review product page where the user can create a review of the product or just look at previous reviews posted.*
+
+* *The user must have an account to leave a review of a product.*
+
+* *The user must input a name and a message to be able to submit the review.*
+
+* *Once the review is submited the user can view it underneath the create review form on the same page.*
 --------
 
 ### Bag page feature
