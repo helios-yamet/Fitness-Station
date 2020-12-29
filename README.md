@@ -511,6 +511,10 @@ Review post: If a user is signed into their account and they wish to leave a rev
 
 - Bootstrap: https://getbootstrap.com/ - provides key styling such as product cards, colors and bag table.
 
+- Travis: https://docs.travis-ci.com/user/tutorial/ - provides incremental code testing
+
+---------
+
 ## Languages
 
   - In this project I used *HTML5*, *CSS*, *JAVASCRIPT*, *PYTHON*, *Django*, Jinja TEMPLATE programming languages.
