@@ -225,7 +225,7 @@ See full article on design here __https://github.com/michodgs25/Fitness-Station/
 
 The purpose for implementing these bootstrap styles are two-fold:
 
-1. Mimic the traffic light system, danger being danger(stop/alert), warning(information/wait) and success(go).(T
+1. Mimic the traffic light system, danger being danger(stop/alert), warning(information/wait) and success(go).
 2. Practical, allows for quicker development time without compromising UX.
 
 See bootstrap documentation for full range of colors - https://getbootstrap.com/docs/4.0/utilities/colors/
