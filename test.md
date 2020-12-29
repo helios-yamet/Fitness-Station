@@ -105,26 +105,49 @@ Results below:
 ----
 
 ## Functional testing 
-To ensure each feature works as intended, I manually tested each platform feature homepage, to the footer cards:
+To ensure each feature works as intended, I manually tested each platform feature homepage, to the footer cards , the manual testing was done with a samsung S10 as following a mobile first approach:
  
  
  __Home page__ -
+ - https://youtu.be/xb5ostLKy0M
+ 
+ *Homepage works as intended.*
  
 __Products Page__ - 
+- https://youtu.be/qDcjpCTlcEs
+
+*Products page works as intended*
 
 __Product Review page__ -
+- https://youtu.be/tXJL4kbJvgw
+
+*Product review page works as expected.*
 
 __Bag page__ - 
+- https://youtu.be/3jsDA0FdqnM
+
+*Shopping bag page works as intended*
 
 __Checkout page__ - 
+- https://youtu.be/hCguB1z_P8Q
+
+*Checkout page works as intended*
 
 __Checkout success page__ - 
+See end of this clip for checkout success: 
+- https://youtu.be/hCguB1z_P8Q
+
+*Checkout success page works as intended.*
 
 __Contact page__ - 
+- https://youtu.be/fCke9cusVJA
 
-__Profile page__ -
+*Contact page works as intended.*
 
-__Past order page__ -
+__Profile page and Past order page__  - 
+- https://youtu.be/9BSg7XH8av8
+
+*Profile page and past order page works as intended.*
  
  ----
 
@@ -414,7 +437,7 @@ I will keep the email verification files and code as for future iterations of th
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
 ```
-And the second assumming that an order has been placed, responding with a success webhook and send the confirmation to the user. 
+And the second assuming that an order has been placed, responding with a success webhook and send the confirmation to the user. 
 However if there is no order, attempt create it using the json version in payment intent and if anything does go wrong(user loses wifi connection for example),
 the order will be deleted. 
 This prevents any unauthorised orders and protects the customer.
@@ -436,4 +459,6 @@ To test the above functionality, I made test order using a test card number
 - zip(any)
 
 taken from stripe testing documents: https://stripe.com/docs/testing 
-and then check the stripe webhook response: 
+and then check the stripe webhook response on the stripe dashboard.
+
+*Stripe webhooks works as expected.*
