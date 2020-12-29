@@ -51,7 +51,7 @@ I decided to create the Fitness Station brand because I wanted to bring my own d
 
 Fitness station has a thriving exercise community, that I aim to capture, allowing users purchase& review products and contact the gym with any questions. 
 
- - Site mobile demo: **
+ - Site mobile demo: *https://youtu.be/6hICY7NBmoo*
 
 
 # UX
