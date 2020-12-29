@@ -8,7 +8,7 @@
 
 __Get Fit with Fitness Station__
 
-*Here at Fitness station we put the individual needs first, providing first class exercise plans; whether you are starting out or have years of experience we have the plan for you. In addition you can support us by purchasing our fantastic merchandise, from T-shirts to workout Joggers!* 
+*Here at Fitness station we put the individual needs first, providing first class exercise plans; whether you are starting out or have years of experience we have the product for you. In addition you can support us by purchasing our fantastic merchandise, from T-shirts to workout Joggers!* 
 #### You can visit us here [here.](https://fitness-station.herokuapp.com/)
 
 ## Contents
@@ -40,14 +40,16 @@ __Get Fit with Fitness Station__
 * [Acknowledgements](#Acknowledgements)
      * [External-Media](#External-Media)
 
-     # Project purpose
+-------------
+
+# Project purpose
 
 The purpose of this project is to create a modern, intuitive E-site for my local gym and encourage users to purchase the latest excercise plans and merchandise with one click. 
 Potential users can range from 18 to elderly gym members, so an easy to use platform, that takes into account the full spectrum of technical ability amongst potential users is crucial to the success of the site. 
 
-I decided to create the Fitness Station brand because I wanted to bring my own design and modern coding conventions to a local fitness facility, which is a cornerstone of the community but can greatly benefit from having E-site capabilities, such as being able to purchase their favourite fitness station brand t-shirt and exercise plan or accessories; rather than having to physically visit the facility to make a purchase. 
+I decided to create the Fitness Station brand because I wanted to bring my own design and modern coding conventions to a local fitness facility, which is a cornerstone of the community but can greatly benefit from having E-site capabilities, such as being able to purchase their favourite fitness station brand t-shirt and exercise plan and fitness accessories; rather than having to physically visit the facility to make a purchase. 
 
-Fitness station has a thriving exercise community, that I aim to capture, allowing users purchase& review product and contact the gym with any questions. 
+Fitness station has a thriving exercise community, that I aim to capture, allowing users purchase& review products and contact the gym with any questions. 
 
  - Site mobile demo: **
 
@@ -56,29 +58,25 @@ Fitness station has a thriving exercise community, that I aim to capture, allowi
 
 ## UI 
 
-Using the five planes of UX model created by Jesse Garrett, below describes the project from concept to surface level:
+Using the five planes of UX model created by Jesse Garrett, below are the names of the five planes and the article url:
 
 - 1 __Strategy Level__
-
 
 
 - 2 __Feature Level__
 
 
-
 - 3 __Structure Level__
  
 
-
 - 4 __Layout Level__
-
 
 
 - 5 __Surface Level__
 
   
- See article below I describe the process of creating the platform each plane phase; from stratedgy to surface level:
-  *https://github.com/michodgs25/Fitness-Station-360/issues/6#issue-770549917*
+ See article below I describe the process of creating the platform each plane phase; from strategy to surface level:
+ *https://github.com/michodgs25/Fitness-Station-360/issues/6#issue-770549917*
 
 
 ## User Stories
@@ -172,7 +170,7 @@ Using the five planes of UX model created by Jesse Garrett, below describes the 
 
 - As a developer, I would like all code to have purposeful comments describing what each piece of code does, as this helps understanding of what the code function is.
 
-- As a developer, I would like all Css, JS, and python code to be in separate files, as this conforms to good practice and greater readability.
+- As a developer, I would like all Css, JS, and python code to be in separate files, as much as possible, this conforms to good practice and greater readability.
  
  ------
 
@@ -201,9 +199,9 @@ See full article on design here __https://github.com/michodgs25/Fitness-Station/
 
 ### Typography
 
-- The main fonts selected for this project are **Oxygen** and **Arsenal**. I think they are a well designed and easy to read google fonts and also represents the fitness station brand.
+- The main font selected for this project is **Lato**. I think this is a well designed and easy to read google font and represents the fitness station brand.
 
-*https://fonts.google.com/specimen/Arsenal?sidebar.open=true&selection.family=Arsenal:wght@700|Oxygen:wght@300*
+*https://fonts.googleapis.com/css?family=Lato&display=swap*
 
 ------
 
@@ -220,14 +218,14 @@ See full article on design here __https://github.com/michodgs25/Fitness-Station/
 
 .text-danger - Used as login button if use does not have an account or needs to login before completing checkout and login 'forgot password' text.
 
-.text-info - Used for review page back to shopping button(button previously text warning but blended into background).
+.text-info - Used for review page back to shopping button(button previously text warning but blended into background) and information notification to user.
 
 .text-warning - used as product card body, contact page backgrounds.
 
 
 The purpose for implementing these bootstrap styles are two-fold:
 
-1. Mimic the traffic light system, danger being danger(stop/alert), warning(information/wait) and success(go). 
+1. Mimic the traffic light system, danger being danger(stop/alert), warning(information/wait) and success(go).(T
 2. Practical, allows for quicker development time without compromising UX.
 
 See bootstrap documentation for full range of colors - https://getbootstrap.com/docs/4.0/utilities/colors/
@@ -522,6 +520,8 @@ Review post: If a user is signed into their account and they wish to leave a rev
 
 These technologies helped create, shape and test my code
 
+* Stripe - https://dashboard.stripe.com/login: Provide the payment and processing products payments platform functionality
+
 * Kaggle.com - https://www.kaggle.com/dqmonn/zalando-store-crawl: provided some raw product images.
 
 * Balslamiq - https://balsamiq.com/:  provided tools to construct the wire-frames of the platform.
@@ -538,7 +538,7 @@ These technologies helped create, shape and test my code
 
 * mobiReady - https://ready.mobi/: Online app that that test whether the app is mobile ready.
 
-* Google dev tools: found top right corner of the chrome browser, more tool then bottom option. Provided a virtual testing environment.
+* Google dev tools: found top right corner of the chrome browser, more tool then bottom option. Provided a virtual testing environment(DOM).
 
 * Google fonts - https://fonts.google.com/: Help provide the text style of the site.
 
@@ -631,7 +631,7 @@ Continuous Integration is the practice of merging in small code changes frequent
 
 As a continuous integration platform, Travis CI supports the development process by automatically building and testing code changes, providing immediate feedback on the success of the change. Travis CI can also automate other parts of the development process by managing deployments and notifications.
 
-#### Instructios on how to integrate Travis CI:
+#### Instructions on how to integrate Travis CI:
 *See https://docs.travis-ci.com/user/tutorial/ for full documentation*
 
 - To start using Travis CI, make sure you have:
@@ -649,6 +649,9 @@ For this project I used github and followed these steps:
 3. Click on your profile picture in the top right of your Travis Dashboard, click Settings and then the green Activate button, and select the repositories you want to use with Travis CI.
 
 For more details see full documentation *https://docs.travis-ci.com/user/tutorial/*
+
+
+In addition for each chunk of code I would test by running it in the browser and using the DOM(document object model) to make adjustments until the code was of desired quality.
 
 ------
 
