@@ -78,7 +78,7 @@
                                 <p class="my-0">Explore</p>
                             </div>
                         </a>
-                        <!--Superuser authentication requests-->
+                        <!--Superuser authentication requests, if normal user product management is not an option-->
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
@@ -86,11 +86,13 @@
                             <a href="{% url 'contact' %}" class="dropdown-item">Contact us</a>
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                             {% endif %}
+                            <!--User has access to their profile, once logged in-->
                             <a href="{% url 'home' %}" class="dropdown-item">Home</a>
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                             <a href="{% url 'contact' %}" class="dropdown-item">Contact us</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
+                            <!--User must register or login to purchase products and have a profile-->
                             <a href="{% url 'home' %}" class="dropdown-item">Home</a>
                             <a href="{% url 'contact' %}" class="dropdown-item">Contact us</a>
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
