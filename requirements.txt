@@ -6,7 +6,7 @@ boto3==1.16.40
 botocore==1.19.40
 checkout==0.2.0
 dj-database-url==0.5.0
-Django==3.1.8
+Django==3.1.12
 django-allauth==0.44.0
 django-countries==7.0
 django-crispy-forms==1.10.0
